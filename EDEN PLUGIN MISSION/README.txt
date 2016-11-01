@@ -1,0 +1,2 @@
+These missions are made for the Exile Eden Plugin and you need the Plugin to use and edit the mission and the placed objects.
+Thes mission files containing the placed objects for the missions in the Editor. Use the Exile Eden plugin to export changes.
