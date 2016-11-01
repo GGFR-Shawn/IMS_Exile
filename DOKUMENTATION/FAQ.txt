@@ -1,0 +1,6 @@
+Where are the placed objects located?
+
+- You will find the placed objects in code format in the following files:
+
+IMS_Exile\ADDON FILES\a3_rg\objects\RG_buildingObjects.sqf
+IMS_Exile\ADDON FILES\a3_rg\objects\RG_mapObjects.sqf
