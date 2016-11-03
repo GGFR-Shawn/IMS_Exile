@@ -1,7 +1,7 @@
 /*
 	"The Fortress" v2.0 Static Raid Mission Tanoa for DMS Exile
 	
-	Needed a3_raids addon by Salutesh to work as it should.
+	Needed a3_ims addon by Salutesh to work as it should.
 	Created by [RG] Salutesh
 	www.reality-gaming.eu
 	
