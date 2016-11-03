@@ -27,12 +27,12 @@ fortressRaid_ToastTaskUpdated = {
 publicVariable "fortressRaid_ToastTaskUpdated";
 
 fortressRaid_ToastToilet = {
-	["ErrorTitleAndText", ["<t color='#ff4242' align='center' font='PuristaSemiBold'>What the Fu#%?!</t>", format ["<t color='#925002'><img align='center' image='textures\poo.paa' size='80'/></t><br/><br/>What do you expect to find in a toilete?"]]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["<t color='#ff4242' align='center' font='PuristaSemiBold'>What the Fu#%?!</t>", format ["<t color='#925002'><img align='center' image='textures\poo.paa' size='80'/></t><br/><br/><t color='#ff4242' font='PuristaSemiBold'>What do you expect to find in a toilete?</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };
 publicVariable "fortressRaid_ToastToilet";
 
 fortressRaid_ToastSupply = {
-	["SuccessTitleAndText", ["<t color='#00ce27' align='center' font='PuristaSemiBold'>Supplycrate</t>", format ["<t color='#ba00ff'><img align='center' image='textures\supply.paa' size='80'/></t><br/><br/>The crate has items.<br/>You can now loot the crate."]]] call ExileClient_gui_toaster_addTemplateToast;
+	["SuccessTitleAndText", ["<t color='#00ce27' align='center' font='PuristaSemiBold'>Supplycrate</t>", format ["<t color='#ba00ff'><img align='center' image='textures\supply.paa' size='80'/></t><br/><br/><t color='#00ce27' font='PuristaSemiBold'>The crate has items.<br/>You can now loot the crate.</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };
 publicVariable "fortressRaid_ToastSupply";
 

@@ -28,8 +28,6 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
 	sleep 180;
 	// Start end events.
-	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
-	sleep 2;
 	[] remoteExec ["fortressRaidBombingEvent", 0, true];
 	sleep 20;
 	// Succsess for fourth task.

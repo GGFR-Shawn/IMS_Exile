@@ -20,6 +20,7 @@ if (worldName == 'Tanoa') then
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidHoldActions.sqf");
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidFillSupplybox.sqf");
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidBombingActionEvents.sqf");
+	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidAlarmActionEvents.sqf");
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidCompletionEvents.sqf");
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidSetup.sqf");
 	CALLFILE("\x\addons\ims\missions\fortress\IMS_raidTasks.sqf");
