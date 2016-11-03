@@ -6,15 +6,16 @@ This concept release is in its early build state and has been released to give t
 Please feel free to give feedback, suggestions or improvements to this work!
 
 
+
 Requirements:
 DMS for Exile by Defent and eraser1
 https://github.com/Defent/DMS_Exile
 
 
+
 Main Installation:
-Pack the a3_rg folder in ADDON FILES with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite).
-Put the generated PBO in your "@ExileServer\addons\" directory.
-Put the content of the MISSION FILES directory into your mission main directory and repack your mission.
+- Pack the a3_ims folder in "IMS_Exile\@ExileServer\addons" with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite) and put the generated PBO in your "@ExileServer\addons\" directory.
+- Put the content of the "IMS_Exile\MPMISSIONS\Exile.Tanoa" directory into your mission main directory and repack your mission.
 
 Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
 Add the following lines to the very bottom of your description.ext:
@@ -23,10 +24,14 @@ Add the following lines to the very bottom of your description.ext:
 #include "CfgRemoteExec.hpp"
 #include "CfgFunctions.hpp" 
 
-
 DMS Setup:
-Put the DMS mission file raid_fortress.sqf from SERVER\DMS MISSIONS\static into your a3_dms\missions\static directory.
-Open the DMS map_configs directory and edit the tanoa_config.sqf:
+- Put the DMS mission file raid_fortress.sqf from SERVER\DMS MISSIONS\static into your a3_dms\missions\static directory.
+
+- Open the DMS config.sqf and edit the following lines:
+
+DMS_MaxStaticMissions				= 2;						// Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
+
+- Open the DMS map_configs directory and edit the tanoa_config.sqf:
 
 DMS_StaticMissionsOnServerStart append
 [
@@ -61,6 +66,7 @@ DMS Mission Features:
 - Helicopter reinfocements.
 
 
+
 Interactive Mission Features:
 - Using exiles toast notifications to give informations about mission progress.
 - Adding tasks for detailed mission instructions.
@@ -69,11 +75,14 @@ Interactive Mission Features:
 - Eventscripts and functions.
 
 
+
 Github Project:
 
 https://github.com/salutesh/IMS_Exile
 
 
+
 Thanks:
 
 Defent and eraser1 and all other contributions to DMS for the great Dynamic Mission System Addon! 
+
