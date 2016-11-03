@@ -15,7 +15,7 @@ fortressRaid_dokument setPosWorld [12108.5, 2314.93, 3.27098];
 fortressRaid_dokument setVectorDirAndUp [[-0.783477, -0.621421, 0], [0, 0, 1]];
 fortressRaid_dokument enableSimulationGlobal false;
 fortressRaid_dokument setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_dokument, "Read Secret Dokuments", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_dokument_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_dokument, "Read Secret Dokuments", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_dokument_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_dokument";
 
 // Laptop interaction Object.
@@ -25,7 +25,7 @@ fortressRaid_laptop setPosWorld [12097.1, 2494.17, 9.18705];
 fortressRaid_laptop setVectorDirAndUp [[-0.444932, 0.895564, 0], [0, 0, 1]];
 fortressRaid_laptop enableSimulationGlobal false;
 fortressRaid_laptop setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_laptop, "Disable Security Rules", "pc", "_this distance _target < 5", {remoteExec ["fortressRaid_laptop_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_laptop, "Disable Security Rules", "pc", "_this distance _target < 5", {remoteExec ["fortressRaid_laptop_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_laptop";
 
 // Terminal interaction Object.
@@ -35,7 +35,7 @@ fortressRaid_terminal setPosWorld [12068, 2460.88, 19.6264];
 fortressRaid_terminal setVectorDirAndUp [[0.880998, 0.47312, 0], [0, 0, 1]];
 fortressRaid_terminal enableSimulationGlobal false;
 fortressRaid_terminal setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_terminal, "Disable Terminal Link", "charge", "_this distance _target < 5", {remoteExec ["fortressRaid_terminal_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_terminal, "Disable Terminal Link", "charge", "_this distance _target < 5", {remoteExec ["fortressRaid_terminal_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_terminal";
 
 // Toilet interaction Object 1.
@@ -45,7 +45,7 @@ fortressRaid_toilet_1 setPosWorld [12085.7, 2493.1, 8.65006];
 fortressRaid_toilet_1 setVectorDirAndUp [[-0.00666718, -0.999978, 0], [0, 0, 1]];
 fortressRaid_toilet_1 enableSimulationGlobal false;
 fortressRaid_toilet_1 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_toilet_1, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_toilet_1, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_toilet_1";
 
 // Toilet interaction Object 2.
@@ -55,7 +55,7 @@ fortressRaid_toilet_2 setPosWorld [12047.7, 2418.96, 4.58764];
 fortressRaid_toilet_2 setVectorDirAndUp [[0.862249, 0.506485, 0], [0, 0, 1]];
 fortressRaid_toilet_2 enableSimulationGlobal false;
 fortressRaid_toilet_2 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_toilet_2, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_toilet_2, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_toilet_2";
 
 // Supplybox interaction Object 1.
@@ -69,7 +69,7 @@ fortressRaid_supplybox_1 setPosWorld [12036.6, 2393.8, 19.2759];
 fortressRaid_supplybox_1 setVectorDirAndUp [[0.986968, -0.160915, 0], [0, 0, 1]];
 fortressRaid_supplybox_1 enableSimulationGlobal true;
 fortressRaid_supplybox_1 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_supplybox_1, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_1_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_supplybox_1, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_1_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_supplybox_1";
 
 // Supplybox interaction Object 2.
@@ -83,7 +83,7 @@ fortressRaid_supplybox_2 setPosWorld [12191.3, 2461.35, 4.43157];
 fortressRaid_supplybox_2 setVectorDirAndUp [[0.609799, -0.792556, 0], [0, 0, 1]];
 fortressRaid_supplybox_2 enableSimulationGlobal true;
 fortressRaid_supplybox_2 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_supplybox_2, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_2_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_supplybox_2, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_2_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_supplybox_2";
 
 // Supplybox interaction Object 3.
@@ -97,7 +97,7 @@ fortressRaid_supplybox_3 setPosWorld [12186.4, 2568.7, 19.2527];
 fortressRaid_supplybox_3 setVectorDirAndUp [[-0.99368, -0.11225, 0], [0, 0, 1]];
 fortressRaid_supplybox_3 enableSimulationGlobal true;
 fortressRaid_supplybox_3 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_supplybox_3, "Seeking Crate",	"crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_3_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_supplybox_3, "Seeking Crate",	"crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_3_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_supplybox_3";
 
 // Supplybox interaction Object 4.
@@ -111,7 +111,7 @@ fortressRaid_supplybox_4 setPosWorld [12026.1, 2559.24, 4.31213];
 fortressRaid_supplybox_4 setVectorDirAndUp [[0.944304, -0.329075, 0], [0, 0, 1]];
 fortressRaid_supplybox_4 enableSimulationGlobal true;
 fortressRaid_supplybox_4 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_supplybox_4, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_4_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_supplybox_4, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_4_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_supplybox_4";
 
 // Supplybox interaction Object 5.
@@ -125,7 +125,7 @@ fortressRaid_supplybox_5 setPosWorld [12076.4, 2511.93, 8.54528];
 fortressRaid_supplybox_5 setVectorDirAndUp [[-0.0994412, 0.995043, 0], [0, 0, 1]];
 fortressRaid_supplybox_5 enableSimulationGlobal true;
 fortressRaid_supplybox_5 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_supplybox_5, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_5_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_supplybox_5, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_5_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_supplybox_5";
 
 // Bomb interaction Object 1.
@@ -139,7 +139,7 @@ fortressRaid_bomb_1 setPosWorld [12039.9, 2397.12, 4.3973];
 fortressRaid_bomb_1 setVectorDirAndUp [[-0.893646, 0.448773, 0], [0, 0, 1]];
 fortressRaid_bomb_1 enableSimulationGlobal false;
 fortressRaid_bomb_1 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_1, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_1, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_1";
 
 // Bomb interaction Object 2.
@@ -153,7 +153,7 @@ fortressRaid_bomb_2 setPosWorld [12122.1, 2470.91, 8.2553];
 fortressRaid_bomb_2 setVectorDirAndUp [[-0.107409, -0.994215, 0], [0, 0, 1]];
 fortressRaid_bomb_2 enableSimulationGlobal false;
 fortressRaid_bomb_2 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_2, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_2, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_2";
 
 // Bomb interaction Object 3.
@@ -167,7 +167,7 @@ fortressRaid_bomb_3 setPosWorld [12064.3, 2461.58, 4.43478];
 fortressRaid_bomb_3 setVectorDirAndUp [[0.787484, 0.616335, 0], [0, 0, 1]];
 fortressRaid_bomb_3 enableSimulationGlobal false;
 fortressRaid_bomb_3 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_3, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_3, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_3";
 
 // Bomb interaction Object 4.
@@ -181,7 +181,7 @@ fortressRaid_bomb_4 setPosWorld [12042.2, 2564.58, 4.4053];
 fortressRaid_bomb_4 setVectorDirAndUp [[0.787484, 0.616335, 0], [0, 0, 1]];
 fortressRaid_bomb_4 enableSimulationGlobal false;
 fortressRaid_bomb_4 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_4, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_4, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_4";
 
 // Bomb interaction Object 5.
@@ -195,7 +195,7 @@ fortressRaid_bomb_5 setPosWorld [12182.9, 2568.96, 4.35387];
 fortressRaid_bomb_5 setVectorDirAndUp [[0.814419, -0.580277, 0], [0, 0, 1]];
 fortressRaid_bomb_5 enableSimulationGlobal false;
 fortressRaid_bomb_5 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_5, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_5, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_5";
 
 // Bomb interaction Object 6.
@@ -209,7 +209,7 @@ fortressRaid_bomb_6 setPosWorld [12185.1, 2447.89, 4.4053];
 fortressRaid_bomb_6 setVectorDirAndUp [[-0.107409, -0.994215, 0], [0, 0, 1]];
 fortressRaid_bomb_6 enableSimulationGlobal false;
 fortressRaid_bomb_6 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_6, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_6, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_6";
 
 // Bomb interaction Object 7.
@@ -223,7 +223,7 @@ fortressRaid_bomb_7 setPosWorld [12182.9, 2486.76, 4.4053];
 fortressRaid_bomb_7 setVectorDirAndUp [[-0.637168, 0.770725, 0], [0, 0, 1]];
 fortressRaid_bomb_7 enableSimulationGlobal false;
 fortressRaid_bomb_7 setVariable ["ExileIsLocked", -1, true];
-[fortressRaid_bomb_7, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["RG_fnc_raidAddHoldAction", 0, true];
+[fortressRaid_bomb_7, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_raidAddHoldAction", 0, true];
 publicVariable "fortressRaid_bomb_7";
 
 // Bomb Object 1.

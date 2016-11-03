@@ -38,7 +38,7 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaid_ToastComplete", FortressPlayerUnits, true];
 	sleep 20;
 	[] call fortressRaidCompletionEvent;
-	[[12137,2245.81,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["RG_fnc_raidDrop", 0, true];
+	[[12137,2245.81,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_raidDrop", 0, true];
 	// Announce the loot drop.
 	[] remoteExec ["fortressRaid_ToastLoot", FortressPlayerUnits, true];
 	sleep 10;
