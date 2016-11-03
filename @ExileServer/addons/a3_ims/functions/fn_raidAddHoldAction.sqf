@@ -1,3 +1,11 @@
+/*
+    File: fn_raidAddHoldAction.sqf
+    Author: Salutesh aka Steve
+    
+    Description:
+	Function to create a hold action on target. Just a smarter version for our needs of the BI function.
+*/
+
 params [["_object", player], ["_label", "Search"], ["_type", "search"], ["_active", "true"], ["_completeCode", {hint 'Nothing found'}], ["_args", []], ["_duration", 2], ["_remove", "true"]];
 
 // Change icon based on _type input.

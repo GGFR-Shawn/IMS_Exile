@@ -4,20 +4,15 @@
     
     Description:
 	//////////////////////////////////////////////////////////////////
-	// Use the following to activate the script.
-	// nul=[[X,X,Z],100,35,2]execVM "core\functions\fn_raidEndBombing.sqf";
-	// or use 
-	// nul=[[[X,X,Z],100,35,2]execVM "core\functions\fn_raidEndBombing.sqf"; placed in a game logic Init or trigger for instant result.
+	// Use something like this to use the script:
+	// [180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
 	// ///////////////////////////////////////////////////////////////
-	// 1. Add the position where you want the explosions.
-	// 2. Choose the size of the area in metere.
-	// 3. Select how many explosions you require.
-	// 4. Select the maximum delay between explosions in seconds. 
-	// 5. minimum delay is 0.5 secs and can be changed in the script.
-	// 6. If the two // are removed from the "Grenadebase" line a more visible marke is left on the ground.
+	// 1. [180] - The amount of seconds for the timer.
+	// 2. exile_fnc_raidEndTimer - The function itself.
+	// 3. FortressPlayerUnits - The target, in this case a definied name for units in a special area.
 	// ///////////////////////////////////////////////////////////////
-    
 */
+
 // Start bombing area
 private _pos    	= _this select 0;
 private _area   	= _this select 1;

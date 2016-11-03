@@ -1,9 +1,9 @@
 /*
-    File: fn_raidFillSupplybox.sqf
+    File: IMS_raidFillSupplybox.sqf
     Author: Salutesh aka Steve
 	www.reality-gaming.eu
     
-    Description: Setup for supplyboxes 
+    Description: Setup for supplyboxes in the fortress area.
 */
 
 raid_fnc_supplybox_1 = {

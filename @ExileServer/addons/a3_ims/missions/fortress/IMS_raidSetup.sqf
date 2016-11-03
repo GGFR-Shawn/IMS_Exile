@@ -1,10 +1,9 @@
 /*
-    File: fn_raidSetup.sqf
+    File: IMS_raidSetup.sqf
     Author: Salutesh aka Steve
     
     Description:
-    Setup for the raid system.
-
+    Pre-Setup for some placed objects.
 */
 
 // The Fortress - Pre mission setup

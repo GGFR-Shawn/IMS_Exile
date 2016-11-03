@@ -1,3 +1,11 @@
+/*
+    File: IMS_raidCompletionEvents.sqf
+    Author: Salutesh aka Steve
+    
+    Description:
+    This file triggers after the mission to coplete the DMS mission also and remove the interaction objects until the server restarts.
+*/
+
 fortressRaidCompletionEvent = {
 	// End the DMS mission The Fortress after raid event completion.
 	// This grabs the array that contains information about the mission.

@@ -1,10 +1,11 @@
 /*
-    File: fn_raidSetupEndBombing.sqf
+    File: IMS_raidBombingActionEvents.sqf
     Author: Salutesh aka Steve
     
     Description:
-    
+    This file includes the bombing event at the end of the timer.
 */
+
 fortressRaidBombingEvent = {
 	// Start bombing the area
 	[[12166.1,2554.16,0],30,1,2] remoteExec ["IMS_fnc_raidEndBombing",0,true];

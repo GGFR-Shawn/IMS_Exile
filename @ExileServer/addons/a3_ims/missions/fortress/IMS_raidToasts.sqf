@@ -1,3 +1,11 @@
+/*
+    File: IMS_raidHoldActionScripts.sqf
+    Author: Salutesh aka Steve
+	www.reality-gaming.eu
+	
+    Description: Toast notifications for the fortress mission.  
+*/
+
 fortressRaid_ToastDokuments = {
 	["InfoTitleAndText", ["<t color='#c200f3' align='center' font='PuristaSemiBold'>Secret Dokuments</t>", format ["<t color='#f30000'><img align='center' image='textures\dokuments.paa' size='80'/></t><br/><br/><t color='#c200f3' font='PuristaSemiBold'>You found a secret dokument that contains mission instructions.</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };

@@ -1,8 +1,10 @@
-// call with this, place in trigger activate (don't copy //):
-// nul = [position thisTrigger,"B_supplyCrate_F","supply drop",true] execVM "createArsenal.sqf";
-// replace "B_supplyCrate_F with classname of box to spawn
-// replace "supply drop" with marker to change alpha of
-// change true to false if you don't want a parachute
+/*
+    File: fn_raidDrop.sqf
+    Author: Salutesh aka Steve
+    
+    Description:
+	Just creates the loot crate on the sucsess of a mission.
+*/
 
 // Crate loot setup
 private _weaponLoot = selectRandom ["srifle_GM6_ghex_F","srifle_DMR_07_hex_F","srifle_LRR_tna_F"];

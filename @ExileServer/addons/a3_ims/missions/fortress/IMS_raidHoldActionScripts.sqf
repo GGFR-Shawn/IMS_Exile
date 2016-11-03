@@ -1,9 +1,9 @@
 /*
-    File: fn_raidHoldActionScripts.sqf
+    File: IMS_raidHoldActionScripts.sqf
     Author: Salutesh aka Steve
 	www.reality-gaming.eu
     
-    Description: Event scripts for the hold actions  
+    Description: Event scripts for the hold actions.  
 */
 
 fortressRaid_terminal_ActionScript = {

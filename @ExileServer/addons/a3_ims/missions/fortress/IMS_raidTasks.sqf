@@ -1,3 +1,11 @@
+/*
+    File: IMS_raidHoldActionScripts.sqf
+    Author: Salutesh aka Steve
+	www.reality-gaming.eu
+	
+    Description: Mission tasks for the fortress mission.  
+*/
+
 fortressRaidTask_One = {
 	fortressRaidTask_1 = player createSimpleTask ["The Fortress - The Mission [Part 1]"];
 	fortressRaidTask_1 setSimpleTaskDescription ["<img align='center' image='textures\mission.paa' width='360' height='360'/><br/><br/><font color='#db3a49'>Situation:</font><br/>Bandits have taken the fortress near Lijnhaven.<br/>There are sensitive technologies, explosives and resources in the area.<br/><br/><font color='#db3a49'>Mission Ojective:</font><br/>The objective is to investigate the fortress area and find a way to stop the bandits from stealing the technologies and explosives.<br/><br/>Go to the fortess area and investigate anything that might be useful to achieve the success of this mission.",

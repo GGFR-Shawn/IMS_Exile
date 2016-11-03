@@ -1,10 +1,10 @@
 /*
-    File: fn_raidObjects.sqf
+    File: IMS_raidHoldActions.sqf
     Author: Salutesh aka Steve
     www.reality-gaming.eu
 	
     Description:
-    Spawns the fortress raid mission objects.
+    Spawns the fortress raid mission objects that are iteractable and gives them the hold actions.
 */
 
 // Create interaction object for hold actions.
