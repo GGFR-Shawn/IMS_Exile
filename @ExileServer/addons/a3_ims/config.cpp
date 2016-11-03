@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class a3_rg
+	class a3_ims
 	{
 		units[] = {};
 		weapons[] = {};
@@ -12,17 +12,17 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Exile_Server_Core
+	class IMS_Server_Core
 	{	
-		tag = "RG";
+		tag = "IMS";
 		class Master_Directory
 		{
-			file = "\x\addons\rg";
+			file = "\x\addons\ims";
 			class postInit {postInit = 1;};
 		};
 		class Raids
 		{
-			file = "\x\addons\rg\functions";
+			file = "\x\addons\ims\functions";
 			class raidAddHoldAction {};
 			class raidDrop {};
 			class raidEndBombing {};

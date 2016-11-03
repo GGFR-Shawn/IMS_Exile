@@ -14,12 +14,10 @@ DMS for Exile by Defent and eraser1
 https://github.com/Defent/DMS_Exile
 
 Main Installation:
-Pack the a3_rg folder in ADDON FILES with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite).
-Put the generated PBO in your "@ExileServer\addons\" directory.
-Put the content of the MISSION FILES directory into your mission main directory and repack your mission.
-
-Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
-Add the following lines to the very bottom of your description.ext:
+- Pack the a3_rg folder in "IMS_Exile\@ExileServer\addons" with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite) and put the generated PBO in your "@ExileServer\addons\" directory.
+- Put the content of the "IMS_Exile\MPMISSIONS\Exile.Tanoa" directory into your mission main directory and repack your mission.
+- Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
+- Add the following lines to the very bottom of your description.ext:
 
 // Base Config Files
 #include "CfgRemoteExec.hpp"
@@ -27,8 +25,12 @@ Add the following lines to the very bottom of your description.ext:
 
 
 DMS Setup:
-Put the DMS mission file raid_fortress.sqf from SERVER\DMS MISSIONS\static into your a3_dms\missions\static directory.
-Open the DMS map_configs directory and edit the tanoa_config.sqf:
+- Put the DMS mission file raid_fortress.sqf from SERVER\DMS MISSIONS\static into your a3_dms\missions\static directory.
+- Open the DMS config.sqf and change the following lines:
+
+DMS_MaxStaticMissions				= 2;  <--- If you have more static missions change this value to the amount of running staic DMS missions on your Server.
+
+- Open the DMS map_configs directory and edit the tanoa_config.sqf:
 
 DMS_StaticMissionsOnServerStart append
 [
