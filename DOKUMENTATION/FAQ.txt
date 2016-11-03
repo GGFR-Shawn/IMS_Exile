@@ -1,6 +1,5 @@
 Where are the placed objects located?
 
-- You will find the placed objects in code format in the following files:
+- You will find the placed objects in code format in the following file:
 
-IMS_Exile\ADDON FILES\a3_rg\objects\RG_buildingObjects.sqf
-IMS_Exile\ADDON FILES\a3_rg\objects\RG_mapObjects.sqf
+IMS_Exile\@ExileServer\addons\a3_ims\missions\fortress\IMS_raidObjects.sqf
