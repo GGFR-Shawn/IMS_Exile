@@ -1,3 +1,19 @@
+/*
+    File: fn_raidEndTimer.sqf
+    Author: Salutesh aka Steve
+    
+    Description:
+	
+	//////////////////////////////////////////////////////////////////
+	// Use something like this to use the script:
+	// [180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	// ///////////////////////////////////////////////////////////////
+	// 1. [180] - The amount of seconds for the timer.
+	// 2. exile_fnc_raidEndTimer - The function itself.
+	// 3. FortressPlayerUnits - The target, in this case a definied name for units in a special area.
+	// ///////////////////////////////////////////////////////////////
+*/
+
 private "_time";
 _time = _this select 0;
 
