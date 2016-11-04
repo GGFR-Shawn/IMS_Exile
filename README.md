@@ -19,9 +19,8 @@ https://github.com/Defent/DMS_Exile
 - Download the latest IMS release from here: https://github.com/salutesh/IMS_Exile/releases
 - Pack the a3_ims folder in "IMS_Exile\@ExileServer\addons" with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite) and put the generated PBO in your "@ExileServer\addons\" directory.
 - Put the content of the "IMS_Exile\MPMISSIONS\Exile.Tanoa" directory into your mission main directory and repack your mission.
-
-Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
-Add the following lines to the very bottom of your description.ext:
+- Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
+- Add the following lines to the very bottom of your description.ext:
 ```
 // Base Config Files
 #include "CfgRemoteExec.hpp"
@@ -44,8 +43,8 @@ DMS_StaticMissionsOnServerStart append
 ];
 ```
 
-Repack a3_dms with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite).
-Put the generated PBO in your "@ExileServer\addons\" directory.
+- Repack a3_dms with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite).
+- Put the generated PBO in your "@ExileServer\addons\" directory.
 
 
 ####BattlEye Filters:
