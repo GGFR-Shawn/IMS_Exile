@@ -3,7 +3,7 @@
 # General Information:
 ####Please note that this is not ready for public servers!
 ####Its builded and tested on a public dedicated server enviroment with Exile Mod 1.0.2 and DMS (parent 21bdacd commit 92d32436e06bd167e9dd4b2971954d09d8669b18 22 Sep. 2016)
-####so everything should work as intendet but use it on your own risk on a live server with players at this state! 
+####Everything should work as intended but use it on your own risk on a live server with players at this state! 
 
 ####This concept release is in its early build state and has been released to give the Exile community a overview how the system works and to get feedback from better coders from the forum to may get improvements.
 ####Please feel free to give feedback, suggestions or improvements to this work!
