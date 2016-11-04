@@ -77,7 +77,7 @@ raid_fnc_supplybox_3 = {
 	fortressRaid_supplybox_3 addMagazineCargoGlobal [_cratemag, (1 + floor(random 3))];
 	fortressRaid_supplybox_3 addItemCargoGlobal [_cratemed, (1 + floor(random 1))];
 	// Unlock the crate
-	fortressRaid_supplybox_2 setVariable ["ExileIsLocked", 0, true];
+	fortressRaid_supplybox_3 setVariable ["ExileIsLocked", 0, true];
 };
 publicVariable "raid_fnc_supplybox_3";
 
@@ -102,7 +102,7 @@ raid_fnc_supplybox_4 = {
 	fortressRaid_supplybox_4 addMagazineCargoGlobal [_cratemag, (1 + floor(random 3))];
 	fortressRaid_supplybox_4 addItemCargoGlobal [_cratemed, (1 + floor(random 1))];
 	// Unlock the crate
-	fortressRaid_supplybox_2 setVariable ["ExileIsLocked", 0, true];
+	fortressRaid_supplybox_4 setVariable ["ExileIsLocked", 0, true];
 };
 publicVariable "raid_fnc_supplybox_4";
 
@@ -127,6 +127,6 @@ raid_fnc_supplybox_5 = {
 	fortressRaid_supplybox_5 addMagazineCargoGlobal [_cratemag, (1 + floor(random 3))];
 	fortressRaid_supplybox_5 addItemCargoGlobal [_cratemed, (1 + floor(random 1))];
 	// Unlock the crate
-	fortressRaid_supplybox_2 setVariable ["ExileIsLocked", 0, true];
+	fortressRaid_supplybox_5 setVariable ["ExileIsLocked", 0, true];
 };
 publicVariable "raid_fnc_supplybox_5";
