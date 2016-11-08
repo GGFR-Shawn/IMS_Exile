@@ -1,5 +1,5 @@
 /*
-	IMS Server Addon Pre-init
+	IMS Server Addon Post-Init File
 	Written by Salutesh
 	www.reality-gaming.eu
 */
@@ -15,6 +15,7 @@ if (worldName == 'Tanoa') then
 {
 	diag_log format['[IMS Server Addon] Load Interactive Mission Systems'];
 	diag_log format['[IMS Server Addon] Load Fortress Mission Systems'];
+	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidEventHandler.sqf");
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidObjects.sqf");
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidHoldActionScripts.sqf");
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidHoldActions.sqf");

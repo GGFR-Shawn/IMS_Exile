@@ -1,5 +1,5 @@
 /*
-    File: IMS_raidHoldActionScripts.sqf
+    File: IMS_raidTasks.sqf
     Author: Salutesh aka Steve
 	www.reality-gaming.eu
 	
@@ -18,6 +18,7 @@ publicVariable "fortressRaidTask_One";
 
 fortressRaidTask_OneEnd = {
 	fortressRaidTask_1 setTaskState "Succeeded";
+	player setVariable ["fortressTask_1",0];
 };
 publicVariable "fortressRaidTask_OneEnd";
 

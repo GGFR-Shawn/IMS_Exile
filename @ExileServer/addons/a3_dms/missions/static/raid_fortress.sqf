@@ -20,17 +20,25 @@ _num = DMS_MissionCount;
 // Set mission side (only "bandit" is supported for now)
 _side = "bandit";
 
-_pos = [12103,2486,0]; // Centr position of the area
+_pos = [12103,2486,0];				 // Center position of the area
+//_posVehicle = [12130.9,2272.26,0];  // Position of the Vehicle spawn on mission success.
 
 if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"delay"};
 
 _difficulty = "hardcore"; 
+
+// Work in progress!
+// Vehicle pin code choice - doing early as its used in win message and vehicle spawn
+//_pinCode = (1000 +(round (random 8999)));
+// Vehicle for mission success.
+//_vehicle = [IMS_FortressVehicleLootClass,[(_posVehicle select 0), (_posVehicle select 1)]] call DMS_fnc_SpawnPersistentVehicle;
+
 _AIMaxReinforcementsWaves = 1;
 _AIMaxReinforcements = 5;
 _AIdelay = 10;
-_crate_weapons = 10;
-_crate_items = 10;
-_crate_backpacks = 5;
+//_crate_weapons = 10;
+//_crate_items = 10;
+//_crate_backpacks = 5;
 
 private _temp = DMS_ai_use_launchers;
 DMS_ai_use_launchers = true;
@@ -395,8 +403,10 @@ _groupReinforcementsInfo =
 	]
 ];
 
+
+// Setup crates with items from choices
+// Disabled in this mission and use IMS loot-drop instead.
 /*
-// setup crates with items from choices
 _crate_loot_values =
 [
 	_crate_weapons,			// Set in difficulty select - Weapons
@@ -405,14 +415,37 @@ _crate_loot_values =
 ];
 */
 
+// Work in progress! 
 // Define mission-spawned objects and loot values with vehicle
+/*
+if (IMS_FortressVehicleLoot) then
+{
+	_missionObjs =
+	[
+		[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
+		[_vehicle],												// Vehicle prize
+		[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
+	];
+} 
+else
+{
+	_missionObjs =
+	[
+		[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
+		[],														// No Vehicle prize
+		[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
+	];
+};
+*/
+
+// Define mission-spawned objects
 _missionObjs =
 [
 	[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
-	[],											// no vehicle prize
-	[]											// Crate price setup (Example: [[_crate,_crate_loot_values]])
+	[],														// No Vehicle prize
+	[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
 ];	
-											
+
 // Define Mission Start message
 _msgStart = ['#FFFF00',"Bandis captured the fortress ruins near Lijnhaven. Pick up your mates and find out what's going on."];
 

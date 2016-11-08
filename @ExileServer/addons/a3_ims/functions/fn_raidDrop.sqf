@@ -7,55 +7,55 @@
 */
 
 // Crate loot setup
-private _weaponLoot = selectRandom ["srifle_GM6_ghex_F","srifle_DMR_07_hex_F","srifle_LRR_tna_F"];
-private _weaponLoot2 = selectRandom ["SMG_05_F","arifle_MX_SW_khk_F","LMG_03_F","arifle_ARX_ghex_F","arifle_MXC_khk_F"];
-private _medecineLoot = selectRandom ["Exile_Item_InstaDoc","Exile_Item_Bandage"];
-private _raidLoot = ["H_HelmetO_ViperSP_ghex_F","H_HelmetO_ViperSP_hex_F"];
+private _weaponLoot = selectRandom IMS_FortressLootWeapons;
+private _weaponLoot2 = selectRandom IMS_FortressLootWeapons;
+private _medecineLoot = selectRandom IMS_FortressMedicalItems;
+private _gearLoot = IMS_FortressGearItems;
 private _magazineLoot = selectRandom (getArray (configFile >> "CfgWeapons" >> _weaponLoot >> "magazines"));
 private _magazineLoot2 = selectRandom (getArray (configFile >> "CfgWeapons" >> _weaponLoot2 >> "magazines"));
-private _crateweapon = _weaponLoot;
-private _crateweapon2 = _weaponLoot2;
-private _cratemag = _magazineLoot;
-private _cratemag2 = _magazineLoot2;
-private _cratemed = _medecineLoot;
-private _crateraid = _raidLoot;
+private _crateWeapon = _weaponLoot;
+private _crateWeapon2 = _weaponLoot2;
+private _crateMag = _magazineLoot;
+private _crateMag2 = _magazineLoot2;
+private _crateMed = _medecineLoot;
+private _crateGear = _gearLoot;
 
 _pos = _this select 0;
 _box = _this select 1;
-_marker = _this select 2;
+_markerCrate = _this select 2;
 _paradrop = _this select 3;
 
 if (_paradrop) then {
 	_chute = createVehicle ["NonSteerable_Parachute_F", [_pos select 0, _pos select 1, (_pos select 2) + 150], [], 0, "CAN_COLLIDE"];
-	_created = createVehicle [_box, [_pos select 0, _pos select 1, (_pos select 2) + 150], [], 0, ""];
-	_created attachTo [_chute,[0,0,1]];
-	clearMagazineCargoGlobal _created; 
-	clearWeaponCargoGlobal _created;
-	clearItemCargoGlobal _created;
-	clearBackpackCargoGlobal _created;
+	_lootCrate = createVehicle [_box, [_pos select 0, _pos select 1, (_pos select 2) + 150], [], 0, ""];
+	_lootCrate attachTo [_chute,[0,0,1]];
+	clearMagazineCargoGlobal _lootCrate; 
+	clearWeaponCargoGlobal _lootCrate;
+	clearItemCargoGlobal _lootCrate;
+	clearBackpackCargoGlobal _lootCrate;
 	// Fill the crate
-	_created addWeaponCargoGlobal [_crateweapon, 2];
-	_created addWeaponCargoGlobal [_crateweapon2, 2];
-	_created addMagazineCargoGlobal [_cratemag, (3 + floor(random 3))];
-	_created addMagazineCargoGlobal [_cratemag2, (3 + floor(random 3))];
-	_created addItemCargoGlobal [_cratemed, (3 + floor(random 1))];
-	_created addItemCargoGlobal [_crateraid, 2];
-	_created setVariable ["ExileMoney", 25000, true];
-	_created allowDamage false;
-	_marker setMarkerAlpha 1; 
-	_chemlight = "chemlight_blue" createVehicle (position _created);
-	_chemlight attachto [_created, [0,0,0]];
-	_blueSmoke = "SmokeShellPurple" createVehicle (position _created);
-	_blueSmoke attachto [_created, [0,0,0]];  
-	_boxheight = getpos _created select 2;
+	_lootCrate addWeaponCargoGlobal [_crateWeapon, 2];
+	_lootCrate addWeaponCargoGlobal [_crateWeapon2, 2];
+	_lootCrate addMagazineCargoGlobal [_crateMag, (3 + floor(random 3))];
+	_lootCrate addMagazineCargoGlobal [_crateMag2, (3 + floor(random 3))];
+	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
+	_lootCrate addItemCargoGlobal [_crateGear, 2];
+	_lootCrate setVariable ["ExileMoney", 25000, true];
+	_lootCrate allowDamage false;
+	_markerCrate setMarkerAlpha 1; 
+	_chemlight = "chemlight_blue" createVehicle (position _lootCrate);
+	_chemlight attachto [_lootCrate, [0,0,0]];
+	_blueSmoke = "SmokeShellPurple" createVehicle (position _lootCrate);
+	_blueSmoke attachto [_lootCrate, [0,0,0]];  
+	_boxheight = getpos _lootCrate select 2;
 	
 	while {_boxheight > 0} do {		
-		_boxheight = getpos _created select 2;
+		_boxheight = getpos _lootCrate select 2;
 		if (_boxheight <= 2) exitWith {
-			detach _created;
+			detach _lootCrate;
 			// Add a marker on the map at box position for 5 minutes.
-			_marker = createMarker ["RaidLootMarker", position _created];
-			_marker setMarkerType "ExileHeart";
+			_markerCrate = createMarker ["RaidLootMarker", position _lootCrate];
+			_markerCrate setMarkerType "ExileHeart";
 			"RaidLootMarker" setMarkerText "Raid Loot Drop";
 			"RaidLootMarker" setMarkerColor "colorCivilian";
 			sleep 300;
@@ -63,25 +63,25 @@ if (_paradrop) then {
 		};
 	};
 } else {
-	_created = createVehicle [_box, _pos, [], 0, ""]; 
-	clearMagazineCargoGlobal _created; 
-	clearWeaponCargoGlobal _created;
-	clearItemCargoGlobal _created;
-	clearBackpackCargoGlobal _created;
+	_lootCrate = createVehicle [_box, _pos, [], 0, ""]; 
+	clearMagazineCargoGlobal _lootCrate; 
+	clearWeaponCargoGlobal _lootCrate;
+	clearItemCargoGlobal _lootCrate;
+	clearBackpackCargoGlobal _lootCrate;
 	// Fill the crate
-	_created addWeaponCargoGlobal [_crateweapon, 2];
-	_created addWeaponCargoGlobal [_crateweapon2, 2];
-	_created addMagazineCargoGlobal [_cratemag, (3 + floor(random 3))];
-	_created addMagazineCargoGlobal [_cratemag2, (3 + floor(random 3))];
-	_created addItemCargoGlobal [_cratemed, (3 + floor(random 1))];
-	_created addItemCargoGlobal [_crateraid, 2];
-	_created setVariable ["ExileMoney", 25000, true];
-	_created allowDamage false;
-	_marker setMarkerAlpha 1; 
+	_lootCrate addWeaponCargoGlobal [_crateWeapon, 2];
+	_lootCrate addWeaponCargoGlobal [_crateWeapon2, 2];
+	_lootCrate addMagazineCargoGlobal [_crateMag, (IMS_FortressLootAmmoAmount + floor(random IMS_FortressLootAmmoAmount))];
+	_lootCrate addMagazineCargoGlobal [_crateMag2, (IMS_FortressLootAmmoAmount + floor(random IMS_FortressLootAmmoAmount))];
+	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
+	_lootCrate addItemCargoGlobal [_crateGear, 2];
+	_lootCrate setVariable ["ExileMoney", IMS_FortressPoptabsLoot, true];
+	_lootCrate allowDamage false;
+	_markerCrate setMarkerAlpha 1; 
 	_chemlight = createVehicle ["chemlight_blue", _pos, [], 0, ""];
 	// Add a marker on the map at box position for 5 minutes.
-	_marker = createMarker ["RaidLootMarker", position _created];
-	_marker setMarkerType "ExileHeart";
+	_markerCrate = createMarker ["RaidLootMarker", position _lootCrate];
+	_markerCrate setMarkerType "ExileHeart";
 	"RaidLootMarker" setMarkerText "Raid Loot Drop";
 	"RaidLootMarker" setMarkerColor "colorCivilian";
 	sleep 300;

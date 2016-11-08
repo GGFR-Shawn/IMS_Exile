@@ -1,10 +1,16 @@
+/*
+	IMS Server Addon Configuration
+	Written by Salutesh
+	www.reality-gaming.eu
+*/
+
 class CfgPatches
 {
 	class a3_ims
 	{
 		units[] = {};
 		weapons[] = {};
-		a3_rg_version = "November 04, 2016";
+		a3_rg_version = "November 05, 2016";
 		requiredVersion = 1.64;
 		requiredAddons[] = {"exile_client","exile_server_config","a3_dms"};
 	};
@@ -18,6 +24,7 @@ class CfgFunctions
 		class Master_Directory
 		{
 			file = "\x\addons\ims";
+			class preInit {preInit = 1;};
 			class postInit {postInit = 1;};
 		};
 		class Raids

@@ -134,11 +134,18 @@ fortressRaid_dokument_ActionScript = {
 	[fortressRaid_dokument, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Play ambient music for players in mission area.
 	["AmbientTrack01_F_EXP", 0] remoteExec ["BIS_fnc_playMusic", FortressPlayerUnits];
+	// Add Event Handler to players in mission area.
+	[] remoteExec ["fortressRaid_EventHandler", FortressPlayerUnits, true];
 	// Notifiy toast for players in mission area.
 	[] remoteExec ["fortressRaid_ToastDokuments", FortressPlayerUnits, true];
 	// Create the first mission task for players in mission area.
 	[] remoteExec ["fortressRaidTask_One", FortressPlayerUnits, true];
-	// Wait 3 seconds.
+	// Dirty Hack for a test
+	FortressObjective = {
+		player setVariable ["fortressRaid_Objective", 1, true];
+	};
+	[] remoteExec ["FortressObjective", FortressPlayerUnits, true];
+	// Wait 3 seconds
 	sleep 3;
 	// Notifiy toast for players in mission area.
 	[] remoteExec ["fortressRaid_ToastNewTask", FortressPlayerUnits, true];
