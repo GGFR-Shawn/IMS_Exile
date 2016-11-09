@@ -15,6 +15,6 @@
 	
 		/* Vehicle Spawn Settings */
 		/* THIS IS WORK IN PROGRESS AND NOT READY */
-		IMS_FortressVehicleLoot					= true;																																								// Enable/disable vehicle loot spawn on Fortress mission success.
-		IMS_FortressVehicleLootClass			= "Exile_Car_Ifrit";
-																																	// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
+		IMS_FortressVehicleLoot					= false;																																							// Enable/disable vehicle loot spawn on Fortress mission success.
+		IMS_FortressVehicleLootClass			= "Exile_Car_Ifrit";																																				// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
+																																																						
