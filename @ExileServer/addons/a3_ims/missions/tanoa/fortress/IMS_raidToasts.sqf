@@ -52,6 +52,11 @@ fortressRaid_ToastLoot = {
 publicVariable "fortressRaid_ToastLoot";
 
 fortressRaid_ToastComplete = {
-	["SuccessTitleAndText", ["<t color='#06ff00' align='center' font='PuristaSemiBold'>MISSION COMPLETE</t>", format ["<t color='#ffe400'><img align='center' 	image='textures\win.paa' size='80'/></t><br/><br/><t color='#06ff00' font='PuristaSemiBold'>The bandits were successfully stopped.<br/>Raid mission completed!</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
+	["SuccessTitleAndText", ["<t color='#06ff00' align='center' font='PuristaSemiBold'>MISSION COMPLETE</t>", format ["<t color='#ffe400'><img align='center' image='textures\win.paa' size='80'/></t><br/><br/><t color='#06ff00' font='PuristaSemiBold'>The bandits were successfully stopped.<br/>Raid mission completed!</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };
 publicVariable "fortressRaid_ToastComplete";
+
+fortressRaid_ToastVehicle = {
+	["SuccessTitleAndText", ["<t color='#f07700' align='center' font='PuristaSemiBold'>Vehicle Drop</t>", format ["<t color='#ffc96b'><img align='center' image='textures\vehicle.paa' size='80'/></t><br/><br/><t color='#f07700' font='PuristaSemiBold'>Vehicle drop incoming! The Pin-Code for the Vehicle is: %1</t>", IMS_fortressVehiclePinCode]]] call ExileClient_gui_toaster_addTemplateToast;
+};
+publicVariable "fortressRaid_ToastVehicle";

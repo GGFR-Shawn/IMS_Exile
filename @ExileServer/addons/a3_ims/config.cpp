@@ -33,6 +33,8 @@ class CfgFunctions
 			class raidAddHoldAction {};
 			class raidDrop {};
 			class raidEndBombing {};
+			class vehicleSpawn {};
+			class vehicleHandle {};
 		};
 	};
 };

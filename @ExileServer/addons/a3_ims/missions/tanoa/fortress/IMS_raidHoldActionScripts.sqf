@@ -24,9 +24,13 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaid_ToastBombActivated", FortressPlayerUnits, true];
 	sleep 3;
 	// Start timer
-	[180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	//[180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	//[] remoteExec ["fortressRaidAlarmEvent", -2, true];
+	//sleep 180;
+	// Start timer
+	[10] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
 	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
-	sleep 180;
+	sleep 10;
 	// Start end events.
 	[] remoteExec ["fortressRaidBombingEvent", 0, true];
 	sleep 20;
@@ -35,10 +39,20 @@ fortressRaid_terminal_ActionScript = {
 	// Notifiy player with toast.
 	[] remoteExec ["fortressRaid_ToastComplete", FortressPlayerUnits, true];
 	sleep 20;
+	// Completion Event.
 	[] call fortressRaidCompletionEvent;
+	// Spawn loot.
 	[[12137,2245.81,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_raidDrop", 0, true];
 	// Announce the loot drop.
 	[] remoteExec ["fortressRaid_ToastLoot", FortressPlayerUnits, true];
+	sleep 10;
+	// Spawn vehicle if option is true.
+	if (IMS_FortressVehicleLoot) then {
+		[[12137,2245.81,0], 150, IMS_FortressVehicleLootClass, (1000 +(round (random 8999))), false] call IMS_fnc_vehicleSpawn;
+		sleep 2;
+		// Announce the vehicle drop and pin-code.
+		[] remoteExec ["fortressRaid_ToastVehicle", FortressPlayerUnits, true];
+	};
 	sleep 10;
 	[] remoteExec ["fortressRaidRemoveEvent", -2, true];
 };
