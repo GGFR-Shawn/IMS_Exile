@@ -1,12 +1,13 @@
 /*
-    File: IMS_raidHoldActionScripts.sqf
-    Author: Salutesh aka Steve
-	www.reality-gaming.eu
+    IMS_raidHoldActionScripts.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
 	
 	Created with Exile Mod 3DEN Plugin
 	www.exilemod.com
 	
-    Description: Place visiual objects and buildings in the fortress area.  
+    Description: 
+	Place visiual objects and buildings in the fortress area.  
 */
 
 ExileRouletteChairs = [];

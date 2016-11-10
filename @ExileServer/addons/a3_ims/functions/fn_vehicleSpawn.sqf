@@ -1,13 +1,11 @@
 /*
-	[getPos player, 100, "B_supplyCrate_F", (1000 +(round (random 8999)))] call IMS_fnc_vehicleSpawn;
-	[
-		_type,					// STRING: Vehicle classname to spawn.
-		_pos,					// ARRAY (positionATL or position2d): Where the vehicle will be spawned (strict)
-		_pinCode,				// STRING or NUMBER: String has to be 4 digits. Number has to be between 0-9999, and will be automatically formatted.
-		_spawnATL				// (OPTIONAL) BOOLEAN: Whether or not to spawn the vehicle ATL (Above Terrain Level) or ASL (Above Sea Level). Default: true (ATL)
-	] call DMS_fnc_SpawnPersistentVehicle;
+	fn_vehicleSpawn.sqf
+	Written by Salutesh
+	www.reality-gaming.eu
+	
+	Description:
+	
 */
-
 
 private ["_vehObj","_para","_pos","_height","_type","_pinCode","_spawnATL"];
 _pos = _this select 0;

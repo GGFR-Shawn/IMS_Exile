@@ -1,6 +1,7 @@
 /*
-    File: fn_raidAddHoldAction.sqf
-    Author: Salutesh aka Steve
+    File: fn_raidDrop.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
 	Function to create a hold action on target. Just a smarter version for our needs of the BI function.

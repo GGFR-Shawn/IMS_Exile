@@ -1,6 +1,7 @@
 /*
     File: fn_raidDrop.sqf
-    Author: Salutesh aka Steve
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
 	Just creates the loot crate on the sucsess of a mission.

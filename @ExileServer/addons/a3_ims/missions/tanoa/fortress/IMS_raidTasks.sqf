@@ -1,7 +1,7 @@
 /*
-    File: IMS_raidTasks.sqf
-    Author: Salutesh aka Steve
-	www.reality-gaming.eu
+    IMS_raidTasks.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
 	
     Description: Mission tasks for the fortress mission.  
 */

@@ -1,4 +1,4 @@
-![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--11--04-00a9e1.svg)
+![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--11--10-00a9e1.svg)
 
 # General Information:
 ####Please note that this is not ready for public servers!

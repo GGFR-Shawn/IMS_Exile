@@ -1,6 +1,7 @@
 /*
     File: fn_raidEndBombing.sqf
-    Author: Salutesh aka Steve
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
 	//////////////////////////////////////////////////////////////////

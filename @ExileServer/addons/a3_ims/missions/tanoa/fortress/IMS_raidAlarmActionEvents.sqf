@@ -1,6 +1,7 @@
 /*
-    File: IMS_raidAlarmActionEvents.sqf
-    Author: Salutesh aka Steve
+    IMS_raidAlarmActionEvents.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
     This file includes the alarm events after activation of the bombs.

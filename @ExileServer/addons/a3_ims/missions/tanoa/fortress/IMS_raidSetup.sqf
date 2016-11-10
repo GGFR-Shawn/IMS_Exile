@@ -1,6 +1,7 @@
 /*
-    File: IMS_raidSetup.sqf
-    Author: Salutesh aka Steve
+    IMS_raidSetup.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
     Pre-Setup for some placed objects.

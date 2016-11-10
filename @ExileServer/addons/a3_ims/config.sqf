@@ -1,7 +1,7 @@
 /*
 	Main IMS Config File
-
-	Created by Salutesh
+	Written by Salutesh
+	www.reality-gaming.eu
 */
 
 /* Mission System Settings */

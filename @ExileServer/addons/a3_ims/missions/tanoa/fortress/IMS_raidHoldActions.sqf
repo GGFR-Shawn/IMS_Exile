@@ -1,6 +1,6 @@
 /*
-    File: IMS_raidHoldActions.sqf
-    Author: Salutesh aka Steve
+    IMS_raidHoldActions.sqf
+    Written by Salutesh
     www.reality-gaming.eu
 	
     Description:

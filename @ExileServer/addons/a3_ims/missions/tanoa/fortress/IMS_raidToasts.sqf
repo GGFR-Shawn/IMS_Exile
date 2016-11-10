@@ -1,7 +1,7 @@
 /*
-    File: IMS_raidHoldActionScripts.sqf
-    Author: Salutesh aka Steve
-	www.reality-gaming.eu
+    IMS_raidToasts.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
 	
     Description: Toast notifications for the fortress mission.  
 */

@@ -1,6 +1,7 @@
 /*
-    File: IMS_raidBombingActionEvents.sqf
-    Author: Salutesh aka Steve
+    IMS_raidBombingActionEvents.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
     This file includes the bombing event at the end of the timer.

@@ -1,4 +1,12 @@
-//[_iniVeh, _para, _type] spawn TGM_vd_fnc_handle;
+/*
+	fn_vehicleHandle.sqf
+	Written by Salutesh
+	www.reality-gaming.eu
+	
+	Description:
+	
+*/
+
 private ["_iniVeh","_para","_type"];
 _iniVeh = _this select 0;
 _para = _this select 1;

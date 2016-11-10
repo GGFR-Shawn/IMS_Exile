@@ -1,6 +1,7 @@
 /*
-    File: IMS_raidCompletionEvents.sqf
-    Author: Salutesh aka Steve
+    IMS_raidCompletionEvents.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
     This file triggers after the mission to coplete the DMS mission also and remove the interaction objects until the server restarts.

@@ -1,7 +1,8 @@
 /*
     File: fn_raidEndTimer.sqf
-    Author: Salutesh aka Steve
-    
+    Written by Salutesh
+    www.reality-gaming.eu
+	
     Description:
 	
 	//////////////////////////////////////////////////////////////////

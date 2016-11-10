@@ -1,6 +1,7 @@
 /*
-    File: IMS_raidEventHandler.sqf
-    Author: Salutesh aka Steve
+    IMS_raidEventHandler.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description:
 	

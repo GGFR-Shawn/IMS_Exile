@@ -1,7 +1,7 @@
 /*
-    File: IMS_raidFillSupplybox.sqf
-    Author: Salutesh aka Steve
-	www.reality-gaming.eu
+    IMS_raidFillSupplybox.sqf
+    Written by Salutesh
+    www.reality-gaming.eu
     
     Description: Setup for supplyboxes in the fortress area.
 */
