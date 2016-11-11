@@ -21,31 +21,14 @@ _num = DMS_MissionCount;
 _side = "bandit";
 
 _pos = [12103,2486,0];				 // Center position of the area
-//_posVehicle = [12143.2,2260.43,-5];  // Position of the Vehicle spawn on mission success.
 
 if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"delay"};
 
 _difficulty = "hardcore"; 
 
-// Add vehicle spawn if option is enabled.
-/*
-if (IMS_FortressVehicleLoot) then {
-	// Vehicle pin code choice - doing early as its used in win message and vehicle spawn.
-	_pinCode = (1000 +(round (random 8999)));
-	IMS_fortressVehiclePinCode = _pinCode;
-	publicVariable "IMS_fortressVehiclePinCode";
-	// Vehicle for mission success.
-	_vehicle = [IMS_FortressVehicleLootClass,[(_posVehicle select 0), (_posVehicle select 1)]] call DMS_fnc_SpawnPersistentVehicle;
-	_vehicle setDir 289;
-};
-*/
-
 _AIMaxReinforcementsWaves = 1;
 _AIMaxReinforcements = 5;
 _AIdelay = 10;
-//_crate_weapons = 10;
-//_crate_items = 10;
-//_crate_backpacks = 5;
 
 private _temp = DMS_ai_use_launchers;
 DMS_ai_use_launchers = true;
@@ -341,29 +324,6 @@ _staticGuns =
 ] call DMS_fnc_SpawnAIStaticMG;
 
 DMS_ai_use_launchers = _temp;
-/*
-// Define the classnames and locations where the crates can spawn (at least 2, since we're spawning 2 crates)
-_crateClasses_and_Positions =
-[
-	
-	//[[12471.7,14195.7,0.413441],"I_CargoNet_01_ammo_F"]
-];
-
-{
-	deleteVehicle (nearestObject _x);		// Make sure to remove any previous crates.
-} forEach _crateClasses_and_Positions;
-
-// Shuffle the list
-_crateClasses_and_Positions = _crateClasses_and_Positions call ExileClient_util_array_shuffle;
-
-// Create Crates
-_crate = [_crateClasses_and_Positions select 0 select 1, _crateClasses_and_Positions select 0 select 0] call DMS_fnc_SpawnCrate;
-
-// Enable smoke on the crates due to size of area
-{
-	_x setVariable ["DMS_AllowSmoke", true];
-} forEach [_crate];
-*/
 
 // Get the AI to shut the fuck up :)
 enableSentences false;
@@ -410,39 +370,7 @@ _groupReinforcementsInfo =
 	]
 ];
 
-
-// Setup crates with items from choices
-// Disabled in this mission and use IMS loot-drop instead.
-/*
-_crate_loot_values =
-[
-	_crate_weapons,			// Set in difficulty select - Weapons
-	_crate_items,			// Set in difficulty select - Items
-	_crate_backpacks 		// Set in difficulty select - Backpacks
-];
-*/
-
-// Define mission-spawned objects and loot values with vehicle
-/*
-if (IMS_FortressVehicleLoot) then
-{
-	_missionObjs =
-	[
-		[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
-		[_vehicle],												// Vehicle prize
-		[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
-	];
-} 
-else
-{
-	_missionObjs =
-	[
-		[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
-		[],														// No Vehicle prize
-		[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
-	];
-};
-*/
+// Add mission objects to monitor.
 _missionObjs =
 [
 	[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.

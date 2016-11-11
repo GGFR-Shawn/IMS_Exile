@@ -17,22 +17,9 @@ _pinCode = _this select 5;
 
 _vehicleObject = [_type,_pos,_dir,_spawnATL,_pinCode] call ExileServer_object_vehicle_createPersistentVehicle;
 
-_vehicleObject addMPEventHandler ["MPKilled", { if (isServer) then {_this call ExileServer_object_vehicle_event_onMPKilled;};}];
-_vehicleObject addEventHandler ["GetIn", {_this call ExileServer_object_vehicle_event_onGetIn}];
-
-_vehicleObject setVariable ["ExileMoney",0,true];
-_vehicleObject setVariable ["ExileIsPersistent", true];
-_vehicleObject setVariable ["ExileAccessCode", _pinCode];
-_vehicleObject setVariable ["ExileOwnerUID", "DMS_PersistentVehicle"];
-_vehicleObject setVariable ["ExileIsLocked",0];
-_vehicleObject lock 0;
-
-_vehicleObject call ExileServer_object_vehicle_database_insert;
-_vehicleObject call ExileServer_object_vehicle_database_update;
-
 _para = "B_Parachute_02_F" createVehicle [0, 0, 10000];
 _vehicleObject attachTo [_para,[0,0,-1]];
 _para setPos [_pos select 0, _pos select 1, _height];
-[_vehicleObject, _para, _type] spawn IMS_fnc_vehicleHandle;
+[_vehicleObject,_para,_type,_pinCode] spawn IMS_fnc_vehicleHandle;
 
 _vehicleObject;

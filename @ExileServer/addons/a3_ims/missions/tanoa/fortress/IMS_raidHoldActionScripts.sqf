@@ -25,9 +25,9 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaid_ToastBombActivated", FortressPlayerUnits, true];
 	sleep 3;
 	// Start timer
-	[10] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	[180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
 	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
-	sleep 10;
+	sleep 180;
 	// Start end events.
 	[] remoteExec ["fortressRaidBombingEvent", 0, true];
 	sleep 20;
