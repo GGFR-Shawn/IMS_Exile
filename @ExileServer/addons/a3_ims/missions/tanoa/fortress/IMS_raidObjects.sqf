@@ -165,7 +165,7 @@ private _vehicles = [
 }
 forEach _vehicles;
 
-// 458 Simple Objects
+// 490 Simple Objects
 private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
 private _simpleObjects = [
 ["a3\structures_f_epb\civ\camping\camping_light_f.p3d", [12097.2, 2501.07, 8.33567], [-0.996805, 0.079868, 0], [0, 0, 1]],
@@ -625,7 +625,39 @@ private _simpleObjects = [
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12149.8, 2478.96, 3.59515], [0.860189, -0.509976, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12149.9, 2478.92, 4.94888], [0.860189, -0.509976, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12146.7, 2474.09, 3.57995], [0.551129, 0.83442, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [12146.8, 2474.11, 4.93369], [0.551129, 0.83442, 0], [0, 0, 1]]
+["a3\structures_f\walls\stone_pillar_f.p3d", [12146.8, 2474.11, 4.93369], [0.551129, 0.83442, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\garbage_square3_f.p3d", [12151.2, 2260.68, 7.9377], [-0.0280976, 0.999605, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\garbagebags_f.p3d", [12150.2, 2253, 8.19844], [-0.0280976, 0.999605, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12149.5, 2250.36, 8.50317], [0.981713, 0.190366, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12149.9, 2248.39, 8.56843], [0.981713, 0.190366, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_open_f.p3d", [12151.6, 2246.92, 8.60917], [-0.221097, 0.975252, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\garbagewashingmachine_f.p3d", [12153.5, 2249.94, 8.4374], [0.974564, 0.224109, 0], [0, 0, 1]],
+["a3\structures_f\wrecks\wreck_hmmwv_f.p3d", [12157.9, 2254.13, 9.27901], [-0.984856, -0.173377, 0], [0, 0, 1]],
+["a3\structures_f\items\vessels\canisterplastic_f.p3d", [12157.1, 2264.23, 8.5453], [-0.451465, 0.892289, 0], [0, 0, 1]],
+["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12161.1, 2250.26, 9.29235], [0.970048, 0.242915, 0], [0, 0, 1]],
+["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12160.8, 2251.81, 9.21252], [0.970048, 0.242915, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12155.9, 2267.96, 8.29942], [0.180041, -0.983659, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12151.9, 2267.23, 8.29806], [0.180041, -0.983659, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12147.9, 2266.48, 8.30025], [0.180041, -0.983659, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12146.4, 2264.04, 8.19025], [0.985964, 0.166957, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12158.3, 2266.28, 8.29699], [-0.980888, -0.194574, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12159.1, 2262.33, 8.30249], [-0.980888, -0.194574, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12159.9, 2258.38, 8.30198], [-0.978935, -0.204173, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12160.8, 2254.43, 8.30241], [-0.976967, -0.213389, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12161.7, 2250.48, 8.30187], [-0.976967, -0.213389, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12160.1, 2248.07, 8.30584], [-0.224029, 0.974582, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12156.2, 2247.16, 8.30322], [-0.224029, 0.974582, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12148.4, 2252.13, 8.28434], [0.985964, 0.166957, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12149.2, 2248.18, 8.28434], [0.981854, 0.18964, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12152.3, 2246.21, 8.30542], [-0.228453, 0.973555, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\tyre_f.p3d", [12154.7, 2265.68, 8.27178], [-0.0280976, 0.999605, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\tyres_f.p3d", [12156.3, 2266.04, 8.46982], [-0.733538, -0.679648, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\junkpile_f.p3d", [12148.9, 2264.33, 8.08082], [-0.405668, -0.91402, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampstreet_f.p3d", [12150.9, 2247.4, 13.6224], [0.578333, 0.815801, 0], [0, 0, 1]],
+["a3\structures_f_exp\commercial\market\woodenshelter_01_f.p3d", [12144.5, 2252.34, 8.5183], [-0.767512, 0.641035, 0], [0, 0, 1]],
+["a3\structures_f_epa\civ\camping\woodentable_small_f.p3d", [12143.4, 2251.09, 7.83678], [0.7874, -0.616443, 0], [0, 0, 1]],
+["a3\structures_f\items\electronics\survivalradio_f.p3d", [12143.7, 2250.92, 8.36317], [-0.393807, 0.919193, 0], [0, 0, 1]],
+["a3\structures_f\households\addons\i_garage_v2_f.p3d", [12150.9, 2270.45, 8.44816], [-0.196844, 0.980435, 0], [0, 0, 1]]
 ];
 
 {

@@ -21,17 +21,24 @@ _num = DMS_MissionCount;
 _side = "bandit";
 
 _pos = [12103,2486,0];				 // Center position of the area
-//_posVehicle = [12130.9,2272.26,0];  // Position of the Vehicle spawn on mission success.
+//_posVehicle = [12143.2,2260.43,-5];  // Position of the Vehicle spawn on mission success.
 
 if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"delay"};
 
 _difficulty = "hardcore"; 
 
-// Work in progress!
-// Vehicle pin code choice - doing early as its used in win message and vehicle spawn
-//_pinCode = (1000 +(round (random 8999)));
-// Vehicle for mission success.
-//_vehicle = [IMS_FortressVehicleLootClass,[(_posVehicle select 0), (_posVehicle select 1)]] call DMS_fnc_SpawnPersistentVehicle;
+// Add vehicle spawn if option is enabled.
+/*
+if (IMS_FortressVehicleLoot) then {
+	// Vehicle pin code choice - doing early as its used in win message and vehicle spawn.
+	_pinCode = (1000 +(round (random 8999)));
+	IMS_fortressVehiclePinCode = _pinCode;
+	publicVariable "IMS_fortressVehiclePinCode";
+	// Vehicle for mission success.
+	_vehicle = [IMS_FortressVehicleLootClass,[(_posVehicle select 0), (_posVehicle select 1)]] call DMS_fnc_SpawnPersistentVehicle;
+	_vehicle setDir 289;
+};
+*/
 
 _AIMaxReinforcementsWaves = 1;
 _AIMaxReinforcements = 5;
@@ -415,7 +422,6 @@ _crate_loot_values =
 ];
 */
 
-// Work in progress! 
 // Define mission-spawned objects and loot values with vehicle
 /*
 if (IMS_FortressVehicleLoot) then
@@ -437,14 +443,12 @@ else
 	];
 };
 */
-
-// Define mission-spawned objects
 _missionObjs =
 [
 	[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
 	[],														// No Vehicle prize
 	[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
-];	
+];
 
 // Define Mission Start message
 _msgStart = ['#FFFF00',"Bandis captured the fortress ruins near Lijnhaven. Pick up your mates and find out what's going on."];
