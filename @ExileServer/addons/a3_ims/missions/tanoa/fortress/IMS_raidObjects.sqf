@@ -10,22 +10,16 @@
 	Place visiual objects and buildings in the fortress area.  
 */
 
+/**
+ * Created with Exile Mod 3DEN Plugin
+ * www.exilemod.com
+ */
+
 ExileRouletteChairs = [];
 ExileRouletteChairPositions = [];
 
-// 132 Vehicles
+// 131 Vehicles
 private _vehicles = [
-["Land_Cargo_HQ_V4_F", [12034.6, 2560.52, 7.2554], [-0.234752, -0.972055, 0], [0, 0, 1], true],
-["Land_Cargo_HQ_V4_F", [12189.4, 2455.45, 7.39616], [-0.236702, 0.971582, 0], [0, 0, 1], true],
-["Land_Cargo_Patrol_V4_F", [12105.5, 2516.27, 12.3233], [-0.994776, -0.102081, 0], [0, 0, 1], true],
-["Land_House_Small_05_F", [12095.3, 2498.45, 9.30392], [0.499713, -0.866191, 0], [0, 0, 1], true],
-["Land_HBarrier_01_tower_green_F", [12127.7, 2470.73, 9.72711], [0.521432, -0.853293, 0], [0, 0, 1], true],
-["Land_HBarrier_01_tower_green_F", [12148.5, 2510.46, 9.72711], [-0.0270842, -0.999633, 0], [0, 0, 1], true],
-["Land_TripodScreen_01_large_F", [12178.4, 2482.6, 4.46267], [-0.589676, -0.80764, 0], [0, 0, 1], true],
-["Land_Slum_01_F", [12078.5, 2508.75, 7.49581], [-0.993373, -0.114937, 0], [0, 0, 1], true],
-["Land_Cargo_Tower_V1_No1_F", [12063.7, 2457.71, 16.3205], [0.471166, -0.882045, 0], [0, 0, 1], true],
-["Land_Cargo_Tower_V1_No2_F", [12043.4, 2392.34, 16.4518], [0.885418, 0.464796, 0], [0, 0, 1], true],
-["Land_Cargo_Tower_V1_No3_F", [12181.3, 2570.86, 16.4498], [-0.994077, 0.108676, 0], [0, 0, 1], true],
 ["Land_GarbageBags_F", [12136.1, 2495.36, 3.8135], [0.682471, 0.730913, 0], [0, 0, 1], true],
 ["Land_File1_F", [12182.1, 2479.29, 4.24996], [0.977916, 0.208997, 0], [0, 0, 1], true],
 ["Land_Boat_04_wreck_F", [12148.1, 2436.29, -0.796846], [-0.442471, 0.852823, 0.27733], [0, -0.30925, 0.950981], true],
@@ -117,6 +111,15 @@ private _vehicles = [
 ["Land_LampHalogen_F", [12075.6, 2515.25, 13.5528], [-0.656402, -0.754411, 0], [0, 0, 1], true],
 ["Land_FoodContainer_01_F", [12062.2, 2462.71, 16.639], [0.834654, -0.550775, 0], [0, 0, 1], true],
 ["Exile_Cosmetic_PopTabs", [12061.9, 2462.58, 17.13], [0.852213, -0.523194, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11130.7, 11480.8, 351.305], [-0.0674877, -0.99772, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11133.5, 11484.1, 351.305], [0.0683203, 0.997663, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11131.1, 11485.1, 351.305], [-0.0564112, -0.998408, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11133.8, 11488.6, 351.305], [0.0683203, 0.997663, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11131.4, 11489.6, 351.305], [-0.0440985, -0.999027, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11135, 11495.4, 351.305], [0.997501, -0.0706468, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11145.1, 11484.5, 351.305], [0.0683203, 0.997663, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11145.3, 11488.9, 351.305], [0.0683203, 0.997663, 0], [0, 0, 1], true],
+["OfficeTable_01_old_F", [11145.6, 11493.3, 351.305], [0.0683203, 0.997663, 0], [0, 0, 1], true],
 ["Exile_Cosmetic_Beer", [12062.1, 2462.87, 17.1328], [0, 1, 0], [0, 0, 1], true],
 ["Land_CampingChair_V2_F", [12188.8, 2458.95, 4.62892], [-0.999188, 0.0402885, 0], [0, 0, 1], true],
 ["Land_CampingChair_V2_F", [12189.1, 2458.07, 4.62892], [-0.93195, -0.362586, 0], [0, 0, 1], true],
@@ -140,13 +143,14 @@ private _vehicles = [
 ["Flag_Syndikat_F", [12029.5, 2409.49, 7.74139], [-0.531108, 0.847304, 0], [0, 0, 1], true],
 ["Flag_Syndikat_F", [12087.5, 2498.36, 11.4068], [-0.862336, 0.506336, 0], [0, 0, 1], true],
 ["Land_CampingTable_F", [12068.1, 2460.89, 19.2055], [-0.880389, -0.474252, 0], [0, 0, 1], true],
-["Land_Pot_02_F", [12087.7, 2498.05, 7.43709], [-0.461741, 0.887015, 0], [0, 0, 1], true],
+["Land_Pot_02_F", [12087.7, 2498.05, 7.43712], [-0.461749, 0.887011, 0], [0, 0, 1], true],
 ["Land_Pot_02_F", [12029.5, 2409.12, 3.77165], [0, 1, 0], [0, 0, 1], true],
 ["Land_dp_smallTank_F", [12148, 2569.94, 8.90147], [0.695675, 0.718357, 0], [0, 0, 1], true],
 ["Land_dp_smallTank_F", [12161.1, 2445.1, 8.42847], [-0.706699, 0.707514, 0], [0, 0, 1], true],
 ["CamoNet_ghex_big_F", [12060.2, 2553.73, 5.45084], [0.576931, 0.816793, 0], [0, 0, 1], true],
 ["CamoNet_ghex_big_F", [12180.4, 2479.08, 5.48944], [0.940175, 0.340691, 0], [0, 0, 1], true],
-["Land_Ammobox_rounds_F", [12182.4, 2478.26, 4.33777], [-0.451675, 0.892182, 0], [0, 0, 1], true]
+["Land_Ammobox_rounds_F", [12182.4, 2478.26, 4.33777], [-0.451675, 0.892182, 0], [0, 0, 1], true],
+["Land_TripodScreen_01_large_F", [12178.4, 2482.6, 4.46267], [-0.589676, -0.80764, 0], [0, 0, 1], false]
 ];
 
 {
@@ -165,9 +169,19 @@ private _vehicles = [
 }
 forEach _vehicles;
 
-// 490 Simple Objects
+// 499 Simple Objects
 private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
 private _simpleObjects = [
+["a3\structures_f_exp\military\containerbases\cargo_hq_v4_f.p3d", [12034.6, 2560.52, 7.2554], [-0.234752, -0.972055, 0], [0, 0, 1]],
+["a3\structures_f_exp\military\containerbases\cargo_hq_v4_f.p3d", [12189.4, 2455.45, 7.39616], [-0.236702, 0.971582, 0], [0, 0, 1]],
+["a3\structures_f_exp\military\containerbases\cargo_patrol_v4_f.p3d", [12105.5, 2516.27, 12.3233], [-0.994776, -0.102081, 0], [0, 0, 1]],
+["a3\structures_f_exp\civilian\house_small_05\house_small_05_f.p3d", [12095.3, 2498.45, 9.30392], [0.499713, -0.866191, 0], [0, 0, 1]],
+["a3\structures_f_exp\military\fortifications\hbarrier_01_tower_green_f.p3d", [12127.7, 2470.73, 9.72711], [0.521432, -0.853293, 0], [0, 0, 1]],
+["a3\structures_f_exp\military\fortifications\hbarrier_01_tower_green_f.p3d", [12148.5, 2510.46, 9.72711], [-0.0270842, -0.999633, 0], [0, 0, 1]],
+["a3\structures_f_exp\civilian\slum_01\slum_01_f.p3d", [12078.5, 2508.75, 7.49581], [-0.993373, -0.114937, 0], [0, 0, 1]],
+["a3\structures_f\mil\cargo\cargo_tower_v1_no1_f.p3d", [12063.7, 2457.71, 16.3205], [0.471166, -0.882045, 0], [0, 0, 1]],
+["a3\structures_f\mil\cargo\cargo_tower_v1_no2_f.p3d", [12043.4, 2392.34, 16.4518], [0.885418, 0.464796, 0], [0, 0, 1]],
+["a3\structures_f\mil\cargo\cargo_tower_v1_no3_f.p3d", [12181.3, 2570.86, 16.4498], [-0.994077, 0.108676, 0], [0, 0, 1]],
 ["a3\structures_f_epb\civ\camping\camping_light_f.p3d", [12097.2, 2501.07, 8.33567], [-0.996805, 0.079868, 0], [0, 0, 1]],
 ["a3\structures_f\wrecks\uwreck_heli_attack_02_f.p3d", [11994.4, 2542.56, -2.1696], [0, 1, 0], [0, 0, 1]],
 ["a3\structures_f\wrecks\uwreck_mv22_f.p3d", [12219.6, 2523.72, 2.07632], [0.402251, -0.915529, 0], [0, 0, 1]],
@@ -619,45 +633,44 @@ private _simpleObjects = [
 ["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12074.8, 2441.44, 8.78945], [0.866531, 0.499123, 0], [0, 0, 1]],
 ["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12166.3, 2446.38, 4.94245], [-0.3099, 0.950769, 0], [0, 0, 1]],
 ["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12174, 2571.08, 4.89647], [-0.341955, -0.939717, 0], [0, 0, 1]],
-["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12113.2, 2513.45, 8.79245], [-0.961646, -0.274293, 0], [0, 0, 1]],
+["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12113.2, 2513.45, 8.79245], [-0.961646, -0.274295, 0], [0, 0, 1]],
 ["a3\supplies_f_heli\slingload\slingload_01_fuel_f.p3d", [12037.7, 2521.94, 4.94245], [0.82087, 0.571115, 0], [0, 0, 1]],
 ["a3\structures_f_exp\civilian\sheds\shed_07_f.p3d", [12147.8, 2561.17, 4.94505], [0.991819, 0.127653, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12149.8, 2478.96, 3.59515], [0.860189, -0.509976, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12149.9, 2478.92, 4.94888], [0.860189, -0.509976, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12146.7, 2474.09, 3.57995], [0.551129, 0.83442, 0], [0, 0, 1]],
 ["a3\structures_f\walls\stone_pillar_f.p3d", [12146.8, 2474.11, 4.93369], [0.551129, 0.83442, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\garbage_square3_f.p3d", [12151.2, 2260.68, 7.9377], [-0.0280976, 0.999605, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\garbagebags_f.p3d", [12150.2, 2253, 8.19844], [-0.0280976, 0.999605, 0], [0, 0, 1]],
-["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12149.5, 2250.36, 8.50317], [0.981713, 0.190366, 0], [0, 0, 1]],
-["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12149.9, 2248.39, 8.56843], [0.981713, 0.190366, 0], [0, 0, 1]],
-["a3\structures_f_epb\civ\garbage\garbagecontainer_open_f.p3d", [12151.6, 2246.92, 8.60917], [-0.221097, 0.975252, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\garbagewashingmachine_f.p3d", [12153.5, 2249.94, 8.4374], [0.974564, 0.224109, 0], [0, 0, 1]],
-["a3\structures_f\wrecks\wreck_hmmwv_f.p3d", [12157.9, 2254.13, 9.27901], [-0.984856, -0.173377, 0], [0, 0, 1]],
-["a3\structures_f\items\vessels\canisterplastic_f.p3d", [12157.1, 2264.23, 8.5453], [-0.451465, 0.892289, 0], [0, 0, 1]],
-["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12161.1, 2250.26, 9.29235], [0.970048, 0.242915, 0], [0, 0, 1]],
-["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12160.8, 2251.81, 9.21252], [0.970048, 0.242915, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12155.9, 2267.96, 8.29942], [0.180041, -0.983659, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12151.9, 2267.23, 8.29806], [0.180041, -0.983659, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12147.9, 2266.48, 8.30025], [0.180041, -0.983659, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12146.4, 2264.04, 8.19025], [0.985964, 0.166957, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12158.3, 2266.28, 8.29699], [-0.980888, -0.194574, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12159.1, 2262.33, 8.30249], [-0.980888, -0.194574, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12159.9, 2258.38, 8.30198], [-0.978935, -0.204173, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12160.8, 2254.43, 8.30241], [-0.976967, -0.213389, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12161.7, 2250.48, 8.30187], [-0.976967, -0.213389, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12160.1, 2248.07, 8.30584], [-0.224029, 0.974582, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12156.2, 2247.16, 8.30322], [-0.224029, 0.974582, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12148.4, 2252.13, 8.28434], [0.985964, 0.166957, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12149.2, 2248.18, 8.28434], [0.981854, 0.18964, 0], [0, 0, 1]],
-["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12152.3, 2246.21, 8.30542], [-0.228453, 0.973555, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\tyre_f.p3d", [12154.7, 2265.68, 8.27178], [-0.0280976, 0.999605, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\tyres_f.p3d", [12156.3, 2266.04, 8.46982], [-0.733538, -0.679648, 0], [0, 0, 1]],
-["a3\structures_f\civ\garbage\junkpile_f.p3d", [12148.9, 2264.33, 8.08082], [-0.405668, -0.91402, 0], [0, 0, 1]],
-["a3\structures_f\civ\lamps\lampstreet_f.p3d", [12150.9, 2247.4, 13.6224], [0.578333, 0.815801, 0], [0, 0, 1]],
-["a3\structures_f_exp\commercial\market\woodenshelter_01_f.p3d", [12144.5, 2252.34, 8.5183], [-0.767512, 0.641035, 0], [0, 0, 1]],
-["a3\structures_f_epa\civ\camping\woodentable_small_f.p3d", [12143.4, 2251.09, 7.83678], [0.7874, -0.616443, 0], [0, 0, 1]],
-["a3\structures_f\items\electronics\survivalradio_f.p3d", [12143.7, 2250.92, 8.36317], [-0.393807, 0.919193, 0], [0, 0, 1]],
-["a3\structures_f\households\addons\i_garage_v2_f.p3d", [12150.9, 2270.45, 8.44816], [-0.196844, 0.980435, 0], [0, 0, 1]]
+["a3\structures_f\civ\garbage\garbagebags_f.p3d", [12151, 2251.83, 8.28747], [-0.0704294, 0.997517, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12150.4, 2249.17, 8.5922], [0.972765, 0.231794, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_closed_f.p3d", [12150.9, 2247.22, 8.65746], [0.972765, 0.231794, 0], [0, 0, 1]],
+["a3\structures_f_epb\civ\garbage\garbagecontainer_open_f.p3d", [12152.6, 2245.82, 8.6982], [-0.262223, 0.965007, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\garbagewashingmachine_f.p3d", [12154.4, 2248.91, 8.52643], [0.964192, 0.265204, 0], [0, 0, 1]],
+["a3\structures_f\wrecks\wreck_hmmwv_f.p3d", [12158.7, 2253.28, 9.36804], [-0.976624, -0.214953, 0], [0, 0, 1]],
+["a3\structures_f\items\vessels\canisterplastic_f.p3d", [12157.4, 2263.34, 8.63432], [-0.488869, 0.872357, 0], [0, 0, 1]],
+["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12162.1, 2249.56, 9.38138], [0.958883, 0.283801, 0], [0, 0, 1]],
+["a3\structures_f_heli\civ\garbage\wheeliebin_01_f.p3d", [12161.7, 2251.09, 9.30155], [0.958883, 0.283801, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12156.1, 2267.02, 8.38844], [0.221561, -0.975147, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12152.1, 2266.12, 8.38708], [0.221561, -0.975147, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12148.2, 2265.2, 8.38927], [0.221561, -0.975147, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12146.7, 2262.7, 8.27928], [0.978004, 0.208586, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12158.5, 2265.44, 8.38601], [-0.971762, -0.235963, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12159.5, 2261.53, 8.39152], [-0.971762, -0.235963, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12160.5, 2257.62, 8.391], [-0.969404, -0.245471, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12161.5, 2253.71, 8.39144], [-0.967048, -0.254595, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12162.6, 2249.8, 8.39089], [-0.967048, -0.254595, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12161.1, 2247.33, 8.39487], [-0.265125, 0.964214, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12157.2, 2246.25, 8.39224], [-0.265125, 0.964214, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12149.2, 2250.88, 8.37336], [0.978004, 0.208586, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12150.2, 2246.97, 8.37336], [0.972936, 0.231075, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\tin\tinwall_01_m_4m_v2_f.p3d", [12153.3, 2245.13, 8.39445], [-0.269501, 0.963, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\tyre_f.p3d", [12155, 2264.69, 8.36081], [-0.0704294, 0.997517, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\tyres_f.p3d", [12156.6, 2265.12, 8.55885], [-0.70408, -0.710121, 0], [0, 0, 1]],
+["a3\structures_f\civ\garbage\junkpile_f.p3d", [12149.2, 2263.1, 8.16985], [-0.366573, -0.930389, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampstreet_f.p3d", [12151.9, 2246.26, 13.7115], [0.543245, 0.839574, 0], [0, 0, 1]],
+["a3\structures_f_exp\commercial\market\woodenshelter_01_f.p3d", [12145.3, 2250.93, 8.60732], [-0.793986, 0.607937, 0], [0, 0, 1]],
+["a3\structures_f_epa\civ\camping\woodentable_small_f.p3d", [12144.3, 2249.64, 7.92581], [0.812813, -0.582524, 0], [0, 0, 1]],
+["a3\structures_f\items\electronics\survivalradio_f.p3d", [12144.6, 2249.48, 8.4522], [-0.432403, 0.901681, 0], [0, 0, 1]],
+["a3\structures_f\households\addons\i_garage_v2_f.p3d", [12150.9, 2269.29, 8.53719], [-0.238212, 0.971213, 0], [0, 0, 1]]
 ];
 
 {
