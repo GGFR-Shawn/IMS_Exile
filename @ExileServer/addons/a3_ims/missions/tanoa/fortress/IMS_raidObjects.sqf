@@ -18,7 +18,39 @@
 ExileRouletteChairs = [];
 ExileRouletteChairPositions = [];
 
+// 10 Vehicles
+// Indestructible
+private _vehicles = [
+["Land_Cargo_HQ_V4_F", [12034.6, 2560.52, 7.2554], [-0.234752, -0.972055, 0], [0, 0, 1], true],
+["Land_Cargo_HQ_V4_F", [12189.4, 2455.45, 7.39616], [-0.236702, 0.971582, 0], [0, 0, 1], true],
+["Land_Cargo_Patrol_V4_F", [12105.5, 2516.27, 12.3233], [-0.994776, -0.102081, 0], [0, 0, 1], true],
+["Land_House_Small_05_F", [12095.3, 2498.45, 9.30392], [0.499713, -0.866191, 0], [0, 0, 1], true],
+["Land_HBarrier_01_tower_green_F", [12127.7, 2470.73, 9.72711], [0.521432, -0.853293, 0], [0, 0, 1], true],
+["Land_HBarrier_01_tower_green_F", [12148.5, 2510.46, 9.72711], [-0.0270842, -0.999633, 0], [0, 0, 1], true],
+["Land_Slum_01_F", [12078.5, 2508.75, 7.49581], [-0.993373, -0.114937, 0], [0, 0, 1], true],
+["Land_Cargo_Tower_V1_No1_F", [12063.7, 2457.71, 16.3205], [0.471166, -0.882045, 0], [0, 0, 1], true],
+["Land_Cargo_Tower_V1_No2_F", [12043.4, 2392.34, 16.4518], [0.885418, 0.464796, 0], [0, 0, 1], true],
+["Land_Cargo_Tower_V1_No3_F", [12181.3, 2570.86, 16.4498], [-0.994077, 0.108676, 0], [0, 0, 1], true]
+];
+
+{
+    private _vehicle = (_x select 0) createVehicle (_x select 1);
+    _vehicle allowDamage false;
+    _vehicle setPosWorld (_x select 1);
+    _vehicle setVectorDirAndUp [_x select 2, _x select 3];
+    _vehicle enableSimulationGlobal (_x select 4);
+    _vehicle setVariable ["ExileIsLocked", -1, true];
+    
+    if (_vehicle isKindOf "Exile_RussianRouletteChair") then
+    {
+        ExileRouletteChairs pushBack _vehicle;
+        ExileRouletteChairPositions pushBack [_x select 1, getDir _vehicle];
+    };
+}
+forEach _vehicles;
+
 // 131 Vehicles
+// Destructible
 private _vehicles = [
 ["Land_GarbageBags_F", [12136.1, 2495.36, 3.8135], [0.682471, 0.730913, 0], [0, 0, 1], true],
 ["Land_File1_F", [12182.1, 2479.29, 4.24996], [0.977916, 0.208997, 0], [0, 0, 1], true],
@@ -155,7 +187,7 @@ private _vehicles = [
 
 {
     private _vehicle = (_x select 0) createVehicle (_x select 1);
-    _vehicle allowDamage false;
+    _vehicle allowDamage true;
     _vehicle setPosWorld (_x select 1);
     _vehicle setVectorDirAndUp [_x select 2, _x select 3];
     _vehicle enableSimulationGlobal (_x select 4);
@@ -169,19 +201,9 @@ private _vehicles = [
 }
 forEach _vehicles;
 
-// 499 Simple Objects
+// 489 Simple Objects
 private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
 private _simpleObjects = [
-["a3\structures_f_exp\military\containerbases\cargo_hq_v4_f.p3d", [12034.6, 2560.52, 7.2554], [-0.234752, -0.972055, 0], [0, 0, 1]],
-["a3\structures_f_exp\military\containerbases\cargo_hq_v4_f.p3d", [12189.4, 2455.45, 7.39616], [-0.236702, 0.971582, 0], [0, 0, 1]],
-["a3\structures_f_exp\military\containerbases\cargo_patrol_v4_f.p3d", [12105.5, 2516.27, 12.3233], [-0.994776, -0.102081, 0], [0, 0, 1]],
-["a3\structures_f_exp\civilian\house_small_05\house_small_05_f.p3d", [12095.3, 2498.45, 9.30392], [0.499713, -0.866191, 0], [0, 0, 1]],
-["a3\structures_f_exp\military\fortifications\hbarrier_01_tower_green_f.p3d", [12127.7, 2470.73, 9.72711], [0.521432, -0.853293, 0], [0, 0, 1]],
-["a3\structures_f_exp\military\fortifications\hbarrier_01_tower_green_f.p3d", [12148.5, 2510.46, 9.72711], [-0.0270842, -0.999633, 0], [0, 0, 1]],
-["a3\structures_f_exp\civilian\slum_01\slum_01_f.p3d", [12078.5, 2508.75, 7.49581], [-0.993373, -0.114937, 0], [0, 0, 1]],
-["a3\structures_f\mil\cargo\cargo_tower_v1_no1_f.p3d", [12063.7, 2457.71, 16.3205], [0.471166, -0.882045, 0], [0, 0, 1]],
-["a3\structures_f\mil\cargo\cargo_tower_v1_no2_f.p3d", [12043.4, 2392.34, 16.4518], [0.885418, 0.464796, 0], [0, 0, 1]],
-["a3\structures_f\mil\cargo\cargo_tower_v1_no3_f.p3d", [12181.3, 2570.86, 16.4498], [-0.994077, 0.108676, 0], [0, 0, 1]],
 ["a3\structures_f_epb\civ\camping\camping_light_f.p3d", [12097.2, 2501.07, 8.33567], [-0.996805, 0.079868, 0], [0, 0, 1]],
 ["a3\structures_f\wrecks\uwreck_heli_attack_02_f.p3d", [11994.4, 2542.56, -2.1696], [0, 1, 0], [0, 0, 1]],
 ["a3\structures_f\wrecks\uwreck_mv22_f.p3d", [12219.6, 2523.72, 2.07632], [0.402251, -0.915529, 0], [0, 0, 1]],

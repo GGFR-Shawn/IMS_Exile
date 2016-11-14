@@ -37,8 +37,8 @@ if (_paradrop) then {
 	// Fill the crate
 	_lootCrate addWeaponCargoGlobal [_crateWeapon, 2];
 	_lootCrate addWeaponCargoGlobal [_crateWeapon2, 2];
-	_lootCrate addMagazineCargoGlobal [_crateMag, (3 + floor(random 3))];
-	_lootCrate addMagazineCargoGlobal [_crateMag2, (3 + floor(random 3))];
+	_lootCrate addMagazineCargoGlobal [_crateMag, IMS_FortressLootAmmoAmount];
+	_lootCrate addMagazineCargoGlobal [_crateMag2, IMS_FortressLootAmmoAmount];
 	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
 	_lootCrate addItemCargoGlobal [_crateGear, 2];
 	_lootCrate setVariable ["ExileMoney", 25000, true];

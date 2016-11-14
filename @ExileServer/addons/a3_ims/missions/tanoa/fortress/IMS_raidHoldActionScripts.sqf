@@ -25,9 +25,9 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaid_ToastBombActivated", FortressPlayerUnits, true];
 	sleep 3;
 	// Start timer
-	[180] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	[IMS_FortressTimer] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
 	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
-	sleep 180;
+	sleep IMS_FortressTimer;
 	// Start end events.
 	[] remoteExec ["fortressRaidBombingEvent", 0, true];
 	sleep 20;
@@ -54,7 +54,7 @@ fortressRaid_terminal_ActionScript = {
 		_pinCode = (1000 +(round (random 8999)));
 		IMS_fortressVehiclePinCode = _pinCode;
 		publicVariable "IMS_fortressVehiclePinCode";
-		[_pos,_dir,_height,_type,_spawnATL,_pinCode] call IMS_fnc_vehicleSpawn;
+		[_pos,_dir,_height,_type,_spawnATL,_pinCode] call IMS_fnc_raidVehicleSpawn;
 		sleep 2;
 		[] remoteExec ["fortressRaid_ToastVehicle", FortressPlayerUnits, true];
 	};
