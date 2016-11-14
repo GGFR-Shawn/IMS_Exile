@@ -6,8 +6,7 @@ class CfgFunctions
 		class Functions
 		{
 			file = "core\functions";
-			class addHoldAction {};
-			class raidEndTimer {};
+			class EndTimer {};
 		};
 	};
 };
