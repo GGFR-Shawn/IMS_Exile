@@ -25,7 +25,7 @@ fortressRaid_terminal_ActionScript = {
 	[] remoteExec ["fortressRaid_ToastBombActivated", FortressPlayerUnits, true];
 	sleep 3;
 	// Start timer
-	[IMS_FortressTimer] remoteExec ["exile_fnc_raidEndTimer", FortressPlayerUnits, true];
+	[IMS_FortressTimer] remoteExec ["exile_fnc_EndTimer", FortressPlayerUnits, true];
 	[] remoteExec ["fortressRaidAlarmEvent", -2, true];
 	sleep IMS_FortressTimer;
 	// Start end events.
@@ -39,7 +39,7 @@ fortressRaid_terminal_ActionScript = {
 	// Completion Event.
 	[] call fortressRaidCompletionEvent;
 	// Spawn loot.
-	[[12137,2245.81,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_raidDrop", 0, true];
+	[[12137,2245.81,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_Drop", 0, true];
 	// Announce the loot drop.
 	[] remoteExec ["fortressRaid_ToastLoot", FortressPlayerUnits, true];
 	sleep 10;
@@ -54,7 +54,7 @@ fortressRaid_terminal_ActionScript = {
 		_pinCode = (1000 +(round (random 8999)));
 		IMS_fortressVehiclePinCode = _pinCode;
 		publicVariable "IMS_fortressVehiclePinCode";
-		[_pos,_dir,_height,_type,_spawnATL,_pinCode] call IMS_fnc_raidVehicleSpawn;
+		[_pos,_dir,_height,_type,_spawnATL,_pinCode] call IMS_fnc_VehicleSpawn;
 		sleep 2;
 		[] remoteExec ["fortressRaid_ToastVehicle", FortressPlayerUnits, true];
 	};
