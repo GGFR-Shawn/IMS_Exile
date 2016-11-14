@@ -30,11 +30,11 @@ class CfgFunctions
 		class Raids
 		{
 			file = "\x\addons\ims\functions";
-			class raidAddHoldAction {};
-			class raidDrop {};
-			class raidEndBombing {};
-			class raidVehicleSpawn {};
-			class raidVehicleHandle {};
+			class AddHoldAction {};
+			class Drop {};
+			class EndBombing {};
+			class VehicleSpawn {};
+			class VehicleHandle {};
 		};
 	};
 };

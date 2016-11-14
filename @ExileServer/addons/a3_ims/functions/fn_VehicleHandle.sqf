@@ -41,5 +41,5 @@ _vehObj call ExileServer_object_vehicle_database_insert;
 _vehObj call ExileServer_object_vehicle_database_update;
 if (IMS_MissionLogs) then
 {
-	_fortressLog = format ["IMS - FORTRESS MISSION: VEHICLE SPAWNED WITH PIN-CODE %1",_pinCode];
+	diag_log format ["IMS - FORTRESS MISSION: VEHICLE SPAWNED WITH PIN-CODE %1",_pinCode];
 };
