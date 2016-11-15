@@ -9,7 +9,7 @@ IMS_MissionLogs 						= true;																													// Enable or disable I
 
 	/* The Fortress Mission Settings */
 	IMS_FortressTimer 						= 180;																												// Time in seconds for the bomb timer. This is just a option for testing things.
-		
+	
 		/* Loot Crate Settings */
 		IMS_FortressLootWeapons					= ["srifle_GM6_ghex_F","srifle_DMR_07_hex_F","srifle_LRR_tna_F","SMG_05_F","arifle_MX_SW_khk_F","LMG_03_F","arifle_ARX_ghex_F","arifle_MXC_khk_F"];		// Loot Weapons in the crate after Fortress Mission success.
 		IMS_FortressLootAmmoAmount				= 3;																												// Amount of magazines for every Weapon in IMS_FortressLootWeapons for the crate.
@@ -20,4 +20,6 @@ IMS_MissionLogs 						= true;																													// Enable or disable I
 		/* Vehicle Spawn Settings */
 		IMS_FortressVehicleLoot					= true;																												// Enable/disable vehicle loot spawn on Fortress mission success.
 		IMS_FortressVehicleLootClass			= "Exile_Car_Ifrit";																								// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
-																																																						
+
+/* DO NOT EDIT BELOW THIS LINE IF YOU DONT KNOW WHAT YOU ARE DOING! */
+publicVariable "IMS_FortressTimer";

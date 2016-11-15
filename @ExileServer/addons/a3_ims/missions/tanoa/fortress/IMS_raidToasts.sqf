@@ -42,7 +42,7 @@ fortressRaid_ToastLaptop = {
 publicVariable "fortressRaid_ToastLaptop";
 
 fortressRaid_ToastBombActivated = { 
-	["ErrorTitleAndText", ["<t color='#ff4242' align='center' font='PuristaSemiBold'>Bombs Activated</t>", format ["<t color='#e40000'><img align='center' image='textures\bomb.paa' size='80'/></t><br/><br/><t color='#ff4242' font='PuristaSemiBold'>Bomb detornator activated. You have %1 seconds to leafe the area!</t>",IMS_FortressTimer]]] call ExileClient_gui_toaster_addTemplateToast;
+	["ErrorTitleAndText", ["<t color='#ff4242' align='center' font='PuristaSemiBold'>Bombs Activated</t>", format ["<t color='#e40000'><img align='center' image='textures\bomb.paa' size='80'/></t><br/><br/><t color='#ff4242' font='PuristaSemiBold'>Bomb detornator activated. You have %1 seconds to leafe the area!</t>", IMS_FortressTimer]]] call ExileClient_gui_toaster_addTemplateToast;
 };
 publicVariable "fortressRaid_ToastBombActivated";
 
