@@ -30,7 +30,11 @@ DMS for Exile by Defent and eraser1: https://github.com/Defent/DMS_Exile
 - Put the DMS mission file raid_fortress.sqf from SERVER\DMS MISSIONS\static into your a3_dms\missions\static directory.
 - Open the DMS config.sqf and edit the following lines:
 ```
-DMS_MaxStaticMissions				= 2;						// Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
+DMS_MaxStaticMissions				= 2;  // Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
+```
+And if you want the Helicopter reinforcements in the Mission:
+```
+DMS_AllowStaticReinforcements 		= true; // Whether or not static missions will receive reinforcements. This will simply disable the calling of GroupReinforcementsMonitor;
 ```
 
 - Open the DMS map_configs directory and edit the tanoa_config.sqf:
@@ -86,3 +90,6 @@ https://github.com/salutesh/IMS_Exile
 
 Defent and eraser1 and all other contributions to DMS for the great Dynamic Mission System Addon! 
 
+# Changelog:
+
+https://github.com/salutesh/IMS_Exile/wiki/Changelog
