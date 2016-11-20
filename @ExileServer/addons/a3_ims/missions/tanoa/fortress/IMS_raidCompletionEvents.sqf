@@ -11,7 +11,7 @@ fortressRaidCompletionEvent = {
 	// End the DMS mission The Fortress after raid event completion.
 	// This grabs the array that contains information about the mission.
 	// If you want to use this script on a static mission, then replace "DMS_Mission_Arr" with "DMS_StaticMission_Arr".
-	private _missionInfo = DMS_StaticMission_Arr select 1;
+	private _missionInfo = DMS_StaticMission_Arr select IMS_FortressSaticMission_Arr; // Change to 0 if only one static mission is active!
 	{
 		_x setDamage 1;				// Kill all units
 	} forEach ((_missionInfo select 4) call DMS_fnc_GetAllUnits);
