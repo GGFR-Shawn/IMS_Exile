@@ -19,5 +19,5 @@ DMS_MinSurfaceNormal				= 0.8;
 DMS_StaticMissionsOnServerStart append
 [
 	"underwater_stash",
-	"raid_fortress"
+	"raid_fortress_tanoa"
 ];
