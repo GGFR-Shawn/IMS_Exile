@@ -9,9 +9,13 @@
 
 fortressRaidBombingEvent = {
 	// Start bombing the area
-	[[6885.16,11493.2,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
+	[[6888.67,11386.8,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
 	sleep 5;
-	[[6871.54,11443.7,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];	
+	[[6847.68,11475.2,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];	
 	sleep 5;
-	[[6908.83,11393.9,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
+	[[6887.86,11505.3,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
+	sleep 5;
+	[[6926.24,11387.2,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
+	sleep 5;
+	[[6891.16,11429,0],30,1,2] remoteExec ["IMS_fnc_EndBombing",0,true];
 };

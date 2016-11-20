@@ -33,6 +33,7 @@ clearWeaponCargoGlobal _vehObj;
 clearItemCargoGlobal _vehObj;
 clearBackpackCargoGlobal _vehObj;
 _vehObj setFuel (0.75+(random 0.25));
+_vehObj setVariable ["ExileIsPersistent", true];
 _vehObj setVariable ["ExileAccessCode", _pinCode];
 _vehObj setVariable ["ExileOwnerUID", "DMS_PersistentVehicle"];
 _vehObj setVariable ["ExileIsLocked",0];

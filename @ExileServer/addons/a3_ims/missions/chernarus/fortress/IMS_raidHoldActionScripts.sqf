@@ -39,14 +39,14 @@ fortressRaid_terminal_ActionScript = {
 	// Completion Event.
 	[] call fortressRaidCompletionEvent;
 	// Spawn loot.
-	[[6977.1,11329.5,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_Drop", 0, true];
+	[[6951.55,11338.2,0],"B_supplyCrate_F","Raid Loot Drop",true] remoteExec ["IMS_fnc_Drop", 0, true];
 	// Announce the loot drop.
 	[] remoteExec ["fortressRaid_ToastLoot", FortressPlayerUnits, true];
 	sleep 10;
 	// Spawn vehicle if option is true.
 	if (IMS_FortressVehicleLoot) then {
 		// Create vehicle
-		_pos = [6977.1,11329.5,0];
+		_pos = [6951.55,11338.2,0];
 		_dir = 0;
 		_height = 150;
 		_type = IMS_FortressVehicleLootClass;
@@ -67,13 +67,9 @@ fortressRaid_laptop_ActionScript = {
 	FortressPlayerUnits = ([6896.07,11434.2,0] nearEntities ["Exile_Unit_Player", 150]);
 	// Remove action.
 	[fortressRaid_laptop, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
-	// Open central gate
+	// Unlock the gate.
 	fortressRaid_gate setVariable ["ExileIsLocked", 0, true];
-	// Open cetral tower doors
-	((nearestobjects [[6919.55,11382.4,0], ["Land_Cargo_Tower_V1_No1_F"], 150]) select 0) setVariable ['bis_disabled_Door_1',0,true];
-	((nearestobjects [[6919.55,11382.4,0], ["Land_Cargo_Tower_V1_No1_F"], 150]) select 0) setVariable ['bis_disabled_Door_2',0,true];
-	((nearestobjects [[6919.55,11382.4,0]], ["Land_Cargo_Tower_V1_No1_F"], 150]) select 0) setVariable ['bis_disabled_Door_3',0,true];
-	// Notifiy player with toast
+	// Notifiy player with toast.
 	[] remoteExec ["fortressRaid_ToastLaptop", FortressPlayerUnits, true];
 	sleep 3;
 	// Succsess for second task

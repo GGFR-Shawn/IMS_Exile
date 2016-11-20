@@ -1,49 +1,24 @@
-/*
-    IMS_raidHoldActionScripts.sqf
-    Written by Salutesh
-    www.reality-gaming.eu
-	
-	Created with Exile Mod 3DEN Plugin
-	www.exilemod.com
-	
-    Description: 
-	Place visiual objects and buildings in the fortress area.  
-*/
-
 /**
  * Created with Exile Mod 3DEN Plugin
  * www.exilemod.com
  */
 
-ExileRouletteChairs = [];
-ExileRouletteChairPositions = [];
-
-// 24 Vehicles
+ // Buildings
+ // 9 Vehicles
 private _vehicles = [
-["CDF_WarfareBVehicleServicePoint", [6876.59, 11411.8, 394.852], [-0.919656, -0.392724, 0], [0, 0, 1], false],
-["Land_Pot_02_F", [6933.02, 11358.4, 391.539], [0.246061, -0.969254, 0], [0, 0, 1], true],
-["Land_Pot_02_F", [6918.8, 11427.8, 424.664], [0.246061, -0.969254, 0], [0, 0, 1], true],
-["Land_Pot_02_F", [6882.5, 11445.4, 393.807], [0.246061, -0.969254, 0], [0, 0, 1], true],
-["Land_Camping_Light_F", [6927.64, 11383.5, 409.644], [0.978251, -0.207424, 0], [0, 0, 1], true],
-["Land_Camping_Light_F", [6919.49, 11382.2, 410.994], [0.974229, -0.225079, -0.0147405], [0, -0.0653505, 0.997862], true],
-["Land_CampingTable_F", [6921.81, 11387, 410.16], [-0.52852, -0.84853, -0.0257543], [0.024021, -0.0452737, 0.998686], true],
-["Land_CampingTable_small_F", [6926.04, 11387.3, 425.165], [-0.800218, 0.59971, 0], [0, 0, 1], true],
-["Land_CampingTable_small_F", [6915.79, 11385.8, 407.665], [0.533643, 0.84571, 0], [0, 0, 1], true],
-["Land_CampingTable_small_F", [6927.36, 11384.5, 407.183], [-0.847912, 0.528279, 0.0443431], [0.024021, -0.0452737, 0.998686], true],
-["Exile_Cosmetic_Beer", [6915.57, 11386.2, 408.052], [-0.72681, 0.686839, 0], [0, 0, 1], true],
-["Land_WoodenCrate_01_stack_x3_F", [6916.09, 11377.6, 394.761], [-0.834926, 0.548587, 0.0441645], [0.0213271, -0.0479361, 0.998623], true],
-["Land_CanisterFuel_F", [6916.56, 11381.3, 394.481], [0.441517, 0.896623, 0.0336106], [0.0213271, -0.0479361, 0.998623], true],
-["Exile_Cosmetic_Knife", [6915.72, 11386, 408.062], [0.0429674, -0.999076, 0], [0, 0, 1], true],
-["Land_FoodContainer_01_F", [6915.54, 11385.8, 408.298], [0.997687, -0.0624517, -0.0268282], [0.024021, -0.0452737, 0.998686], true],
-["Exile_Cosmetic_PopTabs", [6915.98, 11385.7, 408.065], [0.999521, -0.0309436, 0], [0, 0, 1], true],
-["Land_Portable_generator_F", [6917.02, 11380.9, 394.537], [-0.702495, 0.709994, 0.0490841], [0.0213271, -0.0479361, 0.998623], true],
-["Land_PortableLight_double_F", [6917.13, 11381.8, 395.303], [-0.92105, -0.389444, 0], [0, 0, 1], true],
-["Flag_White_F", [6933.16, 11358.1, 395.599], [0.723269, -0.690567, 0], [0, 0, 1], true],
-["Flag_White_F", [6882.63, 11445.1, 397.917], [0.723269, -0.690567, 0], [0, 0, 1], true],
-["Flag_White_F", [6918.93, 11427.4, 428.573], [0.723269, -0.690566, 0.00132752], [0, 0.00192236, 0.999998], true],
-["Land_Cargo_Tower_V1_No1_F", [6919.55, 11382.4, 407.078], [0.84673, -0.530169, -0.0443829], [0.0239963, -0.0452803, 0.998686], true],
-["Land_Cargo_Tower_V1_No2_F", [6898.75, 11500.5, 405.284], [-0.530274, 0.847826, 0], [0, 0, 1], true],
-["Land_Cargo_Tower_V1_No3_F", [6875.9, 11454.7, 406.634], [0.0225827, -0.999745, 0], [0, 0, 1], true]
+["Land_Cargo_House_V1_F", [6886.03, 11519.6, 392.237], [0.00344627, 0.999994, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6844.07, 11477.1, 391.493], [-0.869921, 0.493192, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6926.28, 11479.7, 391.092], [0.967897, 0.251347, 0], [0, 0, 1], true],
+["Land_Cargo_Patrol_V1_F", [6924.52, 11446.5, 397.918], [-0.999496, -0.0317472, 0], [0, 0, 1], true],
+["Land_House_Small_05_F", [6879.46, 11454.2, 395.828], [-0.0699814, 0.997548, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6919.6, 11381, 394.819], [-0.64577, -0.763532, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6924.86, 11376.3, 394.559], [-0.636407, -0.771353, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6942.3, 11393.6, 392.227], [0.999869, -0.0162063, 0], [0, 0, 1], true],
+["Land_Cargo_House_V1_F", [6908.93, 11416.7, 395.479], [0.998714, -0.0506892, 0], [0, 0, 1], true],
+["Land_NetFence_01_m_gate_F", [6891.65, 11375.1, 393.712], [0.770547, -0.637384, 0], [0, 0, 1], true],
+["Land_NetFence_01_m_gate_F", [6903.9, 11397.9, 395.66], [0.441678, -0.897174, 0], [0, 0, 1], true],
+["Land_Gate_IndVar2_5", [6928.65, 11354.9, 393.75], [-0.819112, 0.573633, 0], [0, 0, 1], true],
+["Land_Gate_IndVar2_5", [6919.05, 11361.6, 394.809], [0.807136, -0.590366, 0], [0, 0, 1], true]
 ];
 
 {
@@ -53,114 +28,173 @@ private _vehicles = [
     _vehicle setVectorDirAndUp [_x select 2, _x select 3];
     _vehicle enableSimulationGlobal (_x select 4);
     _vehicle setVariable ["ExileIsLocked", -1, true];
-    
-    if (_vehicle isKindOf "Exile_RussianRouletteChair") then
-    {
-        ExileRouletteChairs pushBack _vehicle;
-        ExileRouletteChairPositions pushBack [_x select 1, getDir _vehicle];
-    };
 }
 forEach _vehicles;
 
-// 94 Simple Objects
-private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
-private _simpleObjects = [
-["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6845.69, 11445.6, 393.443], [-0.189287, 0.981922, 0], [0, 0, 1]],
-["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6863.9, 11401, 394.792], [-0.631437, 0.775427, 0], [0, 0, 1]],
-["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6941.89, 11434.1, 392.445], [-0.400064, -0.916487, 0], [0, 0, 1]],
-["a3\structures_f\civ\camping\campingtable_f.p3d", [6908.56, 11427.8, 425.202], [0.999481, 0.0321987, 0], [0, 0, 1]],
-["a3\structures_f\civ\camping\campingtable_f.p3d", [6909.95, 11426.5, 425.201], [-0.0213362, 0.999772, 0], [0, 0, 1]],
-["a3\rocks_f\sharp\sharprock_apart.p3d", [6946.89, 11425.2, 391.633], [0, 0.997872, -0.065197], [0.164458, 0.0643093, 0.984286]],
-["a3\rocks_f\sharp\sharprock_apart.p3d", [6950, 11432.2, 388.224], [0.853407, -0.521245, 0], [0, 0, 1]],
-["a3\rocks_f\sharp\sharprock_apart.p3d", [6957.5, 11440.6, 385.275], [-0.291716, 0.956505, 0], [0, 0, 1]],
-["a3\rocks_f\sharp\sharprock_apart.p3d", [6948.55, 11447, 387.214], [-0.960591, 0.277964, 0], [0, 0, 1]],
-["a3\rocks_f\sharp\sharprock_apart.p3d", [6950.24, 11457.7, 386.406], [0.0973988, 0.995245, 0], [0, 0, 1]],
-["a3\structures_f_heli\items\electronics\hdmicable_01_f.p3d", [6909.15, 11426.2, 425.612], [-0.210556, -0.977582, 0], [0, 0, 1]],
-["a3\structures_f\civ\camping\campfire_f.p3d", [6874.59, 11425.7, 393.671], [0, 0.999978, 0.00666787], [-0.0545853, -0.00665793, 0.998487]],
-["a3\structures_f_heli\items\electronics\pcset_01_mouse_f.p3d", [6909.21, 11426.6, 425.632], [-0.249576, -0.968355, 0], [0, 0, 1]],
-["a3\props_f_exp\military\camps\portablegenerator_01_f.p3d", [6911.55, 11426.6, 425.188], [-0.674835, 0.737969, 0], [0, 0, 1]],
-["a3\structures_f\ind\transmitter_tower\ttowersmall_1_f.p3d", [6908.58, 11426.4, 429.778], [0.751842, 0.659344, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_4m_f.p3d", [6885.31, 11390.7, 393.698], [0.935122, 0.354327, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_4m_f.p3d", [6921.24, 11392.6, 394.919], [-0.524948, -0.851134, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_4m_f.p3d", [6929.53, 11387.1, 394.283], [0.52918, 0.848509, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6916.56, 11456.6, 394.052], [-0.998525, 0.0542946, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6913.79, 11463.8, 394.039], [-0.703709, -0.710488, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6911.24, 11501.8, 392.202], [-0.767266, -0.641329, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6906.33, 11508.4, 392.094], [-0.844467, -0.535608, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6908.51, 11499.4, 392.577], [-0.767266, -0.641329, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6903.6, 11506.1, 392.469], [-0.844467, -0.535608, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6913.9, 11452.8, 394.508], [-0.999753, 0.0222369, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6910.9, 11459.9, 394.495], [-0.680557, -0.732695, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6838.82, 11440.3, 390.648], [-0.975628, -0.21943, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6837.51, 11448.5, 390.54], [-0.995932, -0.0901057, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6842.21, 11441.1, 391.552], [-0.975628, -0.21943, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6840.9, 11449.3, 391.444], [-0.995932, -0.0901057, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6855.02, 11401, 392.703], [0.834247, 0.551391, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6860.17, 11394, 392.673], [0.775536, 0.631304, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6865.74, 11387.5, 392.762], [-0.741408, -0.671055, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6857.53, 11403.1, 393.092], [0.834247, 0.551391, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6862.68, 11396.1, 393.062], [0.775536, 0.631304, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6868.25, 11389.6, 393.151], [-0.741408, -0.671055, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6921.24, 11372.2, 394.182], [-0.522055, -0.852912, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6913.87, 11376.7, 394.417], [-0.522055, -0.852912, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6906.17, 11380.6, 393.862], [-0.37179, -0.928317, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6898.2, 11383.8, 393.972], [-0.37179, -0.928317, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6890.26, 11387.1, 393.874], [-0.37179, -0.928317, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6924.74, 11374.9, 394.163], [-0.850177, 0.526497, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6929.33, 11382.3, 394.12], [-0.850177, 0.526497, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6917.01, 11390.1, 394.638], [-0.850177, 0.526497, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_8m_f.p3d", [6912.42, 11382.7, 394.483], [-0.850177, 0.526497, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6916.34, 11452.3, 393.91], [0, 1, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6916.9, 11460.9, 393.593], [-0.442208, -0.896912, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6911.47, 11466.1, 393.667], [-0.688347, -0.725382, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6908.56, 11505, 391.746], [0.63553, -0.772076, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6914.09, 11498.4, 391.721], [0.63553, -0.772076, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6904.01, 11512.1, 391.678], [-0.815061, -0.579375, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6905.84, 11502.6, 392.121], [0.63553, -0.772076, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6911.36, 11496.1, 392.096], [0.63553, -0.772076, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6901.28, 11509.7, 392.053], [-0.815061, -0.579375, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6913.81, 11448.5, 394.366], [-0.0320764, 0.999485, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6914.1, 11457, 394.049], [-0.413211, -0.910635, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6908.51, 11462.1, 394.123], [-0.664725, -0.747089, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6837.92, 11444.4, 390.192], [0.212073, -0.977254, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6839.84, 11436, 390.703], [0.212073, -0.977254, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6837.12, 11452.8, 390.124], [-0.989798, -0.142477, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6841.31, 11445.2, 391.096], [0.212073, -0.977254, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6843.24, 11436.8, 391.607], [0.212073, -0.977254, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6840.51, 11453.6, 390.938], [-0.989798, -0.142477, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6852.6, 11404.7, 392.227], [0.830469, 0.557065, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6857.42, 11397.4, 392.305], [0.830469, 0.557065, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6862.92, 11390.6, 392.372], [-0.573011, 0.819548, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6868.67, 11384.3, 392.932], [0.75127, 0.659995, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6855.11, 11406.8, 392.616], [0.830469, 0.557065, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6859.93, 11399.5, 392.694], [0.830469, 0.557065, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6865.43, 11392.7, 392.762], [-0.573011, 0.819548, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6871.18, 11386.4, 393.322], [0.75127, 0.659995, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6924.95, 11370, 393.891], [0.534637, 0.845082, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6917.59, 11374.4, 394.013], [0.534637, 0.845082, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6910.13, 11378.9, 394.005], [0.872559, -0.488508, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6902.16, 11382.2, 393.705], [0.897601, -0.440809, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6894.22, 11385.5, 393.607], [0.897601, -0.440809, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6886.17, 11388.5, 393.492], [-0.974057, -0.226302, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6884.43, 11392.9, 393.388], [0.400227, -0.916416, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6927.06, 11378.6, 393.974], [-0.867731, 0.497034, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6914.74, 11386.4, 394.487], [-0.867731, 0.497034, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6931.54, 11385.9, 393.62], [-0.867731, 0.497034, 0], [0, 0, 1]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6919.3, 11393.8, 394.586], [-0.867731, 0.497034, 0], [0, 0, 1]],
-["ca\misc3\camonet_east.p3d", [6884.58, 11414.2, 395.016], [-0.870533, -0.49211, 0], [0, 0, 1]],
-["ca\misc3\camonet_east.p3d", [6841.18, 11478.6, 391.757], [-0.909408, 0.415905, 0], [0, 0, 1]],
-["ca\misc3\camonet_east.p3d", [6945.74, 11392.6, 391.866], [0.999971, 0.00763011, 0], [0, 0, 1]],
-["a3\structures_f\civ\camping\campingtable_f.p3d", [6881.69, 11418.7, 394.129], [0.998735, -0.0160215, 0.0476712], [-0.0479473, -0.0173116, 0.9987]],
-["a3\structures_f\civ\camping\campingtable_f.p3d", [6880.88, 11418.7, 394.096], [-0.998977, 0.0112231, -0.0438109], [-0.0439591, -0.0133184, 0.998945]],
-["a3\structures_f\civ\camping\ground_sheet_folded_khaki_f.p3d", [6880.79, 11418.1, 394.567], [-0.571512, -0.8198, -0.0360813], [-0.0439618, -0.0133184, 0.998944]],
-["a3\structures_f\civ\camping\sleeping_bag_folded_f.p3d", [6880.74, 11418.4, 394.612], [-0.505058, -0.862426, -0.033725], [-0.0439618, -0.0133184, 0.998944]],
-["a3\structures_f\walls\stone_pillar_f.p3d", [6922.46, 11371.4, 393.737], [0.534637, 0.845082, 0], [0, 0, 1]],
-["a3\structures_f_heli\civ\constructions\gastank_01_blue_f.p3d", [6916.9, 11376.7, 394.311], [-0.443969, 0.893645, 0.0654906], [0.0213271, -0.0625292, 0.997815]],
-["a3\structures_f_heli\civ\constructions\gastank_01_blue_f.p3d", [6917.15, 11377.1, 394.338], [-0.953413, -0.301664, 0.00147401], [0.0213271, -0.0625292, 0.997815]],
-["ca\misc2\table\chair.p3d", [6882.36, 11418.1, 394.248], [0.884344, -0.465567, 0.0343869], [-0.0479473, -0.0173116, 0.9987]],
-["a3\structures_f\civ\dead\humanskeleton_f.p3d", [6942.04, 11350.6, 389.909], [-0.907034, 0.409798, 0.0967246], [0.104859, -0.00263595, 0.994484]]
+// Visual Objects
+// 36 Vehicles 
+private _vehicles = [
+["Land_CampingTable_F", [6879.29, 11458.9, 395.147], [0.0815029, -0.996673, 0], [0, 0, 1], false],
+["Land_TTowerSmall_1_F", [6888.53, 11456.4, 400.858], [-0.99547, -0.09508, 0], [0, 0, 1], false],
+["Land_File1_F", [6879.03, 11458.9, 395.562], [-0.433372, 0.901215, 0], [0, 0, 1], false],
+["Land_Pot_02_F", [6886.48, 11451.2, 394.127], [0.0267263, -0.999643, 0], [0, 0, 1], false],
+["Land_Document_01_F", [6939.4, 11352.1, 390.402], [0, 0.995504, 0.0947163], [0.117711, -0.0940578, 0.988583], false],
+["Flag_White_F", [6886.54, 11450.8, 398.097], [0.553566, -0.832805, 0], [0, 0, 1], false],
+["Land_File1_F", [6888.02, 11414.3, 394.764], [-0.793293, -0.607062, -0.0464961], [-0.0452934, -0.0173137, 0.998824], false],
+["Land_CampingTable_F", [6889.02, 11413.5, 394.384], [0.660877, 0.749264, 0.0429521], [-0.0452868, -0.0173137, 0.998824], false],
+["Land_CampingTable_F", [6887.54, 11414.9, 394.34], [0.660877, 0.749264, 0.0429521], [-0.0452868, -0.0173137, 0.998824], false],
+["CamoNet_ghex_big_F", [6889.35, 11415.5, 396.052], [-0.703589, -0.710607, 0], [0, 0, 1], false],
+["Land_Canteen_F", [6890.51, 11392.2, 393.626], [-0.289058, -0.956192, -0.0462883], [-0.0585655, -0.0305988, 0.997815], false],
+["Land_CanisterPlastic_F", [6885.12, 11420.1, 394.33], [-0.0522043, -0.998636, 0], [0, 0, 1], false],
+["Land_CampingChair_V1_F", [6893.42, 11419.7, 394.796], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6894.15, 11419.2, 394.831], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6895.63, 11417.9, 394.881], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6894.88, 11418.6, 394.857], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6894.6, 11417.4, 394.819], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6893.75, 11418, 394.788], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6892.96, 11418.6, 394.759], [0.653041, 0.75585, 0.0472025], [-0.0506028, -0.0186387, 0.998545], false],
+["Land_CampingChair_V1_F", [6890.56, 11389.2, 393.915], [-0.998281, 0.0040881, -0.0584676], [-0.0585655, -0.0305988, 0.997815], false],
+["Land_CampingChair_V1_F", [6893.03, 11391, 394.116], [0.201911, 0.978462, 0.042933], [-0.0638753, -0.0305869, 0.997489], false],
+["Land_CampingChair_V1_F", [6929.7, 11391.6, 394.298], [0.988551, -0.118555, -0.0933359], [0.0916132, -0.0199106, 0.995596], false],
+["Land_CampingChair_V1_F", [6927.04, 11390.2, 394.499], [-0.315253, -0.948955, 0.0100313], [0.0916132, -0.0199106, 0.995596], false],
+["Campfire_burning_F", [6892.65, 11389.2, 393.748], [0.987278, 0.143902, 0.067634], [-0.0638753, -0.0305869, 0.997489], false],
+["Campfire_burning_F", [6927.59, 11391.9, 394.192], [-0.995403, -0.029855, 0.0909985], [0.0916132, -0.0199106, 0.995596], false],
+["Land_Ammobox_rounds_F", [6887.05, 11415.4, 394.852], [0.427948, -0.903795, 0.00373958], [-0.0452934, -0.0173137, 0.998824], false],
+["Land_Ammobox_rounds_F", [6887.36, 11415.1, 394.852], [0.789521, -0.613208, 0.0251728], [-0.0452934, -0.0173137, 0.998824], false],
+["Land_TripodScreen_01_large_F", [6892.56, 11413.1, 395.198], [0.183672, 0.981648, 0.0513042], [-0.183485, -0.0170373, 0.982875], false],
+["Land_PortableGenerator_01_F", [6893.44, 11412.7, 394.674], [-0.288269, 0.956825, -0.0372288], [-0.183485, -0.0170373, 0.982875], false],
+["Land_Sleeping_bag_folded_F", [6890.4, 11392, 393.766], [0.310802, 0.950475, 0], [0, 0, 1], false],
+["Land_Portable_generator_F", [6884.77, 11417.7, 394.211], [0.765693, -0.642695, 0.0256201], [-0.0479473, -0.0173116, 0.9987], false],
+["Land_PortableLight_double_F", [6885.36, 11417.1, 395.066], [-0.978454, -0.206465, 0], [0, 0, 1], false],
+["Land_BottlePlastic_V2_F", [6890.88, 11389, 393.548], [0.9876, 0.144063, 0.0623838], [-0.0585655, -0.0305988, 0.997815], false],
+["Land_BottlePlastic_V2_F", [6929.37, 11391.9, 393.936], [-0.995403, -0.029855, 0.0909985], [0.0916132, -0.0199106, 0.995596], false],
+["Land_WaterTank_04_F", [6884.81, 11419.7, 394.942], [-0.948055, -0.318108, 0], [0, 0, 1], false],
+["WaterPump_01_forest_F", [6878.71, 11421.5, 394.546], [-0.990294, -0.129455, -0.0505838], [-0.0492724, -0.0133151, 0.998697], false]
 ];
 
+{
+    private _vehicle = (_x select 0) createVehicle (_x select 1);
+    _vehicle allowDamage false;
+    _vehicle setPosWorld (_x select 1);
+    _vehicle setVectorDirAndUp [_x select 2, _x select 3];
+    _vehicle enableSimulationGlobal (_x select 4);
+    _vehicle setVariable ["ExileIsLocked", -1, true];
+}
+forEach _vehicles;
+
+// Visual Objects
+// 108 Simple Objects
+private _invisibleSelections = ["zasleh", "zasleh2", "box_nato_grenades_sign_f", "box_nato_ammoord_sign_f", "box_nato_support_sign_f"];
+private _simpleObjects = [
+["a3\structures_f_epb\civ\camping\camping_light_f.p3d", [6876.63, 11452.7, 394.86], [0.861195, -0.508275, 0], [0, 0, 1]],
+["a3\structures_f_epa\mil\scrapyard\pallet_milboxes_f.p3d", [6875.91, 11458.4, 395.19], [-0.0485523, 0.998821, 0], [0, 0, 1]],
+["a3\weapons_f_beta\pistols\acpc2\acpc2_f.p3d", [6876.35, 11452.7, 395.588], [-0.43787, -0.899038, 0], [0, 0, 1]],
+["a3\structures_f\items\stationery\penblack_f.p3d", [6879.04, 11458.8, 395.574], [-0.812489, 0.582977, 0], [0, 0, 1]],
+["a3\structures_f_epb\items\military\magazine_rifle_f.p3d", [6876.13, 11452.7, 395.612], [-0.612483, 0.790484, 0], [0, 0, 1]],
+["a3\structures_f_epb\items\military\magazine_rifle_f.p3d", [6876.01, 11452.7, 395.613], [-0.936503, 0.350661, 0], [0, 0, 1]],
+["a3\structures_f\furniture\metal_rack_tall_f.p3d", [6876.13, 11452.7, 394.742], [0.0590138, -0.998257, 0], [0, 0, 1]],
+["a3\structures_f_epb\items\military\ammobox_rounds_f.p3d", [6875.88, 11452.7, 396.086], [-0.998838, -0.0481867, 0], [0, 0, 1]],
+["a3\structures_f_epb\items\military\ammobox_rounds_f.p3d", [6876.07, 11452.7, 396.087], [-0.998838, -0.0481867, 0], [0, 0, 1]],
+["a3\structures_f_epb\items\military\ammobox_rounds_f.p3d", [6876.37, 11452.7, 396.088], [-0.828461, 0.560047, 0], [0, 0, 1]],
+["a3\structures_f_heli\items\electronics\pcset_01_mouse_f.p3d", [6880.05, 11458.7, 395.578], [0.336488, 0.941688, 0], [0, 0, 1]],
+["a3\structures_f\furniture\chairwood_f.p3d", [6878.82, 11458.3, 394.74], [-0.43787, -0.899038, 0], [0, 0, 1]],
+["a3\weapons_f\rifles\mx\mx_sw_f.p3d", [6940.16, 11352.7, 390.357], [-0.0861856, 0.0752046, -0.993437], [0.995167, -0.0406055, -0.0894096]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6922.98, 11370.7, 394.899], [0.605908, 0.795535, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6919.8, 11373.1, 394.889], [0.605908, 0.795535, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6916.76, 11375.7, 394.884], [0.682055, 0.731301, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6913.84, 11378.4, 394.881], [0.682055, 0.731301, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6910.92, 11381.2, 394.877], [0.682055, 0.731301, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6907.99, 11383.9, 394.874], [0.682055, 0.731301, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6905.25, 11386.8, 394.873], [0.768228, 0.640176, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6902.69, 11389.8, 394.87], [0.768228, 0.640176, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6900.25, 11393, 394.867], [0.808231, 0.588866, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6897.89, 11396.2, 394.865], [0.808231, 0.588866, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6930.15, 11357.1, 394.167], [-0.831468, 0.555572, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6927.13, 11352.7, 393.941], [-0.831468, 0.555572, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6924.58, 11369.5, 394.873], [-0.827135, 0.562004, 0], [0, 0, 1]],
+["a3\structures_f\civ\dead\humanskeleton_f.p3d", [6939.68, 11352.8, 390.435], [-0.247777, 0.968817, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6917.51, 11359.4, 394.287], [0.819859, -0.572566, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6920.62, 11363.7, 394.497], [0.819859, -0.572566, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6900.4, 11396.1, 394.866], [-0.479138, 0.877739, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6907.65, 11399.4, 395.317], [-0.267113, 0.963665, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6911.53, 11400.4, 395.317], [-0.241721, 0.970346, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6902.54, 11386.8, 394.489], [-0.725387, 0.688341, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6899.82, 11383.9, 394.461], [-0.725387, 0.688341, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6897.07, 11381, 394.45], [-0.725387, 0.688341, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6894.32, 11378.1, 394.456], [-0.725387, 0.688341, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6889.08, 11372, 394.119], [0.773163, -0.634207, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6886.55, 11368.9, 394.132], [0.773163, -0.634207, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6875.94, 11416.7, 394.552], [-0.901454, -0.432876, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6874.22, 11420.3, 394.559], [-0.901454, -0.432876, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6872.91, 11424, 394.568], [-0.974778, -0.223176, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6872.02, 11427.9, 394.574], [-0.974778, -0.223176, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6867.75, 11447.4, 394.61], [-0.995396, -0.0958528, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6868.27, 11443.4, 394.6], [-0.986498, -0.163776, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6871.04, 11431.8, 394.59], [-0.964657, -0.26351, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6870, 11435.6, 394.592], [-0.964657, -0.26351, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6869.04, 11439.5, 394.588], [-0.975163, -0.221488, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6877.71, 11413.1, 394.551], [-0.892168, -0.451704, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6879.51, 11409.6, 394.556], [-0.892168, -0.451704, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6881.31, 11406, 394.558], [-0.892168, -0.451704, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6912.22, 11464.6, 394.187], [0.852414, 0.522867, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6914.01, 11461.1, 394.196], [0.925515, 0.37871, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6915.44, 11457.4, 394.193], [0.940581, 0.339569, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d", [6916.14, 11453.5, 394.211], [0.999943, 0.0106722, 0], [0, 0, 1]],
+["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6861.66, 11398, 394.727], [-0.653317, 0.757085, 0], [0, 0, 1]],
+["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6843.93, 11444, 393.085], [-0.251439, 0.967873, 0], [0, 0, 1]],
+["a3\structures_f\mil\bagbunker\bagbunker_tower_f.p3d", [6903.36, 11502.5, 394.01], [0.607636, -0.794216, 0], [0, 0, 1]],
+["ca\misc\barel3.p3d", [6900.93, 11391.2, 394.555], [0, 0.99957, 0.0293121], [0.0823801, -0.0292124, 0.996173]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6947.04, 11419.4, 390.166], [-0.970804, 0.239875, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6945.45, 11419.6, 390.157], [-0.970804, 0.239875, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6947.13, 11419.4, 391.526], [-0.0738219, 0.997271, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6945.43, 11419.5, 391.507], [0.643916, 0.765096, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6936.43, 11421.4, 392.424], [0.818482, -0.574533, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrier_1_f.p3d", [6937.72, 11420.6, 392.232], [0.786614, 0.617445, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall_corner_f.p3d", [6856.49, 11403.4, 393.004], [-0.842756, -0.538296, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall_corner_f.p3d", [6869.83, 11388.2, 393.528], [0.493198, -0.869917, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall_corner_f.p3d", [6847.17, 11432.2, 392.245], [0.210766, -0.977104, 0.0290746], [-0.0942439, 0.00929334, 0.995506]],
+["a3\structures_f\mil\fortification\hbarrierwall_corner_f.p3d", [6843.3, 11451.7, 391.705], [-0.967379, -0.235296, -0.0938796], [-0.0981883, 0.00663595, 0.995146]],
+["a3\structures_f\mil\fortification\hbarrierwall_corner_f.p3d", [6908.35, 11497, 392.656], [0.81687, 0.576821, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall4_f.p3d", [6866.28, 11391.8, 393.675], [-0.751479, -0.659757, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall4_f.p3d", [6845.5, 11436.6, 392.049], [-0.961393, -0.260531, -0.0885823], [-0.0942439, 0.00929334, 0.995506]],
+["a3\structures_f\mil\fortification\hbarrierwall4_f.p3d", [6899.35, 11509.2, 392.627], [0.856206, 0.516635, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall4_f.p3d", [6929.76, 11455.1, 391.715], [0.89924, -0.437455, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall4_f.p3d", [6933.85, 11423.9, 392.367], [0.76569, 0.643209, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall6_f.p3d", [6934.45, 11461, 391.354], [0.632592, -0.772041, 0.0614723], [-0.00927724, 0.0718125, 0.997375]],
+["a3\structures_f\mil\fortification\hbarrierwall6_f.p3d", [6928.59, 11447.6, 392.605], [0.999898, -0.0142655, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall6_f.p3d", [6928.89, 11439.2, 392.68], [0.999898, -0.0142655, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall6_f.p3d", [6930.34, 11430.6, 392.67], [0.964939, 0.262473, 0], [0, 0, 1]],
+["a3\structures_f\mil\fortification\hbarrierwall6_f.p3d", [6940.13, 11419.8, 391.237], [0.420153, 0.907453, 0], [0, 0, 1]],
+["a3\rocks_f\sharp\sharprock_apart.p3d", [6942.83, 11413.8, 391.02], [0.848819, 0.528684, 0], [0, 0, 1]],
+["a3\props_f_exp\commercial\market\woodencrate_01_stack_x5_f.p3d", [6882.13, 11406.8, 394.609], [-0.9071, -0.420916, 0], [0, 0, 1]],
+["a3\props_f_exp\commercial\market\woodencrate_01_stack_x5_f.p3d", [6872.94, 11467.6, 394.448], [0.141844, -0.989889, 0], [0, 0, 1]],
+["a3\props_f_exp\commercial\market\woodencrate_01_stack_x5_f.p3d", [6914.76, 11421.5, 395.716], [0.998347, -0.0574659, 0], [0, 0, 1]],
+["a3\structures_f\civ\market\crateswooden_f.p3d", [6916.36, 11421.5, 395.353], [-0.99836, -0.0572425, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6913.57, 11401.2, 397.871], [-0.770882, 0.636978, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6931.35, 11357.6, 395.554], [0.880994, -0.473127, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6898.49, 11394.4, 398.086], [-0.225138, -0.974327, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6869.59, 11464.9, 396.999], [0.715007, -0.699118, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6932.15, 11426.3, 396.195], [0.827047, 0.562133, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6928.65, 11452.2, 395.543], [0.968048, -0.250766, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6929.12, 11434.8, 396.556], [-0.997899, -0.0647896, 0], [0, 0, 1]],
+["a3\structures_f\civ\lamps\lampshabby_f.p3d", [6916.44, 11451.4, 397.203], [0.989823, -0.142307, 0], [0, 0, 1]],
+["a3\structures_f\mil\cargo\cargo_house_v1_f.p3d", [6892.43, 11384, 394.041], [0.715433, -0.698681, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6913.47, 11400.9, 394.863], [0.238907, -0.971042, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6903.91, 11388.2, 394.453], [0.688575, -0.725165, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6885.27, 11367.4, 394.126], [0.789745, -0.613435, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6867.56, 11449.4, 394.578], [0.0342656, -0.999413, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6882, 11404.6, 394.538], [0.400819, -0.916157, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6916.17, 11451.5, 394.195], [-0.99997, -0.00777331, 0], [0, 0, 1]],
+["a3\structures_f_exp\walls\net\netfence_01_m_pole_f.p3d", [6911.21, 11466.3, 394.179], [-0.543434, 0.839452, 0], [0, 0, 1]],
+["ca\weapons\ammoboxes\usspecialweapons.p3d", [6901.56, 11390.1, 395.251], [-0.75803, -0.650761, 0.0436032], [0.0823801, -0.0292124, 0.996173]],
+["a3\structures_f\items\vessels\barrelempty_f.p3d", [6916.11, 11423.2, 395.004], [0, 0.999892, -0.0146684], [0.0731352, 0.0146291, 0.997215]],
+["a3\structures_f\items\vessels\barrelwater_f.p3d", [6880.89, 11421.8, 393.989], [0, 0.999911, 0.0133313], [-0.0439591, -0.0133184, 0.998945]],
+["a3\signs_f\signm\signm_warningunexplodedammo_f.p3d", [6926.55, 11349.2, 392.44], [-0.840917, 0.541164, 0], [0, 0, 1]],
+["a3\signs_f\signm\signm_warningmilitaryarea_f.p3d", [6927.32, 11350.3, 392.502], [-0.823034, 0.567992, 0], [0, 0, 1]],
+["a3\structures_f\civ\camping\campingtable_f.p3d", [6908.49, 11428.7, 425.201], [0.999048, 0.0436345, 0], [0, 0, 1]],
+["a3\props_f_exp\military\camps\portablegenerator_01_f.p3d", [6908.32, 11431, 425.173], [0.127762, 0.991805, 0], [0, 0, 1]],
+["a3\props_f_exp\military\camps\satelliteantenna_01_f.p3d", [6909.31, 11433.3, 425.721], [-0.713009, 0.701154, 0], [0, 0, 1]]
+];
 {
     private _simpleObject = createSimpleObject [_x select 0, _x select 1];
     _simpleObject setVectorDirAndUp [_x select 2, _x select 3];

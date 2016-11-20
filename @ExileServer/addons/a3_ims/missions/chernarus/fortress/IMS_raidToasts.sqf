@@ -37,7 +37,7 @@ fortressRaid_ToastSupply = {
 publicVariable "fortressRaid_ToastSupply";
 
 fortressRaid_ToastLaptop = {
-	["SuccessTitleAndText", ["<t color='#00ce27' align='center' font='PuristaSemiBold'>Security Systems</t>", format ["<t color='#20a1fb'><img align='center' image='textures\security.paa' size='80'/></t><br/><br/><t color='#00ce27' font='PuristaSemiBold'>Security systems disabled.<br/>The central control tower building is unlocked now.</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
+	["SuccessTitleAndText", ["<t color='#00ce27' align='center' font='PuristaSemiBold'>Security Systems</t>", format ["<t color='#20a1fb'><img align='center' image='textures\security.paa' size='80'/></t><br/><br/><t color='#00ce27' font='PuristaSemiBold'>Security systems disabled.<br/>The central fortress tower building is unlocked now.</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };
 publicVariable "fortressRaid_ToastLaptop";
 
