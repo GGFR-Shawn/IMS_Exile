@@ -9,7 +9,7 @@ private ["_timeStamp"];
 _timeStamp = diag_tickTime;
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "---------------- Starting Exile Interactive Mission System Server Addon Pre-Init -------------------";
-diag_log "----------------------------------------- Version 0.4.4 --------------------------------------------";
+diag_log "----------------------------------------- Version 0.4.5 --------------------------------------------";
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format['[IMS Server Addon] Load Interactive Mission Systems'];
 diag_log format['[IMS Server Addon] Load Fortress Mission Systems'];
