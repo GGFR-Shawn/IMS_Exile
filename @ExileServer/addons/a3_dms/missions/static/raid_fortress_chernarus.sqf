@@ -12,7 +12,7 @@
 	- Helicopter reinfocements.
 */
 
-private ["_AICount", "_AIMaxReinforcements", "_AIMaxReinforcementsWaves", "_AIdelay", "_staticguns", "_missionObjs", "_crate", "_crate_loot_values", "_crate_weapons", "_crate_items", "_crate_backpacks", "_difficulty", "_PossibleDifficulty", "_msgWIN"];
+private ["_difficulty", "_AICount", "_AIMaxReinforcements", "_AIMaxReinforcementsWaves", "_AIdelay", "_staticguns", "_missionObjs", "_crate", "_crate_loot_values", "_crate_weapons", "_crate_items", "_crate_backpacks" "_msgWIN"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -131,7 +131,7 @@ _group1 =
 	_group1,						// GROUP or OBJECT: Group or unit whose behavior is to be changed.
 	[6893.32,11388.2,0],			// ARRAY (positionATL): Location for the AI to guard.
 	_difficulty,					// STRING: Difficulty of the AI.
-	"SAFE"							// (OPTIONAL) STRING: AI Behavior. Refer to: https://community.bistudio.com/wiki/setBehaviour
+	"AWARE"							// (OPTIONAL) STRING: AI Behavior. Refer to: https://community.bistudio.com/wiki/setBehaviour
 ] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the first group.
 for "_i" from count (waypoints _group1) to 1 step -1 do
@@ -147,7 +147,7 @@ doStop (units _group1);
 // Second AI Group spawn.
 _group2 = [_AISoldierSpawnLocations2, _AICount2, _difficulty, "sniper", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set second group units behavior.
-[_group2, [6863.14,11399.9,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group2, [6863.14,11399.9,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the second group.
 for "_i" from count (waypoints _group2) to 1 step -1 do
 {
@@ -164,7 +164,7 @@ doStop (units _group2);
 // Third AI Group spawn.
 _group3 = [_AISoldierSpawnLocations3, _AICount3, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set third group units behavior.
-[_group3, [6845.97,11445.2,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group3, [6845.97,11445.2,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the third group.
 for "_i" from count (waypoints _group3) to 1 step -1 do
 {
@@ -181,7 +181,7 @@ doStop (units _group3);
 // Fourth AI Group spawn.
 _group4 = [_AISoldierSpawnLocations4, _AICount4, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set fourth group units behavior.
-[_group4, [6887.52,11496.2,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group4, [6887.52,11496.2,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the fourth group.
 for "_i" from count (waypoints _group4) to 1 step -1 do
 {
@@ -196,7 +196,7 @@ doStop (units _group4);
 // Fifth AI Group spawn.
 _group5 = [_AISoldierSpawnLocations5, _AICount5, _difficulty, "sniper", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set fifth group units behavior.
-[_group5, [6901.86,11500.5,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group5, [6901.86,11500.5,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the fifth group.
 for "_i" from count (waypoints _group5) to 1 step -1 do
 {
@@ -213,7 +213,7 @@ doStop (units _group5);
 // Sixth AI Group spawn.
 _group6 = [_AISoldierSpawnLocations6, _AICount6, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set sixth group units behavior.
-[_group6, [6924.52,11446.5,0.126343], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group6, [6924.52,11446.5,0.126343], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the sixth group.
 for "_i" from count (waypoints _group6) to 1 step -1 do
 {
@@ -230,7 +230,7 @@ doStop (units _group6);
 // Seventh AI Group spawn.
 _group7 = [_AISoldierSpawnLocations7, _AICount7, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set seventh group units behavior.
-[_group7, [6924.09,11392.1,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group7, [6924.09,11392.1,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the seventh group.
 for "_i" from count (waypoints _group7) to 1 step -1 do
 {
@@ -247,7 +247,7 @@ doStop (units _group1);
 // Eighth AI Group spawn.
 _group8 = [_AISoldierSpawnLocations8, _AICount8, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set eighth group units behavior.
-[_group8, [6891.49,11418,0.164276], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group8, [6891.49,11418,0.164276], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the eighth group.
 for "_i" from count (waypoints _group8) to 1 step -1 do
 {
@@ -262,7 +262,7 @@ doStop (units _group8);
 // Ninth AI Group spawn.
 _group9 = [_AISoldierSpawnLocations9, _AICount9, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set ninth group units behavior.
-[_group9, [12020.3,2447.49,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_group9, [12020.3,2447.49,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the ninth group.
 for "_i" from count (waypoints _group9) to 1 step -1 do
 {
@@ -279,7 +279,7 @@ doStop (units _group9);
 // Patrol AI Group spawn.
 _groupPatrol = [_AISoldierSpawnLocationsPatrol, _AICountPatrol, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set patrol group units behavior.
-[_groupPatrol, [6896.07,11434.2,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_groupPatrol, [6896.07,11434.2,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the patrol group.
 for "_i" from count (waypoints _groupPatrol) to 1 step -1 do
 {
@@ -303,12 +303,12 @@ _groupPatrol setFormation "LINE";
 //private _wpPatrol7 = _groupPatrol addWaypoint [[6902.41,11441.4,0],0];
 //_wpPatrol7 setWaypointType "CYCLE";
 
-/*
+
 // Heli AI Group spawn.
 // On this npcs location the heli reinfocements will nearly dropp the units.
 _groupHeli = [_AISoldierSpawnLocationsHeli, _AICountHeli, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
 // Set ninth group units behavior.
-[_groupHeli, [6896.07,11434.2,0], _difficulty, "SAFE"] call DMS_fnc_SetGroupBehavior;
+[_groupHeli, [6896.07,11434.2,0], _difficulty, "AWARE"] call DMS_fnc_SetGroupBehavior;
 // Remove all previous waypoints for the ninth group.
 for "_i" from count (waypoints _groupHeli) to 1 step -1 do
 {
@@ -322,6 +322,7 @@ for "_i" from count (waypoints _groupHeli) to 1 step -1 do
 // Let the Ai dont move from there positions.
 doStop (units _groupHeli);
 
+/*
 // Static Guns
 _staticGuns =
 [
