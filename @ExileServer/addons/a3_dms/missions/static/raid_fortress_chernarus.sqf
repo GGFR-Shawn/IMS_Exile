@@ -139,8 +139,8 @@ for "_i" from count (waypoints _group1) to 1 step -1 do
 	deleteWaypoint ((waypoints _group1) select _i);
 };
 // Give first group waypoints.
-private _wp1 = _group1 addWaypoint [[6893.32,11388.2,0],0];
-_wp1 setWaypointType "SENTRY";
+//private _wp1 = _group1 addWaypoint [[6893.32,11388.2,0],0];
+//_wp1 setWaypointType "SENTRY";
 // Let the Ai dont move from there positions.
 doStop (units _group1);
 
@@ -156,8 +156,10 @@ for "_i" from count (waypoints _group2) to 1 step -1 do
 // Set second group formation. 
 //_group2 setFormation "COLUMN";
 // Give second group waypoints.
-private _wp2 = _group2 addWaypoint [[6863.14,11399.9,0],0];
-_wp2 setWaypointType "HOLD";
+//private _wp2 = _group2 addWaypoint [[6863.14,11399.9,0],0];
+//_wp2 setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _group2);
 
 // Third AI Group spawn.
 _group3 = [_AISoldierSpawnLocations3, _AICount3, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -171,8 +173,10 @@ for "_i" from count (waypoints _group3) to 1 step -1 do
 // Set third group formation. 
 //_group3 setFormation "COLUMN";
 // Give third group waypoints.
-private _wp3 = _group3 addWaypoint [[6845.97,11445.2,0],0];
-_wp3 setWaypointType "HOLD";
+//private _wp3 = _group3 addWaypoint [[6845.97,11445.2,0],0];
+//_wp3 setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _group3);
 
 // Fourth AI Group spawn.
 _group4 = [_AISoldierSpawnLocations4, _AICount4, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -184,8 +188,8 @@ for "_i" from count (waypoints _group4) to 1 step -1 do
 	deleteWaypoint ((waypoints _group4) select _i);
 };
 // Give fourth group waypoints.
-private _wp4 = _group4 addWaypoint [[6887.52,11496.2,0],0];
-_wp4 setWaypointType "SENTRY";
+//private _wp4 = _group4 addWaypoint [[6887.52,11496.2,0],0];
+//_wp4 setWaypointType "SENTRY";
 // Let the Ai dont move from there positions.
 doStop (units _group4);
 
@@ -201,8 +205,10 @@ for "_i" from count (waypoints _group5) to 1 step -1 do
 // Set fifth group formation. 
 //_group5 setFormation "COLUMN";
 // Give fifth group waypoints.
-private _wp5 = _group5 addWaypoint [[6901.86,11500.5,0],0];
-_wp5 setWaypointType "HOLD";
+//private _wp5 = _group5 addWaypoint [[6901.86,11500.5,0],0];
+//_wp5 setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _group5);
 
 // Sixth AI Group spawn.
 _group6 = [_AISoldierSpawnLocations6, _AICount6, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -216,8 +222,10 @@ for "_i" from count (waypoints _group6) to 1 step -1 do
 // Set sixth group formation. 
 //_group6 setFormation "COLUMN";
 // Give sixth group waypoints.
-private _wp6 = _group6 addWaypoint [[6924.52,11446.5,0.126343],0];
-_wp6 setWaypointType "HOLD";
+//private _wp6 = _group6 addWaypoint [[6924.52,11446.5,0.126343],0];
+//_wp6 setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _group6);
 
 // Seventh AI Group spawn.
 _group7 = [_AISoldierSpawnLocations7, _AICount7, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -231,8 +239,10 @@ for "_i" from count (waypoints _group7) to 1 step -1 do
 // Set seventh group formation. 
 //_group7 setFormation "COLUMN";
 // Give seventh group waypoints.
-private _wp7 = _group7 addWaypoint [[6924.09,11392.1,0],0];
-_wp7 setWaypointType "SENTRY";
+//private _wp7 = _group7 addWaypoint [[6924.09,11392.1,0],0];
+//_wp7 setWaypointType "SENTRY";
+// Let the Ai dont move from there positions.
+doStop (units _group1);
 
 // Eighth AI Group spawn.
 _group8 = [_AISoldierSpawnLocations8, _AICount8, _difficulty, "MG", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -244,8 +254,8 @@ for "_i" from count (waypoints _group8) to 1 step -1 do
 	deleteWaypoint ((waypoints _group8) select _i);
 };
 // Give eighth group waypoints.
-private _wp8 = _group8 addWaypoint [[6891.49,11418,0.164276],0];
-_wp8 setWaypointType "HOLD";
+//private _wp8 = _group8 addWaypoint [[6891.49,11418,0.164276],0];
+//_wp8 setWaypointType "HOLD";
 // Let the Ai dont move from there positions.
 doStop (units _group8);
 
@@ -261,8 +271,10 @@ for "_i" from count (waypoints _group9) to 1 step -1 do
 // Set ninth group formation. 
 //_group9 setFormation "COLUMN";
 // Give ninth group waypoints.
-private _wp9 = _group9 addWaypoint [[12020.3,2447.49,0],0];
-_wp9 setWaypointType "HOLD";
+//private _wp9 = _group9 addWaypoint [[12020.3,2447.49,0],0];
+//_wp9 setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _group9);
 
 // Patrol AI Group spawn.
 _groupPatrol = [_AISoldierSpawnLocationsPatrol, _AICountPatrol, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -276,21 +288,22 @@ for "_i" from count (waypoints _groupPatrol) to 1 step -1 do
 // Set the patrol groups formation.
 _groupPatrol setFormation "LINE";
 // Give patrol group waypoints.
-private _wpPatrol1 = _groupPatrol addWaypoint [[6900.4,11409.3,0],0];
-_wpPatrol1 setWaypointType "MOVE"; 
-private _wpPatrol2 = _groupPatrol addWaypoint [[6912.28,11388.6,0],0];
-_wpPatrol2 setWaypointType "MOVE"; 
-private _wpPatrol3 = _groupPatrol addWaypoint [[6921.17,11477.2,0],0];
-_wpPatrol3 setWaypointType "MOVE"; 
-private _wpPatrol4 = _groupPatrol addWaypoint [[6883.44,11496.2,0],0];
-_wpPatrol4 setWaypointType "MOVE"; 
-private _wpPatrol5 = _groupPatrol addWaypoint [[6851.33,11464.7,0],0];
-_wpPatrol5 setWaypointType "MOVE"; 
-private _wpPatrol6 = _groupPatrol addWaypoint [[6885.19,11378.9,0],0];
-_wpPatrol6 setWaypointType "MOVE"; 
-private _wpPatrol7 = _groupPatrol addWaypoint [[6902.41,11441.4,0],0];
-_wpPatrol7 setWaypointType "CYCLE";
+//private _wpPatrol1 = _groupPatrol addWaypoint [[6900.4,11409.3,0],0];
+//_wpPatrol1 setWaypointType "MOVE"; 
+//private _wpPatrol2 = _groupPatrol addWaypoint [[6912.28,11388.6,0],0];
+//_wpPatrol2 setWaypointType "MOVE"; 
+//private _wpPatrol3 = _groupPatrol addWaypoint [[6921.17,11477.2,0],0];
+//_wpPatrol3 setWaypointType "MOVE"; 
+//private _wpPatrol4 = _groupPatrol addWaypoint [[6883.44,11496.2,0],0];
+//_wpPatrol4 setWaypointType "MOVE"; 
+//private _wpPatrol5 = _groupPatrol addWaypoint [[6851.33,11464.7,0],0];
+//_wpPatrol5 setWaypointType "MOVE"; 
+//private _wpPatrol6 = _groupPatrol addWaypoint [[6885.19,11378.9,0],0];
+//_wpPatrol6 setWaypointType "MOVE"; 
+//private _wpPatrol7 = _groupPatrol addWaypoint [[6902.41,11441.4,0],0];
+//_wpPatrol7 setWaypointType "CYCLE";
 
+/*
 // Heli AI Group spawn.
 // On this npcs location the heli reinfocements will nearly dropp the units.
 _groupHeli = [_AISoldierSpawnLocationsHeli, _AICountHeli, _difficulty, "assault", _side] call DMS_fnc_SpawnAIGroup_MultiPos;
@@ -304,10 +317,11 @@ for "_i" from count (waypoints _groupHeli) to 1 step -1 do
 // Set heli group formation. 
 //_groupHeli setFormation "COLUMN";
 // Give heli group waypoints.
-private _wpHeli = _groupHeli addWaypoint [[6896.07,11434.2,0],0];
-_wpHeli setWaypointType "HOLD";
+//private _wpHeli = _groupHeli addWaypoint [[6896.07,11434.2,0],0];
+//_wpHeli setWaypointType "HOLD";
+// Let the Ai dont move from there positions.
+doStop (units _groupHeli);
 
-/*
 // Static Guns
 _staticGuns =
 [

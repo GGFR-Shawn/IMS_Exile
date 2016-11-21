@@ -29,7 +29,6 @@ fortressRaidRemoveEvent = {
 	// There are possibly actions left on the supply crates if they are not used.
 	// We just leafe them as loot crates for area visitors :)
 	[fortressRaid_toilet_1, 0] remoteExec ["BIS_fnc_holdActionRemove", 0];
-	[fortressRaid_toilet_2, 0] remoteExec ["BIS_fnc_holdActionRemove", 0];
 	// Delete interaction objects.
 	// There are possibly objects left like the supply crates if they are not used.
 	// We just leafe them as loot crates for area visitors :)
