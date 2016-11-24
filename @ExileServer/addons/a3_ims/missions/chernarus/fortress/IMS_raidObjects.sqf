@@ -37,9 +37,6 @@ forEach _vehicles;
  * www.exilemod.com
  */
 
-ExileRouletteChairs = [];
-ExileRouletteChairPositions = [];
-
 // Visual objects
 // 40 Vehicles
 private _vehicles = [
@@ -88,12 +85,6 @@ private _vehicles = [
     _vehicle setVectorDirAndUp [_x select 2, _x select 3];
     _vehicle enableSimulationGlobal (_x select 4);
     _vehicle setVariable ["ExileIsLocked", -1, true];
-    
-    if (_vehicle isKindOf "Exile_RussianRouletteChair") then
-    {
-        ExileRouletteChairs pushBack _vehicle;
-        ExileRouletteChairPositions pushBack [_x select 1, getDir _vehicle];
-    };
 }
 forEach _vehicles;
 

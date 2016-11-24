@@ -12,7 +12,7 @@
 	- Helicopter reinfocements.
 */
 
-private ["_difficulty", "_AICount", "_AIMaxReinforcements", "_AIMaxReinforcementsWaves", "_AIdelay", "_staticguns", "_missionObjs", "_crate", "_crate_loot_values", "_crate_weapons", "_crate_items", "_crate_backpacks" "_msgWIN"];
+private ["_difficulty", "_AICount", "_AIMaxReinforcements", "_AIMaxReinforcementsWaves", "_AIdelay", "_staticguns", "_missionObjs", "_crate", "_crate_loot_values", "_crate_weapons", "_crate_items", "_crate_backpacks", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -390,7 +390,7 @@ _groupReinforcementsInfo =
 // Add mission objects to monitor.
 _missionObjs =
 [
-	[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
+	[_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
 	[],														// No Vehicle prize
 	[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
 ];

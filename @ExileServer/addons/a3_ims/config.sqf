@@ -9,7 +9,7 @@ IMS_MissionLogs 						= true;																													// Enable or disable I
 
 	/* The Fortress Mission Settings */
 	
-	IMS_FortressSaticMission_Arr			= 1;																												// This value has to be set to succsesfull complete the DMS Mission part without killing all NPCs. 	The value depents on the load order of static DMS missions. If the Fortress mission is your second static mission the value is 1, if its the only active static mission or the first the value is 0. You can cange the load order of missions in the DMS map config file.
+	IMS_FortressSaticMission_Arr			= 0;																												// This value has to be set to succsesfull complete the DMS Mission part without killing all NPCs. 	The value depents on the load order of static DMS missions. If the Fortress mission is your second static mission the value is 1, if its the only active static mission or the first the value is 0. You can cange the load order of missions in the DMS map config file.
 	IMS_FortressTimer 						= 180;																												// Time in seconds for the bomb timer. This is just a option for testing things.
 	
 		/* Loot Crate Settings */
