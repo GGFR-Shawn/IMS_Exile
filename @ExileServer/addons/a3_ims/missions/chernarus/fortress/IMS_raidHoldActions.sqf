@@ -20,9 +20,6 @@
 // Toilet interaction Object 1.
 [fortressRaid_toilet_1, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
 
-// Toilet interaction Object 2.
-[fortressRaid_toilet_2, "Investigate", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_toilet_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
-
 // Supplybox interaction Object 1.
 [fortressRaid_supplybox_1, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["fortressRaid_supplybox_1_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
 
@@ -49,11 +46,6 @@
 
 // Bomb interaction Object 4.
 [fortressRaid_bomb_4, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
+
 // Bomb interaction Object 5.
 [fortressRaid_bomb_5, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
-
-// Bomb interaction Object 6.
-[fortressRaid_bomb_6, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
-
-// Bomb interaction Object 7.
-[fortressRaid_bomb_7, "Investigate Bomb", "default", "_this distance _target < 5", {remoteExec ["fortressRaid_bomb_ActionScript", 0, true];}, [], 3, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];

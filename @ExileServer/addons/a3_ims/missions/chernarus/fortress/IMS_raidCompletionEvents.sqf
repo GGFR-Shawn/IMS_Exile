@@ -40,14 +40,10 @@ fortressRaidRemoveEvent = {
 	deleteVehicle fortressRaid_bomb_3;
 	deleteVehicle fortressRaid_bomb_4;
 	deleteVehicle fortressRaid_bomb_5;
-	deleteVehicle fortressRaid_bomb_6;
-	deleteVehicle fortressRaid_bomb_7;
 	deleteVehicle fortressRaid_charge_1;
 	deleteVehicle fortressRaid_charge_2;
 	deleteVehicle fortressRaid_charge_3;
 	deleteVehicle fortressRaid_charge_4;
 	deleteVehicle fortressRaid_charge_5;
-	deleteVehicle fortressRaid_charge_6;
-	deleteVehicle fortressRaid_charge_7;
 };
 publicVariable "fortressRaidRemoveEvent";
