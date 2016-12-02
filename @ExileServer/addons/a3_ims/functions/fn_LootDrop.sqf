@@ -1,5 +1,5 @@
 /*
-    File: fn_raidDrop.sqf
+    File: fn_LootDrop.sqf
     Written by Salutesh
     www.reality-gaming.eu
     

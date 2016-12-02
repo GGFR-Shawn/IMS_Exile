@@ -10,7 +10,7 @@ class CfgPatches
 	{
 		units[] = {};
 		weapons[] = {};
-		a3_ims_version = "November 21, 2016";
+		a3_IMS_version = "November 21, 2016";
 		requiredVersion = 1.64;
 		requiredAddons[] = {"exile_client","exile_server_config","a3_dms"};
 	};
@@ -35,6 +35,8 @@ class CfgFunctions
 			class EndBombing {};
 			class VehicleSpawn {};
 			class VehicleHandle {};
+			class ImportFromExileEdenPlugin {};
+			class ImportFromExileEdenPluginSimple {};
 		};
 	};
 };

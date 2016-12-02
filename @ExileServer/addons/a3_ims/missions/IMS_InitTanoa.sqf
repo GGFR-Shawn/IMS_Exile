@@ -14,7 +14,6 @@ diag_log "----------------------------------------------------------------------
 diag_log format['[IMS Server Addon] Load Interactive Mission Systems'];
 diag_log format['[IMS Server Addon] Load Fortress Mission Systems'];
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidEventHandler.sqf");
-CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidObjects.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidInteractionObjects.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidHoldActionScripts.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidHoldActions.sqf");
@@ -25,6 +24,7 @@ CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidCompletionEvents.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidSetup.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidTasks.sqf");
 CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidToasts.sqf");
+CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_raidObjectsCleanup.sqf");
 diag_log format['[IMS Server Addon] Fortress Mission Systems loaded!'];
 diag_log format['[IMS Server Addon] Interactive Mission Systems loaded!'];
 diag_log "----------------------------------------------------------------------------------------------------";

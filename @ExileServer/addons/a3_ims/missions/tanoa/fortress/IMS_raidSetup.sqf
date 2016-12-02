@@ -8,6 +8,9 @@
 */
 
 // The Fortress - Pre mission setup
+// Spaw objects
+"tanoa/fortress_tanoaObjects" call IMS_fnc_ImportFromExileEdenPlugin;
+"tanoa/chernarus/fortress_tanoaSimpleObjects" call IMS_fnc_ImportFromExileEdenPluginSimple;
 // Lock the center control tower doors.
 ((nearestobjects [[12103.6,2491.62,0], ["Land_Cargo_Tower_V1_No1_F"], 150]) select 0) setVariable ['bis_disabled_Door_1',1,true];
 ((nearestobjects [[12103.6,2491.62,0], ["Land_Cargo_Tower_V1_No1_F"], 150]) select 0) setVariable ['bis_disabled_Door_2',1,true];

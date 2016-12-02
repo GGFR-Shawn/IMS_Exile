@@ -23,32 +23,3 @@ fortressRaidCompletionEvent = {
 	// where you want to trigger a mission completion "externally" using a script.
 	_missionInfo set [1, [["external",true]]];	
 };
-
-fortressRaidRemoveEvent = {
-	// Remove left hold actions.
-	// There are possibly actions left on the supply crates if they are not used.
-	// We just leafe them as loot crates for area visitors :)
-	[fortressRaid_toilet_1, 0] remoteExec ["BIS_fnc_holdActionRemove", 0];
-	[fortressRaid_toilet_2, 0] remoteExec ["BIS_fnc_holdActionRemove", 0];
-	// Delete interaction objects.
-	// There are possibly objects left like the supply crates if they are not used.
-	// We just leafe them as loot crates for area visitors :)
-	deleteVehicle fortressRaid_dokument;
-	deleteVehicle fortressRaid_laptop;
-	deleteVehicle fortressRaid_terminal;
-	deleteVehicle fortressRaid_bomb_1;
-	deleteVehicle fortressRaid_bomb_2;
-	deleteVehicle fortressRaid_bomb_3;
-	deleteVehicle fortressRaid_bomb_4;
-	deleteVehicle fortressRaid_bomb_5;
-	deleteVehicle fortressRaid_bomb_6;
-	deleteVehicle fortressRaid_bomb_7;
-	deleteVehicle fortressRaid_charge_1;
-	deleteVehicle fortressRaid_charge_2;
-	deleteVehicle fortressRaid_charge_3;
-	deleteVehicle fortressRaid_charge_4;
-	deleteVehicle fortressRaid_charge_5;
-	deleteVehicle fortressRaid_charge_6;
-	deleteVehicle fortressRaid_charge_7;
-};
-publicVariable "fortressRaidRemoveEvent";
