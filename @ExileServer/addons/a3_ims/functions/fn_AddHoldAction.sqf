@@ -12,14 +12,17 @@
 	//
 	//////////////////////////////////////////////////////////////////
 	//
-	// [STRING]: Object target.
-	// [STRING]: Hold action title.
-	// [STRING]: Idle icon.
-	// [STRING]: Progress icon.
-	// [STRING]: Condition to show.
-	// [CODE]: Code executed on completion.
-	//
-	//
+	// 1. [STRING]: Object target.
+	// 2. [STRING]: Hold action title.
+	// 3. [STRING]: Idle icon.
+	// 4. [STRING]: Progress icon.
+	// 5. [STRING]: Condition to show.
+	// 6. [CODE]: Code executed on completion.
+	// 7. [STRING]: Arguments.
+	// 8. [VALUE]: Action duration in seconds.
+	// 9. [VALUE]: Action priority.
+	// 10. [BOOLEAN]: Remove on completion.
+	// 11. [BOOLEAN]: Show unconscious.
 	//
 	//////////////////////////////////////////////////////////////////
 */

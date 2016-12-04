@@ -29,7 +29,7 @@ private _varname = format ["IMS_StaticBaseSpawned_%1",_file];
 
 if (missionNamespace getVariable [_varname,false]) exitWith
 {
-	diag_log format ["IMS ERROR :: Attempting to spawn static base with file ""%1"" after it has already been spawned!",_file];
+	diag_log format ["IMS ERROR :: Attempting to spawn objects with file ""%1"" after it has already been spawned!",_file];
 };
 
 missionNamespace setVariable [_varname,true];

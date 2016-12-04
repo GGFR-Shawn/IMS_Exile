@@ -26,7 +26,7 @@ IMS_Fortress_Terminal_ActionScript = {
 	[] remoteExec ["IMS_Fortress_Toast_BombActivate", IMS_Fortress_PlayerUnits, true];
 	sleep 3;
 	// Start timer
-	[IMS_Fortress_Timer] remoteExec ["IMS_fnc_EndTimer", IMS_Fortress_PlayerUnits, true];
+	[IMS_Fortress_Timer] remoteExec ["exile_fnc_EndTimer", IMS_Fortress_PlayerUnits, true];
 	[] remoteExec ["IMS_Fortress_AlarmEvent", -2, true];
 	sleep IMS_Fortress_Timer;
 	// Start end events.
@@ -51,10 +51,12 @@ IMS_Fortress_Terminal_ActionScript = {
 		_dir = 0;
 		_height = 150;
 		_type = IMS_Fortress_VehicleLootClass;
-		_spawnATL = false; 
+		_spawnATL = false;
 		_pinCode = (1000 +(round (random 8999)));
+		// Put vehicle Pincode into a variable.
 		IMS_Fortress_VehiclePinCode = _pinCode;
 		publicVariable "IMS_Fortress_VehiclePinCode";
+		// Spawn Vehicle
 		[_pos,_dir,_height,_type,_spawnATL,_pinCode] call IMS_fnc_VehicleSpawn;
 		sleep 2;
 		[] remoteExec ["IMS_Fortress_Toast_VehicleLoot", IMS_Fortress_PlayerUnits, true];
@@ -89,7 +91,7 @@ IMS_Fortress_SupplyBox_ActionScript_1 = {
 	// Remove action.
 	[IMS_InteractionObject_FortressSupplyBox_1, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Fill the crate.
-	[IMS_InteractionObject_FortressSupplyBox_1] remoteExec ["IMS_fnc_FillSupplyBox", 0, true];
+	[IMS_InteractionObject_FortressSupplyBox_1] remoteExec ["IMS_fnc_FillSupplyBox", [0,-2], true];
 	// Notifiy player with toast.
 	[] remoteExec ["IMS_Fortress_Toast_Supply", IMS_Fortress_PlayerUnits, true];
 };
@@ -100,7 +102,7 @@ IMS_Fortress_SupplyBox_ActionScript_2 = {
 	// Remove action.
 	[IMS_InteractionObject_FortressSupplyBox_2, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Fill the crate.
-	[IMS_InteractionObject_FortressSupplyBox_2] remoteExec ["IMS_fnc_FillSupplyBox", 0, true];
+	[IMS_InteractionObject_FortressSupplyBox_2] remoteExec ["IMS_fnc_FillSupplyBox", [0,-2], true];
 	// Notifiy player with toast.
 	[] remoteExec ["IMS_Fortress_Toast_Supply", IMS_Fortress_PlayerUnits, true];
 };
@@ -111,7 +113,7 @@ IMS_Fortress_SupplyBox_ActionScript_3 = {
 	// Remove action.
 	[IMS_InteractionObject_FortressSupplyBox_3, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Fill the crate.
-	[IMS_InteractionObject_FortressSupplyBox_3] remoteExec ["IMS_fnc_FillSupplyBox", 0, true];
+	[IMS_InteractionObject_FortressSupplyBox_3] remoteExec ["IMS_fnc_FillSupplyBox", [0,-2], true];
 	// Notifiy player with toast.
 	[] remoteExec ["IMS_Fortress_Toast_Supply", IMS_Fortress_PlayerUnits, true];
 };
@@ -122,7 +124,7 @@ IMS_Fortress_SupplyBox_ActionScript_4 = {
 	// Remove action.
 	[IMS_InteractionObject_FortressSupplyBox_4, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Fill the crate.
-	[IMS_InteractionObject_FortressSupplyBox_4] remoteExec ["IMS_fnc_FillSupplyBox", 0, true];
+	[IMS_InteractionObject_FortressSupplyBox_4] remoteExec ["IMS_fnc_FillSupplyBox", [0,-2], true];
 	// Notifiy player with toast.
 	[] remoteExec ["IMS_Fortress_Toast_Supply", IMS_Fortress_PlayerUnits, true];
 };
@@ -133,7 +135,7 @@ IMS_Fortress_SupplyBox_ActionScript_5 = {
 	// Remove action.
 	[IMS_InteractionObject_FortressSupplyBox_5, 0] remoteExec ["bis_fnc_holdActionRemove", 0, true];
 	// Fill the crate.
-	[IMS_InteractionObject_FortressSupplyBox_5] remoteExec ["IMS_fnc_FillSupplyBox", 0, true];
+	[IMS_InteractionObject_FortressSupplyBox_5] remoteExec ["IMS_fnc_FillSupplyBox", [0,-2], true];
 	// Notifiy player with toast.
 	[] remoteExec ["IMS_Fortress_Toast_Supply", IMS_Fortress_PlayerUnits, true];
 };

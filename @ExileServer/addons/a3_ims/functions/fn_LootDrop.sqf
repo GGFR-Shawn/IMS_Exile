@@ -4,7 +4,9 @@
     www.reality-gaming.eu
     
     Description:
-	Just creates the loot crate on the sucsess of a mission.
+	
+	COMMING SOON
+	
 */
 
 // Crate loot setup
@@ -41,7 +43,7 @@ if (_paradrop) then {
 	_lootCrate addMagazineCargoGlobal [_crateMag2, IMS_Fortress_LootAmmoAmount];
 	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
 	_lootCrate addItemCargoGlobal [_crateGear, 2];
-	_lootCrate setVariable ["ExileMoney", 25000, true];
+	_lootCrate setVariable ["ExileMoney", IMS_Fortress_PoptabsLoot, true];
 	_lootCrate allowDamage false;
 	_markerCrate setMarkerAlpha 1; 
 	_chemlight = "chemlight_blue" createVehicle (position _lootCrate);

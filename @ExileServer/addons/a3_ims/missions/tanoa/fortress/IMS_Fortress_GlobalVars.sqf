@@ -5,12 +5,6 @@
 	
 */
 
-// Mission objects
-["tanoa\fortress\Objects"] call IMS_fnc_ImportFromExileEdenPlugin;
-["tanoa\fortress\InteractionObjects"] call IMS_fnc_ImportFromExileEdenPluginInteraction;
-["tanoa\fortress\ScriptObjects"] call IMS_fnc_ImportFromExileEdenPluginScripted;
-["tanoa\fortress\SimpleObjects"] call IMS_fnc_ImportFromExileEdenPluginSimple;
-
 // Alarm Sound
 IMS_Fortress_AlarmEvent = {
 	{_x say "air_raid"} foreach [IMS_ScriptObject_FortressSpeaker_1,IMS_ScriptObject_FortressSpeaker_2,IMS_ScriptObject_FortressSpeaker_3,IMS_ScriptObject_FortressSpeaker_4];

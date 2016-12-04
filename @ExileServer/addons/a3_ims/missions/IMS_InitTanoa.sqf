@@ -15,10 +15,16 @@ diag_log format['[IMS Server Addon] Load Interactive Mission Systems'];
 diag_log format['[IMS Server Addon] Load Fortress Mission Systems'];
 
 if (IMS_Fortress_MissionActive) then {
+	// Mission Scripts
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_Fortress_GlobalVars.sqf");
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_Fotress_Tasks.sqf");
 	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_Fotress_Toasts.sqf");
-	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_Fortress_HoldActionScripts.sqf");
+	CALLFILE("\x\addons\ims\missions\tanoa\fortress\IMS_Fortress_HoldActionEvents.sqf");
+	// Mission Objects
+	["tanoa\fortress\Objects"] call IMS_fnc_ImportFromExileEdenPlugin;
+	["tanoa\fortress\InteractionObjects"] call IMS_fnc_ImportFromExileEdenPluginInteraction;
+	["tanoa\fortress\ScriptObjects"] call IMS_fnc_ImportFromExileEdenPluginScripted;
+	["tanoa\fortress\SimpleObjects"] call IMS_fnc_ImportFromExileEdenPluginSimple;
 	diag_log format['[IMS Server Addon] Fortress Mission loaded!'];
 };
 

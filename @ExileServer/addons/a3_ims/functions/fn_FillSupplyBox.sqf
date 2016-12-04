@@ -15,7 +15,5 @@ clearItemCargoGlobal _object;
 _object addWeaponCargoGlobal [_crateweapon, 1];
 _object addMagazineCargoGlobal [_cratemag, (1 + floor(random 3))];
 _object addItemCargoGlobal [_cratemed, (1 + floor(random 1))];
-// Permaloot
-_object setVariable ["permaLoot",true];
 // Unlock the crate
-_object setVariable ["ExileIsLocked", 1, true];
+_object setVariable ["ExileIsLocked", 0, true];

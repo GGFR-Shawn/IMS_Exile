@@ -24,25 +24,25 @@ class CfgFunctions
 		class Master_Directory
 		{
 			file = "\x\addons\ims";
-			class preInit {preInit = 1;};
-			class postInit {postInit = 1;};
+			class IMS_preInit 									{preInit = 1;};
+			class IMS_postInit 									{postInit = 1;};
 		};
 		class Functions
 		{
 			file = "\x\addons\ims\functions";
-			class AddHoldAction {};
-			class LootDrop {};
-			class EndBombing {};
-			class EndTimer {};
-			class FillSupplyBox {};
-			class ImportFromExileEdenPlugin {};
-			class ImportFromExileEdenPluginInteraction {};
-			class ImportFromExileEdenPluginScripted {};
-			class ImportFromExileEdenPluginSimple {};
-			class InteractionNpcCreate {};
-			class InteractionNpcOnAnimationDone {};
-			class VehicleSpawn {};
-			class VehicleHandle {};
+			class AddHoldAction 								{};
+			class LootDrop 										{};
+			class EndBombing 									{};
+			class FillSupplyBox 								{};
+			class ImportFromExileEdenPlugin 					{};
+			class ImportFromExileEdenPluginInteraction 			{};
+			class ImportFromExileEdenPluginScripted 			{};
+			class ImportFromExileEdenPluginSimple 				{};
+			class ImportFromExileEdenPluginSimpleInteraction 	{};
+			class InteractionNpcCreate 							{};
+			class InteractionNpcOnAnimationDone 				{};
+			class VehicleSpawn 									{};
+			class VehicleHandle 								{};
 		};
 	};
 };

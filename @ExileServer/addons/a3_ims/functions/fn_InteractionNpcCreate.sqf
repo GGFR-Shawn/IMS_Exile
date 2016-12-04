@@ -4,7 +4,9 @@
     www.reality-gaming.eu
     
     Description:
-	Creates a Npc with given hold action.
+	
+	COMMING SOON
+	
 */
 
 private["_npcClassName","_npcFace","_animations","_position","_direction", "_attachToObject", "_holdAction", "_holdActionTitle", "_holdActionIcon", "_holdActionEvent", "_npc","_animationCount","_npcName"];
