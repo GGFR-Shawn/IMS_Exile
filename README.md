@@ -80,6 +80,11 @@ The Fortress interactive raid mission for Exile Tanoa Map
 - Adding terrain and interaction objects.
 - Eventscripts and functions.
 
+####Kown Bugs / To Do:
+- Presistent vehicle cant be locked with given pincode.
+- Presistent vehicle pincode cant be changed for free with given pincode at vehicle customizer.
+- DMS Units shoting each other. [To Do]: Retrict uniforms to a single faction related class.
+- Supply crate items cant be looted per klick. [To Do]: Create new function for supply crate spawn without using of ExileIsLocked variable.   
 
 # Github Project:
 
