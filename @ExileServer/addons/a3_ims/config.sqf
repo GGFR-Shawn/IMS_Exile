@@ -8,8 +8,8 @@
 	IMS_MissionLogs 						= true;	// Enable or disable IMS log messages.
 
 	/* --- The Fortress Mission Settings --- */
-	
-		IMS_FortressSaticMission_Arr			= 0;																												
+		IMS_Fortress_MissionActive				= true;	//Enable or disable the Fotress Mission
+		IMS_Fortress_SaticMission_Arr			= 0;																												
 		/* 
 			IMS_FortressSaticMission_Arr NOTE:
 			This value has to be set to succsesfull complete the DMS Mission part without killing all NPCs. 	
@@ -18,19 +18,19 @@
 			You can cange the load order of missions in the DMS map config file. 
 		*/
 	
-		IMS_FortressTimer 						= 10;	//Time in seconds for the bomb timer. This is just a option for testing things and for reduce/delay the timer.
+		IMS_Fortress_Timer						= 10;	//Time in seconds for the bomb timer. This is just a option for testing things and for reduce/delay the timer.
 	
 		/* --- Loot Crate Settings --- */
-		IMS_FortressLootWeapons					= ["srifle_GM6_ghex_F","srifle_DMR_07_hex_F","srifle_LRR_tna_F","SMG_05_F","arifle_MX_SW_khk_F","LMG_03_F","arifle_ARX_ghex_F","arifle_MXC_khk_F"];	// Loot Weapons in the crate after Fortress Mission success.
-		IMS_FortressLootAmmoAmount				= 3;	// Amount of magazines for every Weapon in IMS_FortressLootWeapons for the crate.
-		IMS_FortressMedicalItems				= ["Exile_Item_InstaDoc","Exile_Item_Bandage"];	// Madical Items in the crate after Fortress Mission success.
-		IMS_FortressGearItems					= ["",""];	// Gear Items in the crate after Fortress Mission success.
-		IMS_FortressPoptabsLoot					= 25000;	// Ammount of Poptabs in the crate on Fortress mission success set to 0 to disable this option.
+		IMS_Fortress_LootWeapons					= ["srifle_GM6_ghex_F","srifle_DMR_07_hex_F","srifle_LRR_tna_F","SMG_05_F","arifle_MX_SW_khk_F","LMG_03_F","arifle_ARX_ghex_F","arifle_MXC_khk_F"];	// Loot Weapons in the crate after Fortress Mission success.
+		IMS_Fortress_LootAmmoAmount				= 3;	// Amount of magazines for every Weapon in IMS_FortressLootWeapons for the crate.
+		IMS_Fortress_MedicalItems				= ["Exile_Item_InstaDoc","Exile_Item_Bandage"];	// Madical Items in the crate after Fortress Mission success.
+		IMS_Fortress_GearItems					= ["",""];	// Gear Items in the crate after Fortress Mission success.
+		IMS_Fortress_PoptabsLoot					= 25000;	// Ammount of Poptabs in the crate on Fortress mission success set to 0 to disable this option.
 	
 		/* --- Vehicle Spawn Settings --- */
-		IMS_FortressVehicleLoot					= true;	// Enable/disable vehicle loot spawn on Fortress mission success.
-		IMS_FortressVehicleLootClass			= "Exile_Car_Ifrit";	// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
+		IMS_Fortress_VehicleLoot					= true;	// Enable/disable vehicle loot spawn on Fortress mission success.
+		IMS_Fortress_VehicleLootClass			= "Exile_Car_Ifrit";	// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
 
 
 /* DO NOT EDIT BELOW THIS LINE IF YOU DONT KNOW WHAT YOU ARE DOING! */
-publicVariable "IMS_FortressTimer";
+publicVariable "IMS_Fortress_Timer";

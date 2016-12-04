@@ -2,16 +2,16 @@
 	IMS_fnc_ImportFromExileEdenPluginSimple
 	Created by Salutesh
 
-	Check out Exile Eden Plugin: https://github.com/maca134/m3e_3den/releases
+	Check out Exile Eden Plugin: http://www.exilemod.com/devblog/exile-3den-plugin/
 
 	Usage:
 	[
-		_file							// String: The filename (or filepath under the objects folder) that contains the exported Exile Eden Plugin simple objects.
+		_file																	// String: The filename (or filepath under the objects folder) that contains the exported Exile Eden Plugin simple objects.
 	] call IMS_fnc_ImportFromExileEdenPluginSimple;
 
-	_file call IMS_fnc_ImportFromExileEdenPluginSimple; // This also works
+	_file call IMS_fnc_ImportFromExileEdenPluginSimple; 						// This also works
 
-	This function will simply create the objects from a file that was exported from Exile Eden Plugin, and return a list of those objects.
+	This function will simply create the objects from a file that is included to the addons objects folder.
 */
 
 if !(params

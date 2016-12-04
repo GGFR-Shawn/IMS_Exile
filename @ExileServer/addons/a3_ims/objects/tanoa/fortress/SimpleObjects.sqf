@@ -1,3 +1,12 @@
+/*
+	[
+		"a3\structures_f_epb\civ\camping\camping_light_f.p3d",				// [STRING] Path to the object to spawn
+		[12108.5, 2314.93, 3.27098],										// [VALUE] Position where the object gets spawned
+		[-0.783477, -0.621421, 0],											// [VALUE] Vector Direction of the object
+		[0, 0, 1] 															// [VALUE] Vector Up of the object.
+	]
+*/
+
 [
 	["a3\structures_f_epb\civ\camping\camping_light_f.p3d", [12097.2, 2501.07, 8.33567], [-0.996805, 0.079868, 0], [0, 0, 1]],
 	["a3\structures_f\wrecks\uwreck_heli_attack_02_f.p3d", [11994.4, 2542.56, -2.1696], [0, 1, 0], [0, 0, 1]],

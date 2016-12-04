@@ -2,16 +2,16 @@
 	IMS_fnc_ImportFromExileEdenPlugin
 	Created by Salutesh
 
-	Check out Exile Eden Plugin: https://github.com/maca134/m3e_3den/releases
+	Check out Exile Eden Plugin: http://www.exilemod.com/devblog/exile-3den-plugin
 
 	Usage:
 	[
-		_file							// String: The filename (or filepath under the objects folder) that contains the exported Exile Eden Plugin objects
+		_file																// [STRING]: The filename (or filepath under the objects folder) that contains the exported Exile Eden Plugin objects
 	] call IMS_fnc_ImportFromExileEdenPlugin;
 
-	_file call IMS_fnc_ImportFromExileEdenPlugin; // This also works
+	_file call IMS_fnc_ImportFromExileEdenPlugin; 							// This also works
 
-	This function will simply create the objects from a file that was exported from Exile Eden Plugin, and return a list of those objects.
+	This function will simply create the objects from a file that is included to the addons objects folder.
 */
 
 if !(params
@@ -50,8 +50,7 @@ private _objs = _export apply
 	_vehicle setPosWorld (_x select 1);
 	_vehicle setVectorDirAndUp [_x select 2, _x select 3];
 	_vehicle enableSimulationGlobal (_x select 4);
-	_vehicle setVariable ["ExileIsLocked", -1, true];
-	
+	_vehicle setVariable ["ExileIsLocked", -1, true];	
 	_vehicle;
 };
 

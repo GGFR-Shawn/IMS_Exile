@@ -1,11 +1,29 @@
 /*
-    File: fn_raidDrop.sqf
+    File: fn_AddHoldAction.sqf
     Written by Salutesh
     www.reality-gaming.eu
-    
+	
     Description:
-	Function to create a hold action on target. Just a smarter version for our needs of the BI function.
+	
+	//////////////////////////////////////////////////////////////////
+	//
+	//	Example of the function:
+	//	[_object, _label, _idleIcon, _idleIcon, _active, "true", {}, {}, _completeCode, {}, _args, _duration, 0, _remove, false] remoteExec ["BIS_fnc_holdActionAdd",[0,-2] select isDedicated,true];
+	//
+	//////////////////////////////////////////////////////////////////
+	//
+	// [STRING]: Object target.
+	// [STRING]: Hold action title.
+	// [STRING]: Idle icon.
+	// [STRING]: Progress icon.
+	// [STRING]: Condition to show.
+	// [CODE]: Code executed on completion.
+	//
+	//
+	//
+	//////////////////////////////////////////////////////////////////
 */
+
 
 params [["_object", player], ["_label", "Search"], ["_type", "search"], ["_active", "true"], ["_completeCode", {hint 'Nothing found'}], ["_args", []], ["_duration", 2], ["_remove", "true"]];
 

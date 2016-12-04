@@ -8,10 +8,10 @@
 */
 
 // Crate loot setup
-private _weaponLoot = selectRandom IMS_FortressLootWeapons;
-private _weaponLoot2 = selectRandom IMS_FortressLootWeapons;
-private _medecineLoot = selectRandom IMS_FortressMedicalItems;
-private _gearLoot = IMS_FortressGearItems;
+private _weaponLoot = selectRandom IMS_Fortress_LootWeapons;
+private _weaponLoot2 = selectRandom IMS_Fortress_LootWeapons;
+private _medecineLoot = selectRandom IMS_Fortress_MedicalItems;
+private _gearLoot = IMS_Fortress_GearItems;
 private _magazineLoot = selectRandom (getArray (configFile >> "CfgWeapons" >> _weaponLoot >> "magazines"));
 private _magazineLoot2 = selectRandom (getArray (configFile >> "CfgWeapons" >> _weaponLoot2 >> "magazines"));
 private _crateWeapon = _weaponLoot;
@@ -37,8 +37,8 @@ if (_paradrop) then {
 	// Fill the crate
 	_lootCrate addWeaponCargoGlobal [_crateWeapon, 2];
 	_lootCrate addWeaponCargoGlobal [_crateWeapon2, 2];
-	_lootCrate addMagazineCargoGlobal [_crateMag, IMS_FortressLootAmmoAmount];
-	_lootCrate addMagazineCargoGlobal [_crateMag2, IMS_FortressLootAmmoAmount];
+	_lootCrate addMagazineCargoGlobal [_crateMag, IMS_Fortress_LootAmmoAmount];
+	_lootCrate addMagazineCargoGlobal [_crateMag2, IMS_Fortress_LootAmmoAmount];
 	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
 	_lootCrate addItemCargoGlobal [_crateGear, 2];
 	_lootCrate setVariable ["ExileMoney", 25000, true];
@@ -72,11 +72,11 @@ if (_paradrop) then {
 	// Fill the crate
 	_lootCrate addWeaponCargoGlobal [_crateWeapon, 2];
 	_lootCrate addWeaponCargoGlobal [_crateWeapon2, 2];
-	_lootCrate addMagazineCargoGlobal [_crateMag, (IMS_FortressLootAmmoAmount + floor(random IMS_FortressLootAmmoAmount))];
-	_lootCrate addMagazineCargoGlobal [_crateMag2, (IMS_FortressLootAmmoAmount + floor(random IMS_FortressLootAmmoAmount))];
+	_lootCrate addMagazineCargoGlobal [_crateMag, (IMS_Fortress_LootAmmoAmount + floor(random IMS_Fortress_LootAmmoAmount))];
+	_lootCrate addMagazineCargoGlobal [_crateMag2, (IMS_Fortress_LootAmmoAmount + floor(random IMS_Fortress_LootAmmoAmount))];
 	_lootCrate addItemCargoGlobal [_crateMed, (3 + floor(random 1))];
 	_lootCrate addItemCargoGlobal [_crateGear, 2];
-	_lootCrate setVariable ["ExileMoney", IMS_FortressPoptabsLoot, true];
+	_lootCrate setVariable ["ExileMoney", IMS_Fortress_PoptabsLoot, true];
 	_lootCrate allowDamage false;
 	_markerCrate setMarkerAlpha 1; 
 	_chemlight = createVehicle ["chemlight_blue", _pos, [], 0, ""];

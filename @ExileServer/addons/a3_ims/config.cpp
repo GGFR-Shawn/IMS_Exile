@@ -27,16 +27,22 @@ class CfgFunctions
 			class preInit {preInit = 1;};
 			class postInit {postInit = 1;};
 		};
-		class Raids
+		class Functions
 		{
 			file = "\x\addons\ims\functions";
 			class AddHoldAction {};
-			class Drop {};
+			class LootDrop {};
 			class EndBombing {};
+			class EndTimer {};
+			class FillSupplyBox {};
+			class ImportFromExileEdenPlugin {};
+			class ImportFromExileEdenPluginInteraction {};
+			class ImportFromExileEdenPluginScripted {};
+			class ImportFromExileEdenPluginSimple {};
+			class InteractionNpcCreate {};
+			class InteractionNpcOnAnimationDone {};
 			class VehicleSpawn {};
 			class VehicleHandle {};
-			class ImportFromExileEdenPlugin {};
-			class ImportFromExileEdenPluginSimple {};
 		};
 	};
 };
