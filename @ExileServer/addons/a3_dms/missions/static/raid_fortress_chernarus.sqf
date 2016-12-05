@@ -28,7 +28,7 @@ if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"d
 _difficulty = "hardcore";
 
 // Max amount of ai units
-_AICount = 27;
+_AICount = 30;
 
 _AIMaxReinforcementsWaves = 1;
 _AIMaxReinforcements = 5;
@@ -37,8 +37,9 @@ _AIdelay = 10;
 private _temp = DMS_ai_use_launchers;
 DMS_ai_use_launchers = false;
 
-// Definethe amount of units and spawn locations for AI Soldiers. These will be used for the initial spawning of AI as well as reinforcements.
-// The center spawn location is added 3 times so at least 3 AI will spawn initially at the center location, and so that future reinforcements are more likely to spawn at the center.
+// Define amount of units and spawn locations for AI Soldiers. 
+// These will be used for the initial spawning of AI as well as reinforcements.
+// Future reinforcements are more likely spawn at the center of the mission area.
 _AICount1 = 2;
 _AISoldierSpawnLocations1 =
 [
@@ -343,25 +344,6 @@ _wpHeli setWaypointType "HOLD";
 // Let the Ai dont move from there positions.
 doStop (units _groupHeli);
 
-/*
-// Static Guns
-_staticGuns =
-[
-	[
-		[12031.4,2428.87,0.000761271],
-		[12148.2,2508.84,2.78],
-		[12128.8,2469.37,2.78],
-		[12069.4,2461.54,0]
-	],
-	_group1,
-	"assault",
-	_difficulty,
-	"bandit",
-	"random"
-] call DMS_fnc_SpawnAIStaticMG;
-*/
-
-
 DMS_ai_use_launchers = _temp;
 
 // Get the AI to shut the fuck up :)
@@ -454,7 +436,7 @@ _added =
 		],
 		[
 			"playerNear",
-			[_pos,200]
+			[_pos,150]
 		]
 	],
 	_groupReinforcementsInfo,

@@ -23,7 +23,9 @@ _pos = [12103,2486,0];				 // Center position of the area
 if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"delay"};
 
 // Mission difficulty
-_difficulty = "hardcore"; 
+_difficulty = "hardcore";
+
+_AiCount = 30; 
 
 // Reinforcements values
 _AIMaxReinforcementsWaves = 1;
@@ -306,24 +308,6 @@ for "_i" from count (waypoints _groupHeli) to 1 step -1 do
 // Give heli group waypoints.
 private _wpHeli = _groupHeli addWaypoint [[12086.5,2470.26,0],0];
 _wpHeli setWaypointType "HOLD";
-
-/*
-// Static Guns
-_staticGuns =
-[
-	[
-		[12031.4,2428.87,0.000761271],
-		[12148.2,2508.84,2.78],
-		[12128.8,2469.37,2.78],
-		[12069.4,2461.54,0]
-	],
-	_group1,
-	"assault",
-	_difficulty,
-	"bandit",
-	"random"
-] call DMS_fnc_SpawnAIStaticMG;
-*/
 
 DMS_ai_use_launchers = _temp;
 
