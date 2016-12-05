@@ -289,20 +289,40 @@ for "_i" from count (waypoints _groupPatrol) to 1 step -1 do
 // Set the patrol groups formation.
 _groupPatrol setFormation "LINE";
 // Give patrol group waypoints.
-private _wpPatrol1 = _groupPatrol addWaypoint [[6900.4,11409.3,0],0];
+private _wpPatrol1 = _groupPatrol addWaypoint [[6902.53,11402.6,0.00708008],0];
 _wpPatrol1 setWaypointType "MOVE"; 
-private _wpPatrol2 = _groupPatrol addWaypoint [[6912.28,11388.6,0],0];
+private _wpPatrol2 = _groupPatrol addWaypoint [[6907.35,11391.2,-0.0202637],0];
 _wpPatrol2 setWaypointType "MOVE"; 
-private _wpPatrol3 = _groupPatrol addWaypoint [[6921.17,11477.2,0],0];
+private _wpPatrol3 = _groupPatrol addWaypoint [[6925.06,11396.5,-0.242767],0];
 _wpPatrol3 setWaypointType "MOVE"; 
-private _wpPatrol4 = _groupPatrol addWaypoint [[6883.44,11496.2,0],0];
+private _wpPatrol4 = _groupPatrol addWaypoint [[6924.85,11437.2,0.100128],0];
 _wpPatrol4 setWaypointType "MOVE"; 
-private _wpPatrol5 = _groupPatrol addWaypoint [[6851.33,11464.7,0],0];
+private _wpPatrol5 = _groupPatrol addWaypoint [[6918.22,11446.9,-0.0770874],0];
 _wpPatrol5 setWaypointType "MOVE"; 
-private _wpPatrol6 = _groupPatrol addWaypoint [[6885.19,11378.9,0],0];
+private _wpPatrol6 = _groupPatrol addWaypoint [[6919.61,11467.2,0.0598145],0];
 _wpPatrol6 setWaypointType "MOVE"; 
-private _wpPatrol7 = _groupPatrol addWaypoint [[6902.41,11441.4,0],0];
-_wpPatrol7 setWaypointType "CYCLE";
+private _wpPatrol7 = _groupPatrol addWaypoint [[6893.4,11496.4,0.0141296],0];
+_wpPatrol7 setWaypointType "MOVE";
+private _wpPatrol8 = _groupPatrol addWaypoint [[6879.47,11504.4,-0.688904],0];
+_wpPatrol8 setWaypointType "MOVE";
+private _wpPatrol9 = _groupPatrol addWaypoint [[6869.7,11487.2,0.0620422],0];
+_wpPatrol9 setWaypointType "MOVE";
+private _wpPatrol10 = _groupPatrol addWaypoint [[6893.4,11496.4,0.0141296],0];
+_wpPatrol10 setWaypointType "MOVE";
+private _wpPatrol11 = _groupPatrol addWaypoint [[6919.61,11467.2,0.0598145],0];
+_wpPatrol11 setWaypointType "MOVE";
+private _wpPatrol12 = _groupPatrol addWaypoint [[6918.22,11446.9,-0.0770874],0];
+_wpPatrol12 setWaypointType "MOVE";
+private _wpPatrol13 = _groupPatrol addWaypoint [[6924.85,11437.2,0.100128],0];
+_wpPatrol13 setWaypointType "MOVE";
+private _wpPatrol14 = _groupPatrol addWaypoint [[6925.06,11396.5,-0.242767],0];
+_wpPatrol14 setWaypointType "MOVE";
+private _wpPatrol15 = _groupPatrol addWaypoint [[6907.35,11391.2,-0.0202637],0];
+_wpPatrol15 setWaypointType "MOVE";
+private _wpPatrol16 = _groupPatrol addWaypoint [[6902.53,11402.6,0.00708008],0];
+_wpPatrol16 setWaypointType "MOVE";
+private _wpPatrol17 = _groupPatrol addWaypoint [[6896.21,11434.8,-0.00466919],0];
+_wpPatrol17 setWaypointType "CYCLE";
 
 // Heli AI Group spawn.
 // On this npcs location the heli reinfocements will nearly dropp the units.

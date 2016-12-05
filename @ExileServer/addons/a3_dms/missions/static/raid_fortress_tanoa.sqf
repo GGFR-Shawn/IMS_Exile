@@ -1,8 +1,8 @@
 /*
 	"The Fortress" v2.1 Static Raid Mission Tanoa for DMS Exile
-	
 	Needed a3_ims addon by Salutesh to work as it should.
-	Created by [RG] Salutesh
+	
+	Created by Salutesh
 	www.reality-gaming.eu
 	
 	Includes much love to the AI enviroment:
@@ -11,7 +11,6 @@
 	- Static guns spawns.
 	- Helicopter reinfocements.
 */
-
 private ["_difficulty", "_AICount", "_AIMaxReinforcements", "_AIMaxReinforcementsWaves", "_AIdelay", "_staticguns", "_missionObjs", "_crate", "_crate_loot_values", "_crate_weapons", "_crate_items", "_crate_backpacks" "_msgWIN"];
 
 // For logging purposes
@@ -19,13 +18,14 @@ _num = DMS_MissionCount;
 
 // Set mission side (only "bandit" is supported for now)
 _side = "bandit";
-
 _pos = [12103,2486,0];				 // Center position of the area
 
 if ([_pos,DMS_StaticMinPlayerDistance] call DMS_fnc_IsPlayerNearby) exitWith {"delay"};
 
+// Mission difficulty
 _difficulty = "hardcore"; 
 
+// Reinforcements values
 _AIMaxReinforcementsWaves = 1;
 _AIMaxReinforcements = 5;
 _AIdelay = 10;
@@ -307,6 +307,7 @@ for "_i" from count (waypoints _groupHeli) to 1 step -1 do
 private _wpHeli = _groupHeli addWaypoint [[12086.5,2470.26,0],0];
 _wpHeli setWaypointType "HOLD";
 
+/*
 // Static Guns
 _staticGuns =
 [
@@ -322,6 +323,7 @@ _staticGuns =
 	"bandit",
 	"random"
 ] call DMS_fnc_SpawnAIStaticMG;
+*/
 
 DMS_ai_use_launchers = _temp;
 
@@ -373,7 +375,7 @@ _groupReinforcementsInfo =
 // Add mission objects to monitor.
 _missionObjs =
 [
-	[_staticGuns,_missionAIUnits],							// static gun(s). Note, we don't add the base itself because it already spawns on server start.
+	[_missionAIUnits],										// static gun(s). Note, we don't add the base itself because it already spawns on server start.
 	[],														// No Vehicle prize
 	[]														// Crate price setup (Example: [[_crate,_crate_loot_values]])
 ];

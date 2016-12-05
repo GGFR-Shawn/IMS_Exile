@@ -68,15 +68,6 @@ private _objs = _export apply
 		_vehicle call ExileServer_system_simulationMonitor_addVehicle;
 	};
 	
-	// Check if object is kind of loot crate.
-	if (_vehicle isKindOf "Box_Syndicate_Ammo_F") then
-	{
-		_vehicle setVariable ["ExileIsPersistent", true];
-		_vehicle setVariable ["ExileIsContainer", true];
-		_vehicle setVariable ["permaLoot", true];
-		_vehicle call ExileServer_system_simulationMonitor_addVehicle;
-	};
-	
 	// Add hold action to object.
 	[_vehicle, _holdActionTitle, _holdActionIcon, _holdActionConditions, _holdActionEvent, [], 2, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
 	

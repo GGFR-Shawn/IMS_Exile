@@ -5,8 +5,7 @@
 		[12108.5, 2314.93, 3.27098],										// [VALUE] Position where the object gets spawned
 		[-0.783477, -0.621421, 0],											// [VALUE] Vector Direction of the object
 		[0, 0, 1], 															// [VALUE] Vector Up of the object.
-		false, 																// [BOOLEAN] Object simulation.
-		false																// [BOOLEAN] Lock building doors if object ist kind of "Land_Cargo_Tower_V1_No1_F" and valuer is true.
+		false 																// [BOOLEAN] Object simulation.
 	]
 
 */
@@ -141,8 +140,8 @@
 	["Land_Camping_Light_F", [12063.5, 2457.72, 20.2521], [0.733618, -0.679562, 0], [0, 0, 1], false],
 	["Land_Camping_Light_F", [12041.5, 2397.99, 19.2648], [-0.649074, -0.760726, 0], [0, 0, 1], false],
 	["Land_WoodenCrate_01_stack_x3_F", [12077.4, 2508.16, 8.87257], [-0.159546, 0.987191, 0], [0, 0, 1], false],
-	["Flag_Syndikat_F", [12029.5, 2409.49, 7.74139], [-0.531108, 0.847304, 0], [0, 0, 1], false],
-	["Flag_Syndikat_F", [12087.5, 2498.36, 11.4068], [-0.862336, 0.506336, 0], [0, 0, 1], false],
+	["Flag_White_F", [12029.5, 2409.49, 7.74139], [-0.531108, 0.847304, 0], [0, 0, 1], false],
+	["Flag_White_F", [12087.5, 2498.36, 11.4068], [-0.862336, 0.506336, 0], [0, 0, 1], false],
 	["Land_CampingTable_F", [12068.1, 2460.89, 19.2055], [-0.880389, -0.474252, 0], [0, 0, 1], false],
 	["Land_Pot_02_F", [12087.7, 2498.05, 7.43712], [-0.461749, 0.887011, 0], [0, 0, 1], false],
 	["Land_Pot_02_F", [12029.5, 2409.12, 3.77165], [0, 1, 0], [0, 0, 1], false],
