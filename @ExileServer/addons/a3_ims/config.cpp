@@ -10,7 +10,7 @@ class CfgPatches
 	{
 		units[] = {};
 		weapons[] = {};
-		a3_IMS_version = "November 21, 2016";
+		a3_IMS_version = "December 5, 2016";
 		requiredVersion = 1.64;
 		requiredAddons[] = {"exile_client","exile_server_config","a3_dms"};
 	};
@@ -18,10 +18,10 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class IMS_Server_Core
+	class IMS
 	{	
 		tag = "IMS";
-		class Master_Directory
+		class Master
 		{
 			file = "\x\addons\ims";
 			class IMS_preInit 									{preInit = 1;};
@@ -31,6 +31,8 @@ class CfgFunctions
 		{
 			file = "\x\addons\ims\functions";
 			class AddHoldAction 								{};
+			class CreateMarker									{};	
+			class DebugLog										{};
 			class LootDrop 										{};
 			class EndBombing 									{};
 			class FillSupplyBox 								{};
@@ -39,10 +41,11 @@ class CfgFunctions
 			class ImportFromExileEdenPluginScripted 			{};
 			class ImportFromExileEdenPluginSimple 				{};
 			class ImportFromExileEdenPluginSimpleInteraction 	{};
+			class ImportInteractionCrates						{};
 			class InteractionNpcCreate 							{};
 			class InteractionNpcOnAnimationDone 				{};
-			class VehicleSpawn 									{};
-			class VehicleHandle 								{};
+			class SpawnNonPersistentVehicle						{};
+			class SpawnPersistentVehicle						{};
 		};
 	};
 };

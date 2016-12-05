@@ -45,7 +45,6 @@ IMS_Fortress_AlarmEvent = {
 	sleep 10;
 	{_x say "air_raid"} foreach [IMS_ScriptObject_FortressSpeaker_1,IMS_ScriptObject_FortressSpeaker_2,IMS_ScriptObject_FortressSpeaker_3,IMS_ScriptObject_FortressSpeaker_4];
 };
-publicVariable "IMS_FortressRaidAlarmEvent";
 
 // Bombing Event
 IMS_Fortress_BombEvent = {
@@ -80,3 +79,4 @@ IMS_Fortress_DMSCompletionEvent = {
 	_missionInfo set [1, [["external",true]]];	
 };
 
+publicVariable "IMS_Fortress_AlarmEvent";

@@ -14,13 +14,11 @@ IMS_Fortress_TaskEvent_1 = {
 	IMS_Fortress_Task_1 setTaskState "Assigned";
 	player setCurrentTask IMS_Fortress_Task_1;
 };
-publicVariable "IMS_Fortress_TaskEvent_1";
 
 IMS_Fortress_TaskEvent_1_End = {
 	IMS_Fortress_Task_1 setTaskState "Succeeded";
 	player setVariable ["fortressTask_1",0];
 };
-publicVariable "IMS_Fortress_TaskEvent_1_End";
 
 IMS_Fortress_TaskEvent_2 = {
 	IMS_Fortress_Task_2 = player createSimpleTask ["The Fortress - Big Momma [Part 2]"];
@@ -31,12 +29,10 @@ IMS_Fortress_TaskEvent_2 = {
 	IMS_Fortress_Task_2 setTaskState "Assigned";
 	player setCurrentTask IMS_Fortress_Task_2;
 };
-publicVariable "IMS_Fortress_TaskEvent_2";
 
 IMS_Fortress_TaskEvent_2_End = {
 	IMS_Fortress_Task_2 setTaskState "Succeeded";
 };
-publicVariable "IMS_Fortress_TaskEvent_2_End";
 
 IMS_Fortress_TaskEvent_3 = {
 	IMS_Fortress_Task_3 = player createSimpleTask ["The Fortress - Up And Away [Part 3]"];
@@ -47,12 +43,10 @@ IMS_Fortress_TaskEvent_3 = {
 	IMS_Fortress_Task_3 setTaskState "Assigned";
 	player setCurrentTask IMS_Fortress_Task_3;
 };
-publicVariable "IMS_Fortress_TaskEvent_3";
 
 IMS_Fortress_TaskEvent_3_End = {
 	IMS_Fortress_Task_3 setTaskState "Succeeded";
 };
-publicVariable "IMS_Fortress_TaskEvent_2_End";
 
 IMS_Fortress_TaskEvent_4 = {
 	IMS_Fortress_Task_4 = player createSimpleTask ["The Fortress - Life Is Hard [Final]"];
@@ -63,9 +57,17 @@ IMS_Fortress_TaskEvent_4 = {
 	IMS_Fortress_Task_4 setTaskState "Assigned";
 	player setCurrentTask IMS_Fortress_Task_4;
 };
-publicVariable "IMS_Fortress_TaskEvent_4";
 
 IMS_Fortress_TaskEvent_4_End = {
 	IMS_Fortress_Task_4 setTaskState "Succeeded";
 };
+
+
+publicVariable "IMS_Fortress_TaskEvent_1";
+publicVariable "IMS_Fortress_TaskEvent_1_End";
+publicVariable "IMS_Fortress_TaskEvent_2";
+publicVariable "IMS_Fortress_TaskEvent_2_End";
+publicVariable "IMS_Fortress_TaskEvent_3";
+publicVariable "IMS_Fortress_TaskEvent_3_End";
+publicVariable "IMS_Fortress_TaskEvent_4";
 publicVariable "IMS_Fortress_TaskEvent_4_End";

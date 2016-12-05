@@ -1,11 +1,9 @@
-![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--11--21-00a9e1.svg) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--12--05-00a9e1.svg) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 # General Information:
 ####Please note that this is not ready for public servers!
 ####Its builded and tested on a public dedicated server enviroment with Exile Mod 1.0.2 and DMS (parent 21bdacd commit 92d32436e06bd167e9dd4b2971954d09d8669b18 22 Sep. 2016)
-####Everything should work as intended but use it on your own risk on a live server with players at this state! 
 
-####This concept release is in its early build state and has been released to give the Exile community a overview how the system works and to get feedback from better coders from the forum to may get improvements.
 ####Please feel free to give feedback, suggestions or improvements to this work!
 
 
@@ -16,6 +14,7 @@ DMS for Exile by Defent and eraser1: https://github.com/Defent/DMS_Exile
 # Installation:
 ####Main files:
 - Download the latest IMS release from here: https://github.com/salutesh/IMS_Exile/releases
+- Open up the a3_ims  folder in IMS_Exile\@ExileServer\addons" and edit the config.sqf to fitting to your servers setup.
 - Pack the a3_ims folder in "IMS_Exile\@ExileServer\addons" with a PBO tool (PBO Manager, Eliteness, or the Arma 3 Tools suite) and put the generated PBO in your "@ExileServer\addons\" directory.
 - Put the content of the "IMS_Exile\MPMISSIONS\Exile.Tanoa" directory into your mission main directory and repack your mission.
 - Open up your missions description.ext and copy over the content of the CfgRemoteExec class and merge it with the CfgRemoteExec.hpp.
@@ -81,10 +80,7 @@ The Fortress interactive raid mission for Exile Tanoa Map
 - Eventscripts and functions.
 
 ####Kown Bugs / To Do:
-- Presistent vehicle cant be locked with given pincode.
-- Presistent vehicle pincode cant be changed for free with given pincode at vehicle customizer.
 - DMS Units shoting each other. [To Do]: Retrict uniforms to a single faction related class.
-- Supply crate items cant be looted per klick. [To Do]: Create new function for supply crate spawn without using of ExileIsLocked variable.   
 
 # Github Project:
 
