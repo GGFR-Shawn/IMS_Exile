@@ -1,4 +1,4 @@
-![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--12--05-00a9e1.svg) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![ArmA 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg) ![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg) ![DMS Version](https://img.shields.io/badge/DMS%20Version-2016--09--05-blue.svg) ![IMS Version](https://img.shields.io/badge/IMS%20Version-2016--12--06-00a9e1.svg) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 # General Information:
 ####Please note that this is not ready for public servers!
@@ -64,7 +64,10 @@ Line 15 - addAction:
 
 # Content:
 
-The Fortress interactive raid mission for Exile Tanoa Map
+Interactive Missions:
+```
+[Tanoa/Chernarus] The Fortress
+```
 
 ####DMS Mission Features:
 - Static NPC group spawns with ai behavior, waypoints and formations.
@@ -80,17 +83,21 @@ The Fortress interactive raid mission for Exile Tanoa Map
 - Eventscripts and functions.
 
 ####Kown Bugs / To Do:
-- DMS Units shoting each other. [To Do]: Retrict uniforms to a single faction related class.
+- DMS Units shoting each other.
+[To Do]: Restrict AI uniforms to a single faction related class.
+- Coloring interaction icons.
+
 
 # Github Project:
 
 https://github.com/salutesh/IMS_Exile
 
 
-# Thanks:
-
-Defent and eraser1 and all other contributions to DMS for the great Dynamic Mission System Addon! 
-
 # Changelog:
 
 https://github.com/salutesh/IMS_Exile/wiki/Changelog
+
+
+# Thanks:
+
+Defent and eraser1 and all other contributions to DMS for the great Dynamic Mission System Addon! 

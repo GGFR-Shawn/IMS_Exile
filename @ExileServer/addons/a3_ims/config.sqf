@@ -9,7 +9,7 @@
 
 	/* --- The Fortress Mission Settings --- */
 		IMS_Fortress_MissionActive				= true;	//Enable or disable the Fotress Mission
-		IMS_Fortress_SaticMission_Arr			= 1;																												
+		IMS_Fortress_SaticMission_Arr			= 0;																												
 		/* 
 			IMS_FortressSaticMission_Arr NOTE:
 			This value has to be set to succsesfull complete the DMS Mission part without killing all NPCs. 	

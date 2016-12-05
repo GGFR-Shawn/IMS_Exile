@@ -52,11 +52,6 @@ private _objs = _export apply
 	_vehicle enableSimulationGlobal (_x select 4);
 	_vehicle setVariable ["ExileIsLocked", -1, true];	
 	_vehicle;
-	// Check if object is kind of Flag.
-	if (_vehicle isKindOf "Flag_White_F") then
-	{
-		_vehicle setObjectTextureGlobal [0, "textures\flag_rg.paa"];
-	};
 };
 
 

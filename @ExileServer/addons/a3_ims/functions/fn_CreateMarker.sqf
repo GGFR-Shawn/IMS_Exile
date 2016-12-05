@@ -26,13 +26,12 @@ try
 	{
 		throw (format ["Invalid parameters: %1",_this]);
 	};
-
 	_marker = createMarker [_markerName, _position];
 	_marker setMarkerType "ExileHeart";
 	_marker setMarkerAlpha 1; 
-	_marker setMarkerText format ["[%1]: %2", _markerLabel,_markerName];
+	_marker setMarkerText format ["[%1] %2", _markerLabel,_markerName];
 	_marker setMarkerColor "ColorOrange";
-	[300, {deleteMarker _markerName;}, [_marker], false] call ExileServer_system_thread_addTask;
+	[120, {deleteMarker (_this select 0);}, [_marker], false] call ExileServer_system_thread_addTask;
 }
 catch
 {

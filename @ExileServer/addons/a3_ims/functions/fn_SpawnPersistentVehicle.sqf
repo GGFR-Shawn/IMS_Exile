@@ -105,7 +105,7 @@ catch
 
 if (IMS_DEBUG) then
 {
-	(format ["SpawnPersistentVehicle :: Created %1 at %2 with calling parameters: %3 AND PinCode: %4",_vehObj,_positionNew,_this,_pincode]) call IMS_fnc_DebugLog;
+	(format ["SpawnPersistentVehicle :: Created %1 with calling parameters: %2",_vehObj,_this]) call IMS_fnc_DebugLog;
 };
 
 _vehObj

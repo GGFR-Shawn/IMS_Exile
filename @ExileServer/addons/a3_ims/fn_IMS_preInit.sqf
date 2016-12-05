@@ -16,7 +16,7 @@ IMS_Version = getText (configFile >> "CfgPatches" >> "a3_ims" >> "a3_IMS_version
 // Main config
 CALLFILE("\x\addons\ims\config.sqf");
 	
-// System toast notifications.
+// System toast notifications
 IMS_Toast_Loot = {
 	["SuccessTitleAndText", ["<t color='#f07700' align='center' font='PuristaSemiBold'>Raid Loot Drop</t>", format ["<t color='#ffc96b'><img align='center' image='textures\loot.paa' size='120'/></t><br/><t color='#f07700' font='PuristaSemiBold'>Loot drop inbound. Look for a crate with smoke and chemlights.</t>"]]] call ExileClient_gui_toaster_addTemplateToast;
 };

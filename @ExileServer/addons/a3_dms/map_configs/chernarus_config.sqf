@@ -12,6 +12,6 @@ DMS_MinDistFromNorthBorder			= 1000;
 
 DMS_StaticMissionsOnServerStart append
 [
-	"raid_fortress_chernarus"
+	"IMS_fortress_chernarus"
 ];
 
