@@ -16,9 +16,9 @@
 */
 
 [
-	["Box_NATO_Equip_F", [6895.86, 11383, 394.363], [-0.0795784, 0.996829, 0], [0, 0, 1], false, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_1", 0, true];}, "FortressSupplyBox_1"],
-	["Box_NATO_Equip_F", [6842.17, 11479.8, 391.815], [-0.296637, 0.95499, 0], [0, 0, 1], false, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_2", 0, true];}, "FortressSupplyBox_2"],
-	["Box_NATO_Equip_F", [6884.29, 11522.5, 392.56], [0.655787, 0.754946, 0], [0, 0, 1], false, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_3", 0, true];}, "FortressSupplyBox_3"],
-	["Box_NATO_Equip_F", [6921.67, 11374.8, 394.882], [-0.0795784, 0.996829, 0], [0, 0, 1], false, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_4", 0, true];}, "FortressSupplyBox_4"],
-	["Box_NATO_Equip_F", [6911.96, 11418.3, 395.802], [0.867439, 0.497544, 0], [0, 0, 1], false, "Seeking Crate", "crate", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_5", 0, true];}, "FortressSupplyBox_5"]
+	["Box_NATO_Equip_F", [6895.86, 11383, 394.363], [-0.0795784, 0.996829, 0], [0, 0, 1], false, "Inspect the crate", "supply", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_1", 0, true];}, "FortressSupplyBox_1"],
+	["Box_NATO_Equip_F", [6842.17, 11479.8, 391.815], [-0.296637, 0.95499, 0], [0, 0, 1], false, "Inspect the crate", "supply", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_2", 0, true];}, "FortressSupplyBox_2"],
+	["Box_NATO_Equip_F", [6884.29, 11522.5, 392.56], [0.655787, 0.754946, 0], [0, 0, 1], false, "Inspect the crate", "supply", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_3", 0, true];}, "FortressSupplyBox_3"],
+	["Box_NATO_Equip_F", [6921.67, 11374.8, 394.882], [-0.0795784, 0.996829, 0], [0, 0, 1], false, "Inspect the crate", "supply", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_4", 0, true];}, "FortressSupplyBox_4"],
+	["Box_NATO_Equip_F", [6911.96, 11418.3, 395.802], [0.867439, 0.497544, 0], [0, 0, 1], false, "Inspect the crate", "supply", "_this distance _target < 5", {remoteExec ["IMS_Fortress_SupplyBox_ActionScript_5", 0, true];}, "FortressSupplyBox_5"]
 ]

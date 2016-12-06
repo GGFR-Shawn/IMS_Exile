@@ -23,12 +23,15 @@ params [["_object", player], ["_label", "Search"], ["_type", "search"], ["_activ
 
 // Change icon based on _type input.
 _idleIcon = switch (_type) do {
-	case "data": {"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"};
-	case "launcher": {"icons\holdAction_launcher.paa"};
-	case "pc": {"icons\holdAction_laptop.paa"};
-	case "crate": {"icons\holdAction_search.paa"};
-	case "charge": {"icons\holdAction_terminal.paa"};
-	case "connect": {"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"};
+	case "inspect": {"icons\holdAction_inspect.paa"};
+	case "use": {"icons\holdAction_use.paa"};
+	case "deactivate": {"icons\holdAction_deactivate.paa"};
+	case "hack": {"icons\holdAction_hack.paa"};
+	case "pincode": {"icons\holdAction_pincode.paa"};
+	case "mission": {"icons\holdAction_mission.paa"};
+	case "talk": {"icons\holdAction_talk.paa"};
+	case "read": {"icons\holdAction_read.paa"};
+	case "supply": {"icons\holdAction_supply.paa"};
 	default {"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa"};		
 };
 
