@@ -1,33 +1,24 @@
 /*
-    File: fn_AddHoldAction.sqf
-    Written by Salutesh
-    www.reality-gaming.eu
+	IMS_fnc_AddHoldAction
+	Created by Salutesh
+
+	This function will simply reduce the amount of parameters that are needed to execute the BIS_fnc_holdActionAdd function.
 	
-    Description:
+	Usage:
+	[
+		_object,														// [STRING]: Object target.
+		_label, 														// [STRING]: Hold action title.
+		_type,															// [STRING]: Hold action type. Currently possible types: data, launcher, pc, crate, charge, connect]. This will change the icon of the hold action that is linked to the given name.
+		_active,														// [STRING]: Condition to show.
+		_args,															// [STRING]: Arguments.
+		_completeCode,													// [CODE]: Code executed on hold action completion.
+		_duration,														// [NUMBER]: Time duration in seconds. The hold action circle filled up depending on this value.
+		_remove															// [BOOLEAN]: Remove the action on completion. true = yes / false = no
+	] call IMS_fnc_AddHoldAction;
 	
-	//////////////////////////////////////////////////////////////////
-	//
-	//	Example of the function:
-	//	[_object, _label, _idleIcon, _idleIcon, _active, "true", {}, {}, _completeCode, {}, _args, _duration, 0, _remove, false] remoteExec ["BIS_fnc_holdActionAdd",[0,-2] select isDedicated,true];
-	//
-	//////////////////////////////////////////////////////////////////
-	//
-	// 1. [STRING]: Object target.
-	// 2. [STRING]: Hold action title.
-	// 3. [STRING]: Idle icon.
-	// 4. [STRING]: Progress icon.
-	// 5. [STRING]: Condition to show.
-	// 6. [CODE]: Code executed on completion.
-	// 7. [STRING]: Arguments.
-	// 8. [VALUE]: Action duration in seconds.
-	// 9. [VALUE]: Action priority.
-	// 10. [BOOLEAN]: Remove on completion.
-	// 11. [BOOLEAN]: Show unconscious.
-	//
-	//////////////////////////////////////////////////////////////////
+	This function will create a hold action with given parameters to the given target.
+	Target can be a object, npc or vehicle (nothing else tested yet),
 */
-
-
 params [["_object", player], ["_label", "Search"], ["_type", "search"], ["_active", "true"], ["_completeCode", {hint 'Nothing found'}], ["_args", []], ["_duration", 2], ["_remove", "true"]];
 
 // Change icon based on _type input.
@@ -41,7 +32,7 @@ _idleIcon = switch (_type) do {
 	default {"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa"};		
 };
 
-
+// Create the hold action with given parameters.
 [
 /* 0 object */							_object,
 /* 1 action title */					_label,

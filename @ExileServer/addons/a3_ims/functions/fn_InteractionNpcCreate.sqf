@@ -54,7 +54,7 @@ if (_animationCount > 1) then
 };
 if (_holdAction) then
 {
-	[_npc, _holdActionTitle, _holdActionIcon, "_this distance _target < 5", _holdActionEvent, [], 2, true] remoteExec ["RG_fnc_AddHoldAction", 0, true];
+	[_npc, _holdActionTitle, _holdActionIcon, "_this distance _target < 5", _holdActionEvent, [], 2, true] call IMS_fnc_AddHoldAction;
 };
 
 missionNamespace setVariable [_scriptName, _npc, true];

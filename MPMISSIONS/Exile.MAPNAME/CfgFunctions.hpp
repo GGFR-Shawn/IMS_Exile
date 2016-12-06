@@ -2,7 +2,7 @@ class CfgFunctions
 {
 	class Exile_Client_Core 
 	{
-		tag = "exile";
+		tag = "IMS";
 		class Functions
 		{
 			file = "core\functions";

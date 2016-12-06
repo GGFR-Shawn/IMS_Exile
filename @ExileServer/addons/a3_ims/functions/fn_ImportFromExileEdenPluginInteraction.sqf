@@ -69,7 +69,7 @@ private _objs = _export apply
 	};
 	
 	// Add hold action to object.
-	[_vehicle, _holdActionTitle, _holdActionIcon, _holdActionConditions, _holdActionEvent, [], 2, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
+	[_vehicle, _holdActionTitle, _holdActionIcon, _holdActionConditions, _holdActionEvent, [], 2, true] call IMS_fnc_AddHoldAction;
 	
 	// Give the object a variable name to work with.
 	missionNamespace setVariable [_scriptName, _vehicle, true];

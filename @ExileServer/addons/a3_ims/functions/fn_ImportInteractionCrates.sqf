@@ -77,7 +77,7 @@ private _crates = _export apply
 	private _scriptName = format ["IMS_CrateObject_%1",_objectName];
 	
 	// Add hold action to object.
-	[_crate, _holdActionTitle, _holdActionIcon, _holdActionConditions, _holdActionEvent, [], 2, true] remoteExec ["IMS_fnc_AddHoldAction", 0, true];
+	[_crate, _holdActionTitle, _holdActionIcon, _holdActionConditions, _holdActionEvent, [], 2, true] call IMS_fnc_AddHoldAction;
 	
 	// Give the object a variable name to work with.
 	missionNamespace setVariable [_scriptName, _crate, true];

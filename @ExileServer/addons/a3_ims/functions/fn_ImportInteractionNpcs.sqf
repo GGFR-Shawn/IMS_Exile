@@ -82,12 +82,12 @@ private _npcs = _export apply
 	_animationCount = count _animations;
 	if (_animationCount > 1) then
 	{
-		_npc setVariable ["RGAnimations", _animations];
-		_npc addEventHandler ["AnimDone", {_this call RG_fnc_NpcOnAnimationDone}];
+		_npc setVariable ["IMSAnimations", _animations];
+		_npc addEventHandler ["AnimDone", {_this call IMS_fnc_NpcOnAnimationDone}];
 	};
 	if (_holdAction) then
 	{
-		[_npc, _holdActionTitle, _holdActionIcon, "_this distance _target < 5", _holdActionEvent, [], 2, true] remoteExec ["RG_fnc_AddHoldAction", 0, true];
+		[_npc, _holdActionTitle, _holdActionIcon, "_this distance _target < 5", _holdActionEvent, [], 2, true] call IMS_fnc_AddHoldAction;
 	};
 };
 

@@ -26,7 +26,7 @@ IMS_Fortress_Terminal_ActionScript = {
 	[] remoteExec ["IMS_Fortress_Toast_BombActivate", _playerUnits, true];
 	sleep 3;
 	// Start timer
-	[IMS_Fortress_Timer] remoteExec ["exile_fnc_EndTimer", _playerUnits, true];
+	[IMS_Fortress_Timer] remoteExec ["IMS_fnc_EndTimer", _playerUnits, true];
 	[] remoteExec ["IMS_Fortress_AlarmEvent", -2, true];
 	sleep IMS_Fortress_Timer;
 	// Start end events.
