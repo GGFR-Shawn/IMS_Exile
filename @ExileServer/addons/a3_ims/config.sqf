@@ -6,8 +6,9 @@
 
 /* --- Mission System Settings --- */
 	IMS_MissionLogs 						= true;	// Enable or disable IMS log messages.
-
+	
 	/* --- The Fortress Mission Settings --- */
+	/* --- TANOA AND CHERNARUS MAP ONLY --- */
 		IMS_Fortress_MissionActive				= true;	//Enable or disable the Fotress Mission
 		IMS_Fortress_SaticMission_Arr			= 0;																												
 		/* 
@@ -30,6 +31,12 @@
 		/* --- Vehicle Spawn Settings --- */
 		IMS_Fortress_VehicleLoot				= true;	// Enable/disable vehicle loot spawn on Fortress mission success.
 		IMS_Fortress_VehicleLootClass			= "Exile_Car_Ifrit";	// Vehicle Class that spawns if IMS_FortressVehicleLoot is true.
+		
+	/* --- WORK IN PROGRESS ---*/
+	/* --- DO NOT ENABLE THIS OPTION --- */
+	/* --- Overmind Mission Settings --- */
+	/* --- ALTIS MAP ONLY --- */
+		IMS_Overmind_MissionActive				= false;	//Enable or disable the Overmind Mission
 
 
 /* DO NOT EDIT BELOW THIS LINE IF YOU DONT KNOW WHAT YOU ARE DOING! */
